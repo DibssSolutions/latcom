@@ -14,48 +14,117 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <h1>Index page</h1>
-      <p>Hello from partials/_header.html</p>
-      <svg class="icon icon-facebook">
-        <use xlink:href="img/sprite.svg#icon-facebook"></use>
-      </svg>
-      <p>
-        <!-- begin input -->
-        <label class="checkbox">
-          <input type="checkbox" name="checkbox">
-          <span class="checkbox__text">checkbox</span>
-        </label>
-        <!-- end input -->
-      </p>
-      <p>
-        <!-- begin input -->
-        <label class="checkbox">
-          <input type="checkbox" name="exemple-name" checked>
-          <span class="checkbox__text">checkbox-checked</span>
-        </label>
-        <!-- end input -->
-      </p>
-      <!-- begin input -->
-      <label class="radio">
-        <input type="radio" name="exemple-name">
-        <span class="radio__text">text</span>
-      </label>
-      <!-- end input -->
-      <!-- begin breadcrumbs -->
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-          <a href="#">Главная</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a href="#">Внутренняя</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <span>Корзина</span>
-        </li>
-      </ul>
-      <!-- end breadcrumbs -->
-      <li>Item1</li>
-      <li>Item2</li>
+      <div class="inner">
+        <!-- begin header -->
+        <header class="header">
+          <div class="header__left">
+            <!-- begin logo -->
+            <a href="#" class="logo">
+              <h1 class="logo__text">Latcom</h1>
+              <img src="./img/logo.svg" alt="logo">
+            </a>
+            <!-- end logo -->
+          </div>
+          <div class="header__main">
+            <div class="header__search">
+              <!-- begin search -->
+              <form class="search">
+                <div class="search__input">
+                  <input type="text" placeholder="Buscar cuentas, campañas o países">
+                </div>
+                <button class="search__button" type="button">
+                  <svg class="icon icon-search">
+                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </form>
+              <!-- end search -->
+            </div>
+            <div class="header__account">
+              <!-- begin account -->
+              <div class="account">
+                <button class="account__top" type="button">
+                  <span class="account__avatar" style="background-image: url(./img/avatar.png);"></span>
+                  <span class="account__current">
+                    <span class="account__name">José Cabrera</span>
+                    <span class="account__arrow">
+                      <svg class="icon icon-arrow">
+                        <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                      </svg>
+                    </span>
+                  </span>
+                </button>
+                <ul class="account__list">
+                  <li class="account__item"></li>
+                </ul>
+              </div>
+              <!-- end account -->
+            </div>
+          </div>
+        </header>
+        <!-- end header -->
+        <div class="wrap">
+          <!-- begin sidebar -->
+          <div class="sidebar">
+            <div class="sidebar__top"> bla </div>
+            <div class="sidebar__bottom"> bla </div>
+          </div>
+          <!-- end sidebar -->
+          <div class="main">
+            <!-- begin head -->
+            <div class="head">
+              <h2 class="title">Fútbol 2018</h2>
+            </div>
+            <!-- end head -->
+            <!-- begin megamenu -->
+            <nav class="megamenu">
+              <ul class="megamenu__list row">
+                <li class="megamenu__item col col-6">
+                  <!-- begin item -->
+                  <a href="#" class="item">
+                    <span class="item__content">
+                      <span class="item__name">Reportes</span>
+                      <span class="item__icon"><img src="./img/reportes.svg" alt="{ item.icon }}"></span>
+                    </span>
+                  </a>
+                  <!-- end item -->
+                </li>
+                <li class="megamenu__item col col-6">
+                  <!-- begin item -->
+                  <a href="#" class="item">
+                    <span class="item__content">
+                      <span class="item__name">Fotos</span>
+                      <span class="item__icon"><img src="./img/fotos.svg" alt="{ item.icon }}"></span>
+                    </span>
+                  </a>
+                  <!-- end item -->
+                </li>
+                <li class="megamenu__item col col-6">
+                  <!-- begin item -->
+                  <a href="#" class="item">
+                    <span class="item__content">
+                      <span class="item__name">Mapa</span>
+                      <span class="item__icon"><img src="./img/mapa.svg" alt="{ item.icon }}"></span>
+                    </span>
+                  </a>
+                  <!-- end item -->
+                </li>
+                <li class="megamenu__item col col-6">
+                  <!-- begin item -->
+                  <a href="#" class="item">
+                    <span class="item__content">
+                      <span class="item__name">Listado</span>
+                      <span class="item__icon"><img src="./img/listado.svg" alt="{ item.icon }}"></span>
+                    </span>
+                  </a>
+                  <!-- end item -->
+                </li>
+              </ul>
+            </nav>
+            <!-- end items -->
+          </div>
+        </div>
+      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
