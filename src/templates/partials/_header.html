@@ -1,1 +1,40 @@
-<p>Hello from partials/_header.html</p>
+<!-- begin header -->
+<header class="header">
+	<div class="header__left">
+		<!-- begin logo -->
+		<a href="#" class="logo">
+			<h1 class="logo__text">Latcom</h1>
+			<img src="./img/logo.svg" alt="logo">
+		</a>
+		<!-- end logo -->
+	</div>
+	<div class="header__main">
+		<div class="header__search">
+			<!-- begin search -->
+			<form class="search">
+				<div class="search__input">
+					<input type="text" placeholder="Buscar cuentas, campañas o países">
+				</div>
+				<button class="search__button" type="button">{{ mixins.icon('search') }}</button>
+			</form>
+			<!-- end search -->
+		</div>
+		<div class="header__account">
+			<!-- begin account -->
+			<div class="account">
+				<button class="account__top" type="button">
+					<span class="account__avatar" style="background-image: url(./img/avatar.png);"></span>
+					<span class="account__current">
+						<span class="account__name">José Cabrera</span>
+						<span class="account__arrow">{{ mixins.icon('arrow') }}</span>
+					</span>
+				</button>
+				<ul class="account__list">
+					<li class="account__item"></li>
+				</ul>
+			</div>
+			<!-- end account -->
+		</div>
+	</div>
+</header>
+<!-- end header -->

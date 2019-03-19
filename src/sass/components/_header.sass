@@ -1,0 +1,123 @@
+.header
+	padding-top: 44px
+	display: flex
+	align-items: center
+	&__left
+		+fls(235px)
+		font-size: 0
+	&__main
+		flex-grow: 1
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&__search
+		padding-right: 10px
+	&__account
+		font-size: 0
+.logo
+	position: relative
+	vertical-align: top
+	display: inline-block
+	img
+		display: inline-block
+	&__text
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+.search
+	position: relative
+	width: 470px
+	font-size: 0
+	&__input
+		input
+			padding: 4px 25px 4px 4px
+			font-family: $avenir
+			width: 100%
+			height: 30px
+			font-size: 14px 
+			color: $gray 
+			border-bottom: 2px solid $inputBorder 
+			display: block
+			&::placeholder
+				font-style: italic
+				color: rgba($gray, .79) 
+			&:focus
+				&::placeholder
+					font-size: 0
+	&__button
+		position: absolute
+		top: 50%
+		right: 8px
+		margin-top: -8px
+		font-size: 0
+		background-color: transparent
+		&:before
+			position: absolute
+			content: "" 
+			top: -5px
+			left: -5px
+			right: -5px
+			bottom: -5px
+		.icon
+			font-size: 15px
+			color: $blue 
+.account
+	vertical-align: top
+	display: inline-block
+	&__top
+		display: flex
+		align-items: center
+		font-size: 0
+		background-color: transparent 
+	&__avatar
+		position: relative
+		width: 37px
+		height: 37px
+		border-radius: 50% 
+		background-position: 50% 50%
+		background-size: cover
+		background-color: $blue 
+		border: 2px solid $blue
+		&:before
+			position: absolute
+			content: "" 
+			top: 100%
+			left: 50%
+			margin: -24px 0 0 -13px
+			height: 26px
+			width: 26px
+			opacity: 0.51
+			z-index: -1
+			border-radius: 50% 
+			background-color: $black
+			filter: blur(5px) 
+	&__current
+		position: relative
+		margin-left: 12px
+		padding: 3px 0
+		width: 114px
+		text-align: left
+		font-family: $avenir
+		cursor: pointer
+		color: $gray 
+		+f(15px,500,1.33)
+		border-bottom: 1px solid #8E8D8D 
+		padding-right: 14px
+		background-color: transparent 
+		display: block
+	&__name
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+		display: block
+	&__arrow
+		position: absolute
+		top: 50%
+		margin-top: -4px
+		right: 0
+		font-size: 0
+		.icon
+			font-size: 7px
+			color: $blue 
