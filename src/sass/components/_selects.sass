@@ -1,0 +1,102 @@
+.input-group
+  position: relative
+
+.label
+  display: block
+  opacity: 0.62
+  color: $lightGrey
+  font-family: $avenir 
+  +f(14px,500,1.35)
+
+.sidebar-form
+  .input-group 
+    & + .input-group
+      margin-top: 24px
+
+.modal-form
+  text-align: left
+  .input-group 
+    & + .input-group
+      margin-top: 36px
+
+.input-group
+  .select
+    .dropdown-toggle
+      background-color: transparent
+      border-bottom: 1px solid $selectBorder
+      outline: none
+      &:after
+        display: inline-block
+        content: ''
+        // +coverdiv
+        width: 11px
+        height: 7px
+        padding-left: 10px
+        border-top: none
+        border-bottom: none
+        border-left: none
+        border-right: none
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11' height='7' viewBox='0 0 11 7'%3E%3Cdefs%3E%3Cpath id='cvyxa' d='M177.3 149.452L175.879 148l-3.704 3.96-3.786-3.874-1.389 1.488 5.208 5.325z'/%3E%3C/defs%3E%3Cg%3E%3Cg transform='translate(-167 -148)'%3E%3Cuse fill='%23114bef' xlink:href='%23cvyxa'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+        background-size: 11px 7px
+        background-repeat: no-repeat
+        background-position: right center
+  .select_blue
+    .dropdown-toggle
+      &:after
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath fill='%234a484a' transform='translate(-280 -565)' d='M290.3 566.452L288.879 565l-3.704 3.96-3.786-3.874-1.389 1.488 5.208 5.325z'/%3E%3C/svg%3E")
+
+.bootstrap-select 
+  .dropdown-toggle .filter-option-inner-inner
+    padding-right: 10px
+    color: $gray
+    font-family: $avenir
+    font-size: 17px
+    font-weight: 500
+  &.select_blue
+    .dropdown-toggle .filter-option-inner-inner
+      color: $blue
+      font-family: $avenir
+      font-size: 16px
+      font-weight: 600
+
+.bootstrap-select
+  .inner.show
+    max-height: 100px
+    padding: 0
+
+.bootstrap-select .dropdown-toggle:focus, .bootstrap-select>select.mobile-device:focus+.dropdown-toggle
+  outline: none !important
+
+.dropdown-menu
+  // border: none
+  padding: 10px
+  border-radius: 10px
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19)
+  border-radius: 0
+  // overflow: visible !important
+
+.dropdown-item
+  color: $lightGrey
+  font-family: $avenir
+  font-size: 14px
+  font-weight: 500
+  padding: 6px 10px
+
+.bs-searchbox
+  position: relative
+  &:before
+    display: inline-block
+    content: ''
+    position: absolute
+    left: -10px
+    top: 0
+    height: 100%
+    width: 1px
+    background-color: #979797
+  .form-control
+    height: 20px
+    opacity: 0.41
+    color: #2e2e2e
+    font-family: $avenir
+    font-size: 14px
+    font-weight: 500

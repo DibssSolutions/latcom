@@ -1,0 +1,37 @@
+<div class="modal" data-modal="selectsModal">
+  <div class="modal__container" data-modal-container>
+    <div class="modal__inner">
+      <button class="modal__close" data-modal-close>
+        {{ mixins.icon("close") }}
+      </button>
+      <form class="modal-form">
+        {% for item in [
+          {
+            label: 'Cuenta',
+            options: [ 'McDonalds', 'MacFoxy', 'Puzata Khata' ]
+          },
+          {
+            label: 'País',
+            options: [ 'Argentina', 'Brazil', 'Urugway' ]
+          },
+          {
+            label: 'Campaña',
+            options: [ 'Mc Precios 2017', 'Mc Precios 2018', 'Mc Precios 2019', 'Mc Precios 2017', 'Mc Precios 2018', 'Mc Precios 2019', 'Mc Precios 2017', 'Mc Precios 2018', 'Mc Precios 2019' ]
+          }
+        ] %}
+          <div class="input-group">
+            <label class="label">{{ item.label }}</label>
+            {{ mixins.select({
+              values: item.options,
+              selectWidth: '100%',
+              modifier: 'blue'
+            }) }}
+          </div>
+        {% endfor %}
+        <div class="input-group">
+          <label class="label"></label>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

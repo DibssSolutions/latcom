@@ -1,7 +1,33 @@
 <!-- begin sidebar -->
 <div class="sidebar">
 	<div class="sidebar__top">
-		bla
+		<form class="sidebar-form">
+			{% for item in [
+				{
+					label: 'Cuenta',
+					options: [ 'McDonalds', 'MacFoxy', 'Puzata Khata', 'LOOOOOOONG WORD' ]
+				},
+				{
+					label: 'País',
+					options: [ 'Argentina', 'Brazil', 'Urugway' ]
+				},
+				{
+					label: 'Campaña',
+					options: [ 'Mc Precios 2017', 'Mc Precios 2018', 'Mc Precios 2019', 'Mc Precios 2017', 'Mc Precios 2018', 'Mc Precios 2019', 'Mc Precios 2017', 'Mc Precios 2018', 'Mc Precios 2019' ]
+				}
+			] %}
+				<div class="input-group">
+					<label class="label">{{ item.label }}</label>
+					{{ mixins.select({
+						values: item.options,
+						selectWidth: 'fit'
+					}) }}
+				</div>
+			{% endfor %}
+			<div class="input-group">
+				<label class="label"></label>
+			</div>
+		</form>
 	</div>
 	<div class="sidebar__bottom">
 		bla
