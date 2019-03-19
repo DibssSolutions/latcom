@@ -30,7 +30,15 @@
 		</form>
 	</div>
 	<div class="sidebar__bottom">
-		bla
+		<!-- begin links -->
+		<ul class="links">
+			{% for value in ['Ayuda', 'Perfil', 'Cerrar sesión'] %}
+			<li class="links__item">
+				<a href="#">{{ value }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+		<!-- end links -->
 	</div>
 </div>
 <!-- end sidebar -->
