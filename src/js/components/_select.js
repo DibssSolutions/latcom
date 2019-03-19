@@ -4,6 +4,6 @@ import PerfectScrollbar from 'perfect-scrollbar';
 
 DOC.ready(() => {
   const select = $('.js-select');
-  select.selectpicker({ liveSearchPlaceholder: 'SEARCH' });
+  select.selectpicker({ liveSearchPlaceholder: 'search' });
   BODY.find('.js-select .btn').removeClass('btn');
 });

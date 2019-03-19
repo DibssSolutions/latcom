@@ -2,14 +2,14 @@ import PerfectScrollbar from 'perfect-scrollbar';
 import { DOC } from '../constants';
 
 DOC.ready(() => {
-  const containers = document.querySelectorAll('.dropdown-menu');
+  const containers = document.querySelectorAll('.dropdown-menu .inner.show');
   if (!containers) {
     return;
   } else {
     for (var i = 0; i <= containers.length - 1; i++) {
       containers[i].perfectScrollbar = new PerfectScrollbar(containers[i], {
-        minScrollbarLength: 40,
-        useBothWheelAxes: true
+        // minScrollbarLength: 40,
+        useBothWheelAxes: false
       });
       console.log('INIT PERF SCROLL');
     }

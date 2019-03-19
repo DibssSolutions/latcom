@@ -31,9 +31,10 @@
 
 {% macro select(props) %}
 	<select class="js-select select{% if props.modifier %} select_{{ props.modifier }}{% endif %}"
-		 data-live-search="true"
-		 {% if props.selectWidth %} data-width="{{ props.selectWidth or '100%'}}"{% endif %}
-		 {% if props.placeholder %} title="ready"{% endif %}
+		data-size='5'
+		data-live-search="true"
+		{% if props.selectWidth %} data-width="{{ props.selectWidth or '100%'}}"{% endif %}
+		{# {% if props.placeholder %} title="ready"{% endif %} #}
 	>
 		{% for option in props.values %}
 			<option value="{{ option }}">{{ option }}</option>
