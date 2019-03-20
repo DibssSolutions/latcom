@@ -49,7 +49,7 @@
 
 {% macro photo(props) %}
   <li class="photo-gallery__item">
-    <a href="#" class="photo">
+    <a href="#" class="photo" data-src="./img/{{ props.image }}" data-fancybox="gallery" data-name="{{ props.adress }}" data-location="{{ props.city or 'Buenos Aires'}}">
       <div
         class="photo__bg"
         style="background-image: url(./img/{{ props.image }})"
