@@ -30,11 +30,12 @@
 {% endmacro %}
 
 {% macro select(props) %}
-	<select class="js-select select{% if props.modifier %} select_{{ props.modifier }}{% endif %}"
+	<select class="js-select select{% if props.modifier %} select_{{ props.modifier }}{% endif %}{% if props.multiple %} show-tick{% endif %}"
 		data-size='5'
-		data-live-search="true"
+		{% if not props.checkboxes %} data-live-search="true"{% endif %}
+		{% if props.multiple %} multiple{% endif %}
 		{% if props.selectWidth %} data-width="{{ props.selectWidth or '100%'}}"{% endif %}
-		{# {% if props.placeholder %} title="ready"{% endif %} #}
+		{% if props.placeholder %} title="{{ props.placeholder }}"{% endif %}
 	>
 		{% for option in props.values %}
 			<option value="{{ option }}">{{ option }}</option>

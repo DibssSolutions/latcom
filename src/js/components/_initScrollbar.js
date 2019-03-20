@@ -8,23 +8,9 @@ DOC.ready(() => {
   } else {
     for (var i = 0; i <= containers.length - 1; i++) {
       containers[i].perfectScrollbar = new PerfectScrollbar(containers[i], {
-        // minScrollbarLength: 40,
-        useBothWheelAxes: false
+        useBothWheelAxes: false,
+        maxScrollbarLength: 60
       });
-      console.log('INIT PERF SCROLL');
     }
   }
-  // const shops = document.querySelector('.js-shops-scroll');
-  // if (!shops) {
-  //   return false;
-  // } else {
-  //   const shopsPs = new PerfectScrollbar(shops, {
-  //     useBothWheelAxes: false
-  //   });
-  //   $('.js-photo-gallery-trigger').on('click', function() {
-  //     setTimeout(() => {
-  //       shopsPs.update();
-  //     }, 200);
-  //   });
-  // }
 });

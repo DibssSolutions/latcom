@@ -18,10 +18,6 @@ $('[data-fancybox="gallery"]').fancybox({
     '</button>'
   },
   afterShow: function(instance, current) {
-    // this.content = '<h1>2. My custom title</h1>' + this.content.html();
-    // console.info(instance);
-    // console.info(current);
-    // console.log(current.opts.$orig[0]);
     let name = $(current.opts.$orig[0]).data('name');
     let location = $(current.opts.$orig[0]).data('location');
     let large = $(current.opts.$orig[0]).data('large-src');

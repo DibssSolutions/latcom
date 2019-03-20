@@ -9,21 +9,39 @@
 	+f(14px,500,1.35)
 
 .sidebar-form
-	.input-group 
+	.input-group
 		& + .input-group
 			margin-top: 24px
 	.dropdown-menu
 		padding: 10px
-		border-radius: 0 0 10px 10px
-		min-width: 200px
+		border-radius: $radius
+		min-width: 150px
+		margin: 5px 5px 5px 0
+	.filter-option
+		+text-overflow
+		max-width: 200px
+	.bs-searchbox
+		&:before
+			display: none
 
 .modal-form
 	text-align: left
-	.input-group 
+	.input-group
 		& + .input-group
 			margin-top: 36px
 	.dropdown-menu
 		border: none
+	.bs-searchbox
+		&:before
+			display: inline-block
+			content: ''
+			position: absolute
+			top: 0
+			height: 100%
+			width: 1px
+			background-color: #979797
+			+fadein
+			transition: opacity $tr, visibility $tr
 
 .input-group
 	.select
@@ -52,24 +70,71 @@
 			&:after
 				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath fill='%234a484a' transform='translate(-280 -565)' d='M290.3 566.452L288.879 565l-3.704 3.96-3.786-3.874-1.389 1.488 5.208 5.325z'/%3E%3C/svg%3E")
 
-.bootstrap-select 
-	.dropdown-toggle .filter-option-inner-inner
-		padding-right: 10px
-		color: $gray
-		font-family: $avenir
-		font-size: 17px
-		font-weight: 500
-	&.select_blue
-		.dropdown-toggle .filter-option-inner-inner
-			color: $blue
-			font-family: $avenir
-			font-size: 16px
-			font-weight: 600
-
 .bootstrap-select
+	.dropdown-toggle
+		.filter-option-inner-inner
+			padding-right: 10px
+			color: $gray
+			font-family: $avenir
+			font-size: 17px
+			font-weight: 500
+	&.select_blue
+		.dropdown-toggle
+			.filter-option-inner-inner
+				color: $blue
+				font-family: $avenir
+				font-size: 16px
+				font-weight: 600
 	.inner.show
 		padding: 0
 		position: relative
+		padding-right: 10px
+		& ul
+			padding-right: 0
+	.no-results
+		// max-width: 200px
+		display: block
+		padding: 3px 0
+		margin: 0
+		// background-color: red
+		position: relative
+		z-index: 1000
+		&:before
+			content: ''
+			position: absolute
+			left: 100%
+			top: 0
+			height: 100%
+			width: 6px
+			background-color: $white
+	&.show-tick
+		.dropdown-item
+			padding-left: 20px
+			&.selected
+				font-weight: 700
+				span.check-mark
+					top: 50%
+					right: auto
+					&:before
+						+fadein
+			span.check-mark
+				display: block
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				margin-top: -1px
+				left: 0
+				width: 14px
+				height: 14px
+				border: 1px solid #7d7d7d
+				border-radius: 2px
+				&:before
+					content: ''
+					+vcenter
+					width: 6px
+					height: 6px
+					background-color: $blue
+					+fadeout($tr)
 
 .dropdown
 	&.show
@@ -77,15 +142,33 @@
 			&:after
 				transform: rotate(180deg)
 
-.bootstrap-select .dropdown-toggle:focus, .bootstrap-select>select.mobile-device:focus+.dropdown-toggle
-	outline: none !important
+.bootstrap-select
+	.dropdown-toggle:focus,
+	& > select.mobile-device:focus + .dropdown-toggle
+		outline: none !important
 
 .dropdown-menu
-	z-index: 6
-	margin: 0 5px 0 0
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19)
 	border-radius: 10px
 	box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.19)
-	border-radius: 0
+		// .bs-searchbox
+		// 	&:before
+		// 		opacity: 0
+		// 		visibility: hidden
+	.bs-searchbox
+		position: relative
+		padding: 4px 0
+		// &.is-active
+		// 	&:before
+		// 		opacity: 0
+		// 		visibility: hidden
+		.form-control
+			height: 20px
+			opacity: 0.41
+			color: #2e2e2e
+			font-family: $avenir
+			font-size: 14px
+			font-weight: 500
 
 .dropdown-item
 	color: $lightGrey
@@ -93,41 +176,25 @@
 	font-size: 14px
 	font-weight: 500
 	padding: 6px 0
-
-.bs-searchbox
-	position: relative
-	padding: 4px 0
-	&:before
-		display: inline-block
-		content: ''
-		position: absolute
-		left: -10px
-		top: 0
-		height: 100%
-		width: 1px
-		background-color: #979797
-	.form-control
-		height: 20px
-		opacity: 0.41
-		color: #2e2e2e
-		font-family: $avenir
-		font-size: 14px
-		font-weight: 500
-
-// .bootstrap-select .dropdown-menu li
-// 	margin-right: 5px
-
-.dropdown-item.active,
-.dropdown-item:active
-	background-color: transparent
-	font-weight: 700
-	color: $black
+	&.active,
+	&:active
+		background-color: transparent
+		font-weight: 700
+		color: $black
 
 .ps__thumb-x,
 .ps__thumb-y
 	background-color: $blue
 	right: 0
 	transition: opacity $tr
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: -4px
+		right: -4px
+		height: 100%
+		background-color: transparent
 
 .ps__rail-y
 	opacity: 1
@@ -136,13 +203,24 @@
 .ps__rail-y:focus>.ps__thumb-y,
 .ps__rail-y:hover>.ps__thumb-y
 	width: 6px
-	opacity: 0.8
 	background-color: $blue
 
-.ps 
+.ps--focus>.ps__rail-x,
+.ps--focus>.ps__rail-y,
+.ps--scrolling-x>.ps__rail-x,
+.ps--scrolling-y>.ps__rail-y,
+.ps:hover>.ps__rail-x,
+.ps:hover>.ps__rail-y
+	opacity: 1
+	background-color: #d8d8d8
+
+.ps
+	.ps__rail-x
+		display: none
 	&.ps--active-y
 		.ps__rail-y
 			left: auto !important
 			right: -5px
 			width: 5px
+			border-radius: 3px
 			z-index: 100

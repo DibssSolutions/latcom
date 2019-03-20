@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
         <path id="a" d="M295 891v-4h12v-12h4v12h12v4h-12v12h-4v-12z"/>
-    </defs><symbol id="icon-arrow" viewBox="0 0 11 7">
+    </defs><symbol id="icon-add" viewBox="0 0 12 13">
+    <path d="M6 .78a.695.695 0 0 0-.696.695v4.519H.785a.695.695 0 1 0 0 1.39h4.519v4.519a.695.695 0 1 0 1.39 0V7.384h4.519a.695.695 0 1 0 0-1.39H6.694V1.475A.695.695 0 0 0 5.999.78z"/>
+</symbol><symbol id="icon-arrow" viewBox="0 0 11 7">
     <title>
         Fill 1
     </title>
