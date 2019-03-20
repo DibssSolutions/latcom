@@ -1,0 +1,110 @@
+{# {% import "partials/_mixins.html" as mixins %}
+
+{% macro photo(props) %}
+  <li class="photo-gallery__item">
+    <a href="#" class="photo">
+      <div
+        class="photo__bg"
+        style="background-image: url(./img/photo{{ props.image }}.png)"
+      ></div>
+      <div class="photo__bottom">
+        <div class="photo-bottom-adress">
+          <span class="adress-number">{{ props.number }}</span>
+          <span class="adress-street">{{ props.street }}</span>
+          {% if props.apartment %}
+            <span class="adress-apartment">Apt. {{ props.apartment }}</span>
+          {% endif %}
+        </div>
+      </div>
+      <div class="photo__center">
+        <div class="photo-center-adress">
+          <div class="photo-center-adress__title">
+            <span class="adress-number">{{ props.number }}</span>
+            <span class="adress-street">{{ props.street }}</span>
+          </div>
+          <div class="adress-city">{{ props.city or 'Buenos Aires'}}</div>
+          <span class="photo-info">{{ props.format or 'Gran formato' }}</span>
+        </div>
+      </div>
+      <div class="photo__add">
+        {{ mixins.icon("add") }}
+      </div>
+    </a>
+  </li>
+{% endmacro %}
+
+
+<ul class="photo-gallery">
+  {% for item in [ 
+    {
+      image: 'photo_1.png',
+      number: 916,
+      street: '916 Minnie Gardens Apt. 180'
+    }
+  ] %} {% endfor %}
+</ul> #}
+
+
+{% import "partials/_mixins.html" as mixins %}
+
+{% macro photo(props) %}
+  <li class="photo-gallery__item">
+    <a href="#" class="photo">
+      <div
+        class="photo__bg"
+        style="background-image: url(./img/{{ props.image }})"
+      ></div>
+      <div class="photo__bottom">
+        {{ props.adress }}
+      </div>
+      <div class="photo__center">
+          <div class="photo__text-big">{{ props.adress }}</div>
+          <div class="photo-city">{{ props.city or 'Buenos Aires'}}</div>
+          <div class="photo-info">{{ props.format or 'Gran formato' }}</div>
+      </div>
+      <div class="photo__add">
+        {{ mixins.icon("add") }}
+      </div>
+    </a>
+  </li>
+{% endmacro %}
+
+
+<ul class="photo-gallery">
+  {% for item in [ 
+    {
+      image: 'photo_1.png',
+      adress: '916 Minnie Gardens Apt. 180'
+    },
+    {
+      image: 'photo_2.png',
+      adress: '3557 Carleton Manors'
+    },
+    {
+      image: 'photo_3.png',
+      adress: '391 Nitzsche Islands'
+    },
+    {
+      image: 'photo_4.png',
+      adress: '047 Angela Branch'
+    },
+    {
+      image: 'photo_1.png',
+      adress: '2354 Denesik Avenue Apt. 067'
+    },
+    {
+      image: 'photo_2.png',
+      adress: '34 May Mount'
+    },
+    {
+      image: 'photo_3.png',
+      adress: '447 Orion Parkways'
+    },
+    {
+      image: 'photo_4.png',
+      adress: '15 Reichert Estate Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque recusandae modi qui sapiente esse placeat repudiandae nostrum, debitis' 
+    }
+  ] %} 
+    {{ photo(item) }}
+  {% endfor %}
+</ul>

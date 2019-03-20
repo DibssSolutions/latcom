@@ -38,7 +38,7 @@ title: Index page
 						] %}
 						<li class="megamenu__item col col-6">
 							<!-- begin item -->
-							<a href="#" class="item" data-modal-control="selectsModal">
+							<a href="#" class="item">
 								<span class="item__content">
 									<span class="item__name">{{ item.name }}</span>
 									<span class="item__icon"><img src="./img/{{ item.icon }}.svg" alt="{ item.icon }}"></span>
@@ -49,6 +49,7 @@ title: Index page
 						{% endfor %}
 					</ul>
 				</nav>
+				{% include "partials/_photo-gallery.html" %}
 				<!-- end items -->
 			</div>
 		</div>

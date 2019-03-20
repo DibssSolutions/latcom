@@ -5,7 +5,7 @@
 			{% for item in [
 				{
 					label: 'Cuenta',
-					options: [ 'McDonalds', 'MacFoxy', 'Puzata Khata', 'LOOOOOOONG WORD' ]
+					options: [ 'McDonalds', 'MacFoxy', 'Puzata Khata', 'LOOOOOOONG WORDDDDDDDDDDDDDD' ]
 				},
 				{
 					label: 'País',
@@ -13,14 +13,39 @@
 				},
 				{
 					label: 'Campaña',
-					options: [ 'Mc Precios 2017', 'Mc Precios 2018', 'Mc Precios 2019', 'Mc Precios 2017', 'Mc Precios 2018', 'Mc Precios 2019', 'Mc Precios 2017', 'Mc Precios 2018', 'Mc Precios 2019' ]
+					options: [ 
+						'Mc Precios 2017', 
+						'Mc Precios 2018',
+						'Mc Precios 2019', 
+						'Mc Precios 2017', 
+						'Mc Precios 2018', 
+						'Mc Precios 2019',
+						'Mc Precios 2017', 
+						'Mc Precios 2018', 
+						'Mc Precios 2019' ]
+				},
+				{
+					label: 'Columnas',
+					options: [ 
+						'Soporte', 
+						'Dirección', 
+						'Comienza', 
+						'Finaliza', 
+						'OTS por día'
+					],
+					multiple: true,
+					checkboxes: true,
+					placeholder: 'Select something'
 				}
 			] %}
 				<div class="input-group">
 					<label class="label">{{ item.label }}</label>
 					{{ mixins.select({
 						values: item.options,
-						selectWidth: 'fit'
+						selectWidth: 'fit',
+						multiple: item.multiple,
+						checkboxes: item.checkboxes,
+						placeholder: item.placeholder
 					}) }}
 				</div>
 			{% endfor %}
@@ -29,6 +54,7 @@
 			</div>
 		</form>
 	</div>
+	<a href="#" class="test-modal"data-modal-control="selectsModal">TEST MODAL</a>
 	<div class="sidebar__bottom">
 		<!-- begin links -->
 		<ul class="links">
