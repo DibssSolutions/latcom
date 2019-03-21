@@ -184,8 +184,8 @@
               </ul>
             </nav>
             <ul class="photo-gallery">
-              <li class="photo-gallery__item">
-                <a href="#" class="photo" data-src="./img/photo_1.png" data-fancybox="gallery" data-name="916 Minnie Gardens Apt. 180" data-location="Buenos Aires">
+              <li class="photo-gallery__item js-gallery-trigger" data-modal-control="img-slider">
+                <a href="#" class="photo">
                   <div class="photo__bg" style="background-image: url(./img/photo_1.png)"></div>
                   <div class="photo__bottom"> 916 Minnie Gardens Apt. 180 </div>
                   <div class="photo__center">
@@ -200,8 +200,8 @@
                   </div>
                 </a>
               </li>
-              <li class="photo-gallery__item">
-                <a href="#" class="photo" data-src="./img/photo_2.png" data-fancybox="gallery" data-name="3557 Carleton Manors" data-location="Buenos Aires">
+              <li class="photo-gallery__item js-gallery-trigger" data-modal-control="img-slider">
+                <a href="#" class="photo">
                   <div class="photo__bg" style="background-image: url(./img/photo_2.png)"></div>
                   <div class="photo__bottom"> 3557 Carleton Manors </div>
                   <div class="photo__center">
@@ -216,8 +216,8 @@
                   </div>
                 </a>
               </li>
-              <li class="photo-gallery__item">
-                <a href="#" class="photo" data-src="./img/photo_3.png" data-fancybox="gallery" data-name="391 Nitzsche Islands" data-location="Buenos Aires">
+              <li class="photo-gallery__item js-gallery-trigger" data-modal-control="img-slider">
+                <a href="#" class="photo">
                   <div class="photo__bg" style="background-image: url(./img/photo_3.png)"></div>
                   <div class="photo__bottom"> 391 Nitzsche Islands </div>
                   <div class="photo__center">
@@ -232,8 +232,8 @@
                   </div>
                 </a>
               </li>
-              <li class="photo-gallery__item">
-                <a href="#" class="photo" data-src="./img/photo_4.png" data-fancybox="gallery" data-name="047 Angela Branch" data-location="Buenos Aires">
+              <li class="photo-gallery__item js-gallery-trigger" data-modal-control="img-slider">
+                <a href="#" class="photo">
                   <div class="photo__bg" style="background-image: url(./img/photo_4.png)"></div>
                   <div class="photo__bottom"> 047 Angela Branch </div>
                   <div class="photo__center">
@@ -248,8 +248,8 @@
                   </div>
                 </a>
               </li>
-              <li class="photo-gallery__item">
-                <a href="#" class="photo" data-src="./img/photo_1.png" data-fancybox="gallery" data-name="2354 Denesik Avenue Apt. 067" data-location="Buenos Aires">
+              <li class="photo-gallery__item js-gallery-trigger" data-modal-control="img-slider">
+                <a href="#" class="photo">
                   <div class="photo__bg" style="background-image: url(./img/photo_1.png)"></div>
                   <div class="photo__bottom"> 2354 Denesik Avenue Apt. 067 </div>
                   <div class="photo__center">
@@ -264,8 +264,8 @@
                   </div>
                 </a>
               </li>
-              <li class="photo-gallery__item">
-                <a href="#" class="photo" data-src="./img/photo_2.png" data-fancybox="gallery" data-name="34 May Mount" data-location="Buenos Aires">
+              <li class="photo-gallery__item js-gallery-trigger" data-modal-control="img-slider">
+                <a href="#" class="photo">
                   <div class="photo__bg" style="background-image: url(./img/photo_2.png)"></div>
                   <div class="photo__bottom"> 34 May Mount </div>
                   <div class="photo__center">
@@ -280,8 +280,8 @@
                   </div>
                 </a>
               </li>
-              <li class="photo-gallery__item">
-                <a href="#" class="photo" data-src="./img/photo_3.png" data-fancybox="gallery" data-name="447 Orion Parkways" data-location="Buenos Aires">
+              <li class="photo-gallery__item js-gallery-trigger" data-modal-control="img-slider">
+                <a href="#" class="photo">
                   <div class="photo__bg" style="background-image: url(./img/photo_3.png)"></div>
                   <div class="photo__bottom"> 447 Orion Parkways </div>
                   <div class="photo__center">
@@ -296,8 +296,8 @@
                   </div>
                 </a>
               </li>
-              <li class="photo-gallery__item">
-                <a href="#" class="photo" data-src="./img/photo_4.png" data-fancybox="gallery" data-name="15 Reichert Estate Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque recusandae modi qui sapiente esse placeat repudiandae nostrum, debitis" data-location="Buenos Aires">
+              <li class="photo-gallery__item js-gallery-trigger" data-modal-control="img-slider">
+                <a href="#" class="photo">
                   <div class="photo__bg" style="background-image: url(./img/photo_4.png)"></div>
                   <div class="photo__bottom"> 15 Reichert Estate Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque recusandae modi qui sapiente esse placeat repudiandae nostrum, debitis </div>
                   <div class="photo__center">
@@ -313,6 +313,77 @@
                 </a>
               </li>
             </ul>
+            <div class="js-gallery-trigger" data-modal-control="map-slider">slider</div>
+            <div class="js-slides-wrapper" data-slider-wrapper="map-slider" style="display: none">
+              <div class="map-slide js-map-slide">
+                <div class="map-slide__wrapper">
+                  <div class="map-slide__info">
+                    <div class="map-slide__name">Street Furniture</div>
+                    <div class="map-slide__format">Formatio medio</div>
+                    <div class="map-slide__details">
+                      <div class="map-slide__city">Rio de Janeiro, Brasil</div>
+                      <div class="map-slide__street">1652 Alexa Row</div>
+                      <div class="map-slide__period">10/20/2018 - 11/24/2018</div>
+                    </div>
+                    <div class="map-slide__img">
+                      <img src="./img/img1.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="map-slide__map map js-map-modal" data-center-lat="50.451767" data-center-lng="30.521038" data-json="./json/search-map.json"></div>
+                </div>
+              </div>
+              <div class="map-slide js-map-slide">
+                <div class="map-slide__wrapper">
+                  <div class="map-slide__info">
+                    <div class="map-slide__name">Street Furniture</div>
+                    <div class="map-slide__format">Formatio medio</div>
+                    <div class="map-slide__details">
+                      <div class="map-slide__city">Rio de Janeiro, Brasil</div>
+                      <div class="map-slide__street">1652 Alexa Row</div>
+                      <div class="map-slide__period">10/20/2018 - 11/24/2018</div>
+                    </div>
+                    <div class="map-slide__img">
+                      <img src="./img/photo_1.png" alt="">
+                    </div>
+                  </div>
+                  <div class="map-slide__map map js-map-modal" data-center-lat="50.451767" data-center-lng="30.521038" data-json="./json/search-map.json"></div>
+                </div>
+              </div>
+            </div>
+            <div class="js-slides-wrapper" data-slider-wrapper="img-slider" style="display: none">
+              <div class="img-slide">
+                <div class="img-slide__photo">
+                  <img src="./img/img1.jpg" alt="img">
+                </div>
+                <div class="img-slide__bottom">
+                  <div class="img-slide__left">
+                    <div class="img-slide__name">Mc Precios 2018 - 004</div>
+                    <div class="img-slide__location">Buenos Aires</div>
+                    <a href="#" class="img-slide__link">Gran formato</a>
+                  </div>
+                  <div class="img-slide__right">
+                    <a href="#" class="img-slide__link img-slide__ref">Descargar foto</a>
+                    <a href="#" class="img-slide__link img-slide__ref">Descargar todo el álbum</a>
+                  </div>
+                </div>
+              </div>
+              <div class="img-slide">
+                <div class="img-slide__photo">
+                  <img src="./img/img1.jpg" alt="img">
+                </div>
+                <div class="img-slide__bottom">
+                  <div class="img-slide__left">
+                    <div class="img-slide__name">2</div>
+                    <div class="img-slide__location">Buenos Aires</div>
+                    <a href="#" class="img-slide__link">Gran formato</a>
+                  </div>
+                  <div class="img-slide__right">
+                    <a href="#" class="img-slide__link img-slide__ref">Descargar foto</a>
+                    <a href="#" class="img-slide__link img-slide__ref">Descargar todo el álbum</a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <!-- end items -->
           </div>
         </div>
@@ -363,9 +434,60 @@
           </div>
         </div>
       </div>
+      <div class="modal-slider js-modal-slider-parent" data-modal="map-slider">
+        <div class="modal-slider__container" data-modal-container>
+          <div class="modal-slider__inner">
+            <button class="modal-slider__next js-modal-slider-next">
+              <svg class="icon icon-arrow-next">
+                <use xlink:href="img/sprite.svg#icon-arrow-next"></use>
+              </svg>
+            </button>
+            <button class="modal-slider__prev js-modal-slider-prev">
+              <svg class="icon icon-arrow-prev">
+                <use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
+              </svg>
+            </button>
+            <button class="modal-slider__close" data-modal-close>
+              <svg class="icon icon-close-thin">
+                <use xlink:href="img/sprite.svg#icon-close-thin"></use>
+              </svg>
+            </button>
+            <div class="modal-slider__slider js-modal-slider"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-slider js-modal-slider-parent" data-modal="img-slider">
+        <div class="modal-slider__container modal-slider__container_small" data-modal-container>
+          <div class="modal-slider__inner">
+            <button class="modal-slider__next js-modal-slider-next">
+              <svg class="icon icon-arrow-next">
+                <use xlink:href="img/sprite.svg#icon-arrow-next"></use>
+              </svg>
+            </button>
+            <button class="modal-slider__prev js-modal-slider-prev">
+              <svg class="icon icon-arrow-prev">
+                <use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
+              </svg>
+            </button>
+            <button class="modal-slider__close" data-modal-close>
+              <svg class="icon icon-close-thin">
+                <use xlink:href="img/sprite.svg#icon-close-thin"></use>
+              </svg>
+            </button>
+            <div class="modal-slider__slider js-modal-slider"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
+    <script type="text/template" id="infobox"> <div class="baloon">
+        <button class="baloon__close js-infobox-close"></button>
+        <div className="baloon__content">
+          
+        </div>
+      </div>
+    </script>
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
   </body>
