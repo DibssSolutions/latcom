@@ -1,0 +1,47 @@
+.fancy-bottom
+    position: absolute
+    padding: 13px 0
+    top: 100%
+    left: 0
+    width: 100%
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+    color: $white
+    font-size: 13px
+    font-weight: 500
+    font-family: $avenir
+    &__name
+        font-weight: 700
+    &__link
+        display: block
+        color: $white
+        font-size: 13px
+    &__right
+        display: flex
+    &__ref
+        position: relative
+        &:not(:first-child)
+            padding-left: 33px
+            &:before
+                content: ''
+                position: absolute
+                height: 14px
+                width: 1px
+                top: 50%
+                left: 16px
+                transform: translateY(-50%)
+                background-color: rgba(#D8D8D8,.4)
+.fancy-close
+    position: absolute
+    top: -47px
+    right: -50px
+    cursor: pointer
+.fancybox-slide
+    padding: 0 55px
+.fancybox-navigation
+    .fancybox-button
+        background: none
+        width: 26px
+        height: 40px
