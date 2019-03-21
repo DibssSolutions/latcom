@@ -1,0 +1,24 @@
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="inner">
+		{% include "partials/_header.html" %}
+		<div class="wrap">
+			{% include "partials/_sidebar.html" %}
+			<div class="main">
+				<!-- begin head -->
+				{{ mixins.head({ 
+          title: 'Mc Precios 2018',
+          links: true,
+          currentPage: 'fotos'
+        }) }}
+				<!-- end head -->
+				{% include "partials/_photo-gallery.html" %}
+				<!-- end items -->
+			</div>
+		</div>
+	</div>
+	{% include "partials/_modals.html" %}
+{% endblock %}

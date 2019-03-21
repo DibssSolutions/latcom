@@ -1,0 +1,544 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Listado page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <div class="inner">
+        <!-- begin header -->
+        <header class="header">
+          <div class="header__left">
+            <!-- begin logo -->
+            <a href="#" class="logo">
+              <h1 class="logo__text">Latcom</h1>
+              <img src="./img/logo.svg" alt="logo">
+            </a>
+            <!-- end logo -->
+          </div>
+          <div class="header__main">
+            <div class="header__search">
+              <!-- begin search -->
+              <form class="search">
+                <div class="search__input">
+                  <input type="text" placeholder="Buscar cuentas, campañas o países">
+                </div>
+                <button class="search__button" type="button">
+                  <svg class="icon icon-search">
+                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </form>
+              <!-- end search -->
+            </div>
+            <div class="header__account">
+              <!-- begin account -->
+              <div class="account">
+                <button class="account__top" type="button">
+                  <span class="account__avatar" style="background-image: url(./img/avatar.png);"></span>
+                  <span class="account__current">
+                    <span class="account__name">José Cabrera</span>
+                    <span class="account__arrow">
+                      <svg class="icon icon-arrow">
+                        <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                      </svg>
+                    </span>
+                  </span>
+                </button>
+                <ul class="account__list">
+                  <li class="account__item"></li>
+                </ul>
+              </div>
+              <!-- end account -->
+            </div>
+          </div>
+        </header>
+        <!-- end header -->
+        <div class="wrap">
+          <!-- begin sidebar -->
+          <div class="sidebar">
+            <div class="sidebar__top">
+              <form class="sidebar-form">
+                <div class="input-group">
+                  <label class="label">Cuenta</label>
+                  <select class="js-select select" data-size='5' data-live-search="true" data-width="fit">
+                    <option value="McDonalds">McDonalds</option>
+                    <option value="MacFoxy">MacFoxy</option>
+                    <option value="Puzata Khata">Puzata Khata</option>
+                    <option value="LOOOOOOONG WORDDDDDDDDDDDDDD">LOOOOOOONG WORDDDDDDDDDDDDDD</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <label class="label">País</label>
+                  <select class="js-select select" data-size='5' data-live-search="true" data-width="fit">
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Urugway">Urugway</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <label class="label">Campaña</label>
+                  <select class="js-select select" data-size='5' data-live-search="true" data-width="fit">
+                    <option value="Mc Precios 2017">Mc Precios 2017</option>
+                    <option value="Mc Precios 2018">Mc Precios 2018</option>
+                    <option value="Mc Precios 2019">Mc Precios 2019</option>
+                    <option value="Mc Precios 2017">Mc Precios 2017</option>
+                    <option value="Mc Precios 2018">Mc Precios 2018</option>
+                    <option value="Mc Precios 2019">Mc Precios 2019</option>
+                    <option value="Mc Precios 2017">Mc Precios 2017</option>
+                    <option value="Mc Precios 2018">Mc Precios 2018</option>
+                    <option value="Mc Precios 2019">Mc Precios 2019</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <label class="label">Columnas</label>
+                  <select class="js-select select show-tick" data-size='5' multiple data-width="fit" title="Select something">
+                    <option value="Soporte">Soporte</option>
+                    <option value="Dirección">Dirección</option>
+                    <option value="Comienza">Comienza</option>
+                    <option value="Finaliza">Finaliza</option>
+                    <option value="OTS por día">OTS por día</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <label class="label"></label>
+                </div>
+              </form>
+            </div>
+            <div class="sidebar__bottom">
+              <!-- begin links -->
+              <ul class="links">
+                <li class="links__item">
+                  <a href="#">Ayuda</a>
+                </li>
+                <li class="links__item">
+                  <a href="#">Perfil</a>
+                </li>
+                <li class="links__item">
+                  <a href="#">Cerrar sesión</a>
+                </li>
+              </ul>
+              <!-- end links -->
+            </div>
+          </div>
+          <!-- end sidebar -->
+          <div class="main">
+            <!-- begin head -->
+            <div class="head">
+              <h2 class="title">Mc Precios 2018</h2>
+              <nav class="head-links">
+                <ul class="head-links__list">
+                  <li class="head-links__item">
+                    <a href="reportes.html" class="btn">
+                      <span class="btn__text">Reportes</span>
+                      <span class="btn__icon">
+                        <img src="./img/reportes.svg" alt="reportes">
+                      </span>
+                    </a>
+                  </li>
+                  <li class="head-links__item">
+                    <a href="fotos.html" class="btn">
+                      <span class="btn__text">Fotos</span>
+                      <span class="btn__icon">
+                        <img src="./img/fotos.svg" alt="fotos">
+                      </span>
+                    </a>
+                  </li>
+                  <li class="head-links__item">
+                    <a href="mapa.html" class="btn">
+                      <span class="btn__text">Mapa</span>
+                      <span class="btn__icon">
+                        <img src="./img/mapa.svg" alt="mapa">
+                      </span>
+                    </a>
+                  </li>
+                  <li class="head-links__item">
+                    <a href="listado.html" class="btn is-active">
+                      <span class="btn__text">Listado</span>
+                      <span class="btn__icon">
+                        <img src="./img/listado.svg" alt="listado">
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="mobile-filters-wrapper js-filters-wrapper">
+              <div class="filters-section-wrapper">
+                <div class="filters-section js-filters">
+                  <h3 class="filters-section__title title-md">Listado de soportes</h3>
+                  <div class="filters-section__search">
+                    <form class="search search_small">
+                      <div class="search__input">
+                        <input type="text" placeholder="Buscar soportes">
+                      </div>
+                      <button class="search__button" type="button">
+                        <svg class="icon icon-search">
+                          <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </div>
+                  <div class="filters-section__filters">
+                    <div class="filters">
+                      <div class="filters__item">
+                        <div class="input-group">
+                          <label class="label">Categoría</label>
+                          <select class="js-select select select_blue" data-size='5' data-live-search="true" data-width="fit" title="Todas">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="filters__item">
+                        <div class="input-group">
+                          <label class="label">Ciudad</label>
+                          <select class="js-select select select_blue" data-size='5' data-live-search="true" data-width="fit" title="Todas">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="filters__item">
+                        <div class="input-group">
+                          <label class="label">Dirección</label>
+                          <select class="js-select select select_blue" data-size='5' data-live-search="true" data-width="fit" title="Todas">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="close-mob-filters-btn js-filters-close">
+                    <svg class="icon icon-close">
+                      <use xlink:href="img/sprite.svg#icon-close"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="filters__fab js-filters-open">
+                <a href="#" class="fab">
+                  <svg class="icon icon-fab-filter">
+                    <use xlink:href="img/sprite.svg#icon-fab-filter"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <!-- end head -->
+            <section class="list-section">
+              <h3 class="list-section__title">Buenos Aires</h3>
+              <div class="accordion js-accordion is-open">
+                <a href="#" class="accordion__trigger js-accordion-trigger">
+                  <span class="list-head">
+                    <span class="list-head__plus"></span>
+                    <span class="list-head__title"> Gran formato </span>
+                    <span class="list-head__counter"> (4) </span>
+                  </span>
+                </a>
+                <div class="accordion__content js-accordion-wrap">
+                  <div class="list-table">
+                    <div class="list-table__tr list-table__tr_head">
+                      <div class="list-table__counter">#</div>
+                      <div class="list-table__soporte">
+                        <button class="list-sort-btn js-table-sort-btn" type='button'>
+                          <span>Soporte</span>
+                        </button>
+                      </div>
+                      <div class="list-table__direccion">Dirección</div>
+                      <div class="list-table__comienza">Comienza</div>
+                      <div class="list-table__finaliza">Finaliza</div>
+                      <div class="list-table__ots">OTS por día</div>
+                    </div>
+                    <div class="list-table__tr">
+                      <div class="list-table__counter">1</div>
+                      <div class="list-table__soporte">Street Furniture</div>
+                      <div class="list-table__direccion">781 Leatha Camp</div>
+                      <div class="list-table__comienza">05/10/2018</div>
+                      <div class="list-table__finaliza">08/31/2018</div>
+                      <div class="list-table__ots">5500</div>
+                      <div class="list-table__eye">
+                        <svg class="icon icon-eye">
+                          <use xlink:href="img/sprite.svg#icon-eye"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="list-table__tr">
+                      <div class="list-table__counter">2</div>
+                      <div class="list-table__soporte">Street Furniture</div>
+                      <div class="list-table__direccion">1652 Alexa Row</div>
+                      <div class="list-table__comienza">11/07/2018</div>
+                      <div class="list-table__finaliza">12/05/2018</div>
+                      <div class="list-table__ots">4500</div>
+                      <div class="list-table__eye">
+                        <svg class="icon icon-eye">
+                          <use xlink:href="img/sprite.svg#icon-eye"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="list-table__tr">
+                      <div class="list-table__counter">3</div>
+                      <div class="list-table__soporte">Street Furniture</div>
+                      <div class="list-table__direccion">655 Bins Forge</div>
+                      <div class="list-table__comienza">12/31/2018</div>
+                      <div class="list-table__finaliza">07/03/2018</div>
+                      <div class="list-table__ots">5500</div>
+                      <div class="list-table__eye">
+                        <svg class="icon icon-eye">
+                          <use xlink:href="img/sprite.svg#icon-eye"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="list-table__tr">
+                      <div class="list-table__counter">4</div>
+                      <div class="list-table__soporte">274 Donna Mall</div>
+                      <div class="list-table__direccion">1652 Alexa Row</div>
+                      <div class="list-table__comienza">05/13/2018</div>
+                      <div class="list-table__finaliza">09/28/2018</div>
+                      <div class="list-table__ots">4000</div>
+                      <div class="list-table__eye">
+                        <svg class="icon icon-eye">
+                          <use xlink:href="img/sprite.svg#icon-eye"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion js-accordion">
+                <a href="#" class="accordion__trigger js-accordion-trigger">
+                  <span class="list-head">
+                    <span class="list-head__plus"></span>
+                    <span class="list-head__title"> Formato medio </span>
+                    <span class="list-head__counter"> (12) </span>
+                  </span>
+                </a>
+                <div class="accordion__content js-accordion-wrap">
+                  <div class="list-table">
+                    <div class="list-table__tr list-table__tr_head">
+                      <div class="list-table__counter">#</div>
+                      <div class="list-table__soporte">
+                        <button class="list-sort-btn js-table-sort-btn" type='button'>
+                          <span>Soporte</span>
+                        </button>
+                      </div>
+                      <div class="list-table__direccion">Dirección</div>
+                      <div class="list-table__comienza">Comienza</div>
+                      <div class="list-table__finaliza">Finaliza</div>
+                      <div class="list-table__ots">OTS por día</div>
+                    </div>
+                    <div class="list-table__tr">
+                      <div class="list-table__counter">1</div>
+                      <div class="list-table__soporte">Street Furniture</div>
+                      <div class="list-table__direccion">781 Leatha Camp</div>
+                      <div class="list-table__comienza">05/10/2018</div>
+                      <div class="list-table__finaliza">08/31/2018</div>
+                      <div class="list-table__ots">5500</div>
+                      <div class="list-table__eye">
+                        <svg class="icon icon-eye">
+                          <use xlink:href="img/sprite.svg#icon-eye"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="list-table__tr">
+                      <div class="list-table__counter">2</div>
+                      <div class="list-table__soporte">Street Furniture</div>
+                      <div class="list-table__direccion">1652 Alexa Row</div>
+                      <div class="list-table__comienza">11/07/2018</div>
+                      <div class="list-table__finaliza">12/05/2018</div>
+                      <div class="list-table__ots">4500</div>
+                      <div class="list-table__eye">
+                        <svg class="icon icon-eye">
+                          <use xlink:href="img/sprite.svg#icon-eye"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="list-table__tr">
+                      <div class="list-table__counter">3</div>
+                      <div class="list-table__soporte">Street Furniture</div>
+                      <div class="list-table__direccion">655 Bins Forge</div>
+                      <div class="list-table__comienza">12/31/2018</div>
+                      <div class="list-table__finaliza">07/03/2018</div>
+                      <div class="list-table__ots">5500</div>
+                      <div class="list-table__eye">
+                        <svg class="icon icon-eye">
+                          <use xlink:href="img/sprite.svg#icon-eye"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="list-table__tr">
+                      <div class="list-table__counter">4</div>
+                      <div class="list-table__soporte">274 Donna Mall</div>
+                      <div class="list-table__direccion">1652 Alexa Row</div>
+                      <div class="list-table__comienza">05/13/2018</div>
+                      <div class="list-table__finaliza">09/28/2018</div>
+                      <div class="list-table__ots">4000</div>
+                      <div class="list-table__eye">
+                        <svg class="icon icon-eye">
+                          <use xlink:href="img/sprite.svg#icon-eye"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion js-accordion">
+                <a href="#" class="accordion__trigger js-accordion-trigger">
+                  <span class="list-head">
+                    <span class="list-head__plus"></span>
+                    <span class="list-head__title"> Formato pequeño </span>
+                    <span class="list-head__counter"> (7) </span>
+                  </span>
+                </a>
+                <div class="accordion__content js-accordion-wrap">
+                  <div class="list-table">
+                    <div class="list-table__tr list-table__tr_head">
+                      <div class="list-table__counter">#</div>
+                      <div class="list-table__soporte">
+                        <button class="list-sort-btn js-table-sort-btn" type='button'>
+                          <span>Soporte</span>
+                        </button>
+                      </div>
+                      <div class="list-table__direccion">Dirección</div>
+                      <div class="list-table__comienza">Comienza</div>
+                      <div class="list-table__finaliza">Finaliza</div>
+                      <div class="list-table__ots">OTS por día</div>
+                    </div>
+                    <div class="list-table__tr">
+                      <div class="list-table__counter">1</div>
+                      <div class="list-table__soporte">Street Furniture</div>
+                      <div class="list-table__direccion">781 Leatha Camp</div>
+                      <div class="list-table__comienza">05/10/2018</div>
+                      <div class="list-table__finaliza">08/31/2018</div>
+                      <div class="list-table__ots">5500</div>
+                      <div class="list-table__eye">
+                        <svg class="icon icon-eye">
+                          <use xlink:href="img/sprite.svg#icon-eye"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="list-table__tr">
+                      <div class="list-table__counter">2</div>
+                      <div class="list-table__soporte">Street Furniture</div>
+                      <div class="list-table__direccion">1652 Alexa Row</div>
+                      <div class="list-table__comienza">11/07/2018</div>
+                      <div class="list-table__finaliza">12/05/2018</div>
+                      <div class="list-table__ots">4500</div>
+                      <div class="list-table__eye">
+                        <svg class="icon icon-eye">
+                          <use xlink:href="img/sprite.svg#icon-eye"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="list-table__tr">
+                      <div class="list-table__counter">3</div>
+                      <div class="list-table__soporte">Street Furniture</div>
+                      <div class="list-table__direccion">655 Bins Forge</div>
+                      <div class="list-table__comienza">12/31/2018</div>
+                      <div class="list-table__finaliza">07/03/2018</div>
+                      <div class="list-table__ots">5500</div>
+                      <div class="list-table__eye">
+                        <svg class="icon icon-eye">
+                          <use xlink:href="img/sprite.svg#icon-eye"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="list-table__tr">
+                      <div class="list-table__counter">4</div>
+                      <div class="list-table__soporte">274 Donna Mall</div>
+                      <div class="list-table__direccion">1652 Alexa Row</div>
+                      <div class="list-table__comienza">05/13/2018</div>
+                      <div class="list-table__finaliza">09/28/2018</div>
+                      <div class="list-table__ots">4000</div>
+                      <div class="list-table__eye">
+                        <svg class="icon icon-eye">
+                          <use xlink:href="img/sprite.svg#icon-eye"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- end items -->
+          </div>
+        </div>
+      </div>
+      <div class="modal" data-modal="selectsModal">
+        <div class="modal__container" data-modal-container>
+          <div class="modal__inner">
+            <button class="modal__close" data-modal-close>
+              <svg class="icon icon-close">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <form class="modal-form">
+              <div class="input-group">
+                <label class="label">Cuenta</label>
+                <select class="js-select select select_blue" data-size='5' data-live-search="true" data-width="100%">
+                  <option value="McDonalds">McDonalds</option>
+                  <option value="MacFoxy">MacFoxy</option>
+                  <option value="Puzata Khata">Puzata Khata</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label class="label">País</label>
+                <select class="js-select select select_blue" data-size='5' data-live-search="true" data-width="100%">
+                  <option value="Argentina">Argentina</option>
+                  <option value="Brazil">Brazil</option>
+                  <option value="Urugway">Urugway</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label class="label">Campaña</label>
+                <select class="js-select select select_blue" data-size='5' data-live-search="true" data-width="100%">
+                  <option value="Mc Precios 2017">Mc Precios 2017</option>
+                  <option value="Mc Precios 2018">Mc Precios 2018</option>
+                  <option value="Mc Precios 2019">Mc Precios 2019</option>
+                  <option value="Mc Precios 2017">Mc Precios 2017</option>
+                  <option value="Mc Precios 2018">Mc Precios 2018</option>
+                  <option value="Mc Precios 2019">Mc Precios 2019</option>
+                  <option value="Mc Precios 2017">Mc Precios 2017</option>
+                  <option value="Mc Precios 2018">Mc Precios 2018</option>
+                  <option value="Mc Precios 2019">Mc Precios 2019</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label class="label"></label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+
+</html>

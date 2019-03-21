@@ -35,7 +35,7 @@
 					],
 					multiple: true,
 					checkboxes: true,
-					placeholder: 'Select something'
+					title: 'Select something'
 				}
 			] %}
 				<div class="input-group">
@@ -45,7 +45,8 @@
 						selectWidth: 'fit',
 						multiple: item.multiple,
 						checkboxes: item.checkboxes,
-						placeholder: item.placeholder
+						title: item.title,
+						modifier: item.modifier
 					}) }}
 				</div>
 			{% endfor %}
@@ -54,7 +55,7 @@
 			</div>
 		</form>
 	</div>
-	<a href="#" class="test-modal"data-modal-control="selectsModal">TEST MODAL</a>
+	{# <a href="#" class="test-modal"data-modal-control="selectsModal">TEST MODAL</a> #}
 	<div class="sidebar__bottom">
 		<!-- begin links -->
 		<ul class="links">

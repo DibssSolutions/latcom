@@ -1,0 +1,44 @@
+---
+title: Listado page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="inner">
+		{% include "partials/_header.html" %}
+		<div class="wrap">
+			{% include "partials/_sidebar.html" %}
+			<div class="main">
+				<!-- begin head -->
+				{{ mixins.head({ 
+					title: 'Mc Precios 2018',
+					links: true,
+					currentPage: 'listado'
+				}) }}
+				{{ mixins.filters({ 
+					title: 'Listado de soportes',
+					search: true,
+					selects: [
+						{
+							label: 'Categoría',
+							title: 'Todas'
+						},
+						{
+							label: 'Ciudad',
+							title: 'Todas'
+						},
+						{
+							label: 'Dirección',
+							title: 'Todas'
+						}
+					]
+				}) }}
+				<!-- end head -->
+				{% include "partials/_lists.html" %}
+				<!-- end items -->
+			</div>
+		</div>
+	</div>
+	{% include "partials/_modals.html" %}
+{% endblock %}

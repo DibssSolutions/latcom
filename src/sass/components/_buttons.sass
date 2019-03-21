@@ -1,0 +1,36 @@
+.btn
+  border-radius: 25px
+  background-image: linear-gradient(46deg, #a8bbd6 0%, #c7cfdb 100%)
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 10px 24px
+  &.is-active
+    background-image: linear-gradient(206deg, #2782f8 0%, #114bef 100%)
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.25)
+  &__text
+    color: $white
+    font-family: $avenir
+    font-size: 15px
+    font-weight: 500
+  &__icon
+    img
+      max-height: 18px
+      max-width: 100%
+      display: block
+
+.fab
+  display: inline-block
+  +vertical
+  +circle(70)
+  background-color: $blue
+  box-shadow: 0 13px 18px rgba(0, 0, 0, 0.42)
+  display: none
+  +sm 
+    display: block
+  .icon
+    display: inline-block
+    vertical-align: middle
+    font-size: 23px
+    color: $white
