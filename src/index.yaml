@@ -3,3 +3,7 @@ ProjectTitle: template
 PageList:
 - file: page.html
   ready: 50
+- file: listado.html
+  ready: 50
+- file: fotos.html
+  ready: 50
