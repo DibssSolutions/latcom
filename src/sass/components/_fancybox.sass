@@ -1,17 +1,26 @@
-.fancy-bottom
-    position: absolute
-    padding: 13px 0
-    top: 100%
-    left: 0
-    width: 100%
-    display: flex
-    align-items: flex-start
-    justify-content: space-between
-    flex-wrap: wrap
-    color: $white
-    font-size: 13px
-    font-weight: 500
-    font-family: $avenir
+.img-slide
+    &__photo
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+            display: block
+            max-width: 100%
+    &__bottom
+        // position: relative
+        z-index: 100
+        padding: 13px 0
+        // top: 100%
+        // left: 0
+        width: 100%
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        flex-wrap: wrap
+        color: $white
+        font-size: 13px
+        font-weight: 500
+        font-family: $avenir
     &__name
         font-weight: 700
     &__link
@@ -33,15 +42,41 @@
                 left: 16px
                 transform: translateY(-50%)
                 background-color: rgba(#D8D8D8,.4)
-.fancy-close
-    position: absolute
-    top: -47px
-    right: -50px
-    cursor: pointer
-.fancybox-slide
-    padding: 0 55px
-.fancybox-navigation
-    .fancybox-button
-        background: none
-        width: 26px
-        height: 40px
+// .wrapElement
+//     position: relative
+//     height: 100%
+// .fancy-close
+//     position: absolute
+//     top: -47px
+//     right: -50px
+//     cursor: pointer
+// .fancybox-is-open .fancybox-stage
+//     position: relative
+// .fancybox-slide
+//     padding: 0 55px
+//     position: relative
+// .fancybox-slide--image
+//     .fancybox-content
+//         position: relative
+//         z-index: 100
+//         transform: none!important
+//         width: auto!important
+//         height: auto!important
+// .fancybox-image
+//     position: relative
+// .fancybox-navigation
+// .fancybox-button
+//     background: none
+//     width: 46px
+//     height: 60px
+
+// .fancybox-button--arrow_left
+//     position: absolute
+//     top: 50%
+//     left: -122px
+//     transform: translateY(-50%)
+// .fancybox-button--arrow_right
+//     position: absolute
+//     top: 50%
+//     right: -122px
+//     transform: translateY(-50%)

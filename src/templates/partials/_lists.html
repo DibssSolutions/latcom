@@ -1,0 +1,24 @@
+{% set sections = [
+  {
+    title: 'Buenos Aires',
+    accordions: [
+      {
+        title: 'Gran formato',
+        counter: '4'
+      },
+      {
+        title: 'Formato medio',
+        counter: '12'
+      },
+      {
+        title: 'Formato pequeño',
+        counter: '7'
+      }
+    ]
+  }
+] %}
+
+{% for item in sections %}
+  {{ mixins.accordionSection(item) }}
+{% endfor %}
+

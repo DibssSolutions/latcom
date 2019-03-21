@@ -10,6 +10,8 @@
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
+		+sm 
+			order: -1
 	&__search
 		padding-right: 10px
 	&__account
@@ -26,10 +28,13 @@
 		left: 0
 		opacity: 0
 		visibility: hidden
+
 .search
 	position: relative
 	width: 470px
 	font-size: 0
+	&_small
+		width: 212px
 	&__input
 		input
 			padding: 4px 25px 4px 4px
@@ -38,8 +43,13 @@
 			height: 30px
 			font-size: 14px 
 			color: $gray 
-			border-bottom: 2px solid $inputBorder 
+			border-bottom: 1px solid $inputBorder
 			display: block
+			.search_small &
+				padding: 3px 20px 3px 9px
+				height: 26px
+				font-size: 12px
+				border-bottom: 1px solid $inputBorder
 			&::placeholder
 				font-style: italic
 				color: rgba($gray, .79) 
@@ -53,6 +63,8 @@
 		margin-top: -8px
 		font-size: 0
 		background-color: transparent
+		.search_small &
+			margin-top: -5px
 		&:before
 			position: absolute
 			content: "" 
@@ -62,7 +74,10 @@
 			bottom: -5px
 		.icon
 			font-size: 15px
-			color: $blue 
+			color: $blue
+			.search_small &
+				font-size: 10px
+
 .account
 	vertical-align: top
 	display: inline-block

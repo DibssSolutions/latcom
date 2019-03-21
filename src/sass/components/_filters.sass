@@ -1,0 +1,25 @@
+.filters-section
+  display: flex
+  align-items: flex-end
+  margin-bottom: 20px
+  &__filters
+    margin-left: auto
+    +sm
+      margin-left: 0
+  &__title
+    margin-right: 30px
+  .close-mob-filters-btn
+    display: none
+
+.filters
+  display: flex
+  +sm
+    flex-direction: column
+    width: 100%
+  &__item
+    padding: 0 30px
+    text-align: left
+    +sm 
+      padding: 10px 0
+      .bootstrap-select.fit-width
+          width: 100% !important

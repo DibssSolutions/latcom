@@ -1,12 +1,13 @@
-import {OPEN, ACTIVE, BODY, OVERFLOW_HIDDEN} from './../constants';
+import {OPEN, ACTIVE, BODY, LOADED, OVERFLOW_HIDDEN} from './../constants';
 
-;(() => {
+const modal = () => {
 
   const controls = $('[data-modal-control]');
   const modals = $('[data-modal]');
   controls.each((i, control) => {
     control = $(control);
     const modal = modals.filter(`[data-modal="${control.data('modal-control')}"]`);
+    if ( modal.hasClass(LOADED) ) return;
 
     control.on('click', e => {
       e.preventDefault();
@@ -36,7 +37,7 @@ import {OPEN, ACTIVE, BODY, OVERFLOW_HIDDEN} from './../constants';
     };
 
     BODY.on('click', e => {
-      if ($(e.target).closest(inner).length || $(e.target).closest(close).length || $(e.target).closest(controls).length ) return;
+      if ($(e.target).closest(inner).length || $(e.target).closest(controls).length ) return;
       hide();
     });
 
@@ -44,8 +45,13 @@ import {OPEN, ACTIVE, BODY, OVERFLOW_HIDDEN} from './../constants';
       e.preventDefault();
       hide();
     });
+    if ( modal.hasClass(LOADED) ) return;
+    modal.addClass(LOADED);
   });
-})();
+};
+window.modal = modal;
+
+modal();
 // ----------------------  HTML EXEMPLE ---------------------
 // <a href="#" data-modal-control="modalname"></a> ---- trigger
 // <div class="modal" data-modal="modalname"> ------ modal window
