@@ -42,3 +42,44 @@
 		{% endfor %}
 	</select>
 {% endmacro %}
+
+{% macro mapSlide(props) %}
+	<div class="map-slide js-map-slide">
+		<div class="map-slide__wrapper">
+			<div class="map-slide__info">
+				<div class="map-slide__name">{{ props.name }}</div>
+				<div class="map-slide__format">{{ props.format }}</div>
+				<div class="map-slide__details">
+					<div class="map-slide__city">{{ props.city }}</div>
+					<div class="map-slide__street">{{ props.street }}</div>
+					<div class="map-slide__period">{{ props.period }}</div>
+				</div>
+				<div class="map-slide__img">
+					<img src="./img/{{ props.img }}" alt="">
+				</div>
+			</div>
+			<div class="map-slide__map map js-map-modal" data-center-lat="50.451767" data-center-lng="30.521038" data-json="./json/search-map.json"></div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro imgSlide(props) %}
+
+	<div class="img-slide">
+		<div class="img-slide__photo">
+			<img src="./img/{{ props.img }}" alt="img">
+		</div>
+		<div class="img-slide__bottom">
+			<div class="img-slide__left">
+				<div class="img-slide__name">{{ props.name }}</div>
+				<div class="img-slide__location">{{ props.location }}</div>
+				<a href="{{ props.large or '#' }}" class="img-slide__link">Gran formato</a>
+			</div>
+			<div class="img-slide__right">
+				<a href="{{ props.download or '#' }}" class="img-slide__link img-slide__ref">Descargar foto</a>
+				<a href="{{ props.downloadAlbum or '#' }}" class="img-slide__link img-slide__ref">Descargar todo el álbum</a>
+			</div>
+		</div>
+	</div>
+	
+{% endmacro %}

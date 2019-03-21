@@ -48,8 +48,8 @@
 {% import "partials/_mixins.html" as mixins %}
 
 {% macro photo(props) %}
-  <li class="photo-gallery__item">
-    <a href="#" class="photo" data-src="./img/{{ props.image }}" data-fancybox="gallery" data-name="{{ props.adress }}" data-location="{{ props.city or 'Buenos Aires'}}">
+  <li class="photo-gallery__item js-gallery-trigger" data-modal-control="img-slider">
+    <a href="#" class="photo">
       <div
         class="photo__bg"
         style="background-image: url(./img/{{ props.image }})"
