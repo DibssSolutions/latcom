@@ -18,21 +18,9 @@
 			padding: 0 20px 20px
 		&:not(:last-child)
 			margin-bottom: 24px
-	.bootstrap-select
-		& > .dropdown-menu
-			&.show
-				width: 220px
-				// max-height: 220px !important
-				// position: relative
-				& > .inner.show.ps
-					max-height: 150px !important
-					overflow: hidden
-				// 	min-height: 200px
-		// min-width: 150px
-		// max-width: 200px
 	.filter-option
 		+text-overflow
-		max-width: 200px
+		// max-width: 200px
 
 .modal-form
 	text-align: left
@@ -89,7 +77,7 @@
 				font-size: 16px
 				font-weight: 600
 	.filter-option
-		min-width: 80px
+		min-width: 55px
 	.dropdown-toggle
 		background-color: transparent
 		.filter-option-inner-inner
@@ -125,6 +113,12 @@
 			.dropdown-toggle
 				&:after
 					transform: rotate(180deg)
+	& > .dropdown-menu
+		&.show
+			width: 220px
+			& > .inner.show.ps
+				max-height: 150px !important
+				overflow: hidden
 	.dropdown-menu
 		box-shadow: 0 8px 22px rgba(0, 0, 0, 0.37)
 		border-radius: 10px
