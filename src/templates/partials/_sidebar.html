@@ -1,7 +1,7 @@
 <!-- begin sidebar -->
 <div class="sidebar">
 	<div class="sidebar__top">
-		<form class="sidebar-form">
+		<form class="sidebar__form sidebar-form">
 			{% for item in [
 				{
 					label: 'Cuenta',
@@ -23,22 +23,9 @@
 						'Mc Precios 2017', 
 						'Mc Precios 2018', 
 						'Mc Precios 2019' ]
-				},
-				{
-					label: 'Columnas',
-					options: [ 
-						'Soporte', 
-						'Dirección', 
-						'Comienza', 
-						'Finaliza', 
-						'OTS por día'
-					],
-					multiple: true,
-					checkboxes: true,
-					title: 'Select something'
 				}
 			] %}
-				<div class="input-group">
+				<div class="input-group sidebar__input-group">
 					<label class="label">{{ item.label }}</label>
 					{{ mixins.select({
 						values: item.options,
@@ -50,9 +37,9 @@
 					}) }}
 				</div>
 			{% endfor %}
-			<div class="input-group">
+			{# <div class="input-group">
 				<label class="label"></label>
-			</div>
+			</div> #}
 		</form>
 	</div>
 	{# <a href="#" class="test-modal"data-modal-control="selectsModal">TEST MODAL</a> #}

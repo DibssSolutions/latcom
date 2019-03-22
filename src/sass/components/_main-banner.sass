@@ -1,9 +1,16 @@
 .main-banner
+    display: block
     width: 100%
     border-radius: 7px
     overflow: hidden
+    height: 147px
+    +sm
+        height: 107px
     &:not(:last-child)
         margin-bottom: 20px
     img
         display: block
         width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center

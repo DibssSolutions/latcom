@@ -16,7 +16,7 @@
     <div class="out">
       <div class="inner">
         <!-- begin header -->
-        <header class="header">
+        <header class="header js-header">
           <button class="search-btn js-search-btn" type="button">
             <svg class="icon icon-search">
               <use xlink:href="img/sprite.svg#icon-search"></use>
@@ -55,7 +55,7 @@
             <!-- end logo -->
           </div>
           <div class="header__main">
-            <div class="header__search">
+            <div class="header__search js-search">
               <!-- begin search -->
               <form class="search">
                 <div class="search__input">
@@ -69,7 +69,7 @@
               </form>
               <!-- end search -->
             </div>
-            <div class="header__account">
+            <div class="header__account js-account">
               <!-- begin account -->
               <div class="account dropdown">
                 <button class="account__top" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -108,8 +108,8 @@
           <!-- begin sidebar -->
           <div class="sidebar">
             <div class="sidebar__top">
-              <form class="sidebar-form">
-                <div class="input-group">
+              <form class="sidebar__form sidebar-form">
+                <div class="input-group sidebar__input-group">
                   <label class="label">Cuenta</label>
                   <select class="js-select select" data-live-search="true" data-width="fit">
                     <option value="McDonalds">McDonalds</option>
@@ -118,7 +118,7 @@
                     <option value="LOOOOOOONG WORDDDDDDDDDDDDDD">LOOOOOOONG WORDDDDDDDDDDDDDD</option>
                   </select>
                 </div>
-                <div class="input-group">
+                <div class="input-group sidebar__input-group">
                   <label class="label">País</label>
                   <select class="js-select select" data-live-search="true" data-width="fit">
                     <option value="Argentina">Argentina</option>
@@ -126,7 +126,7 @@
                     <option value="Urugway">Urugway</option>
                   </select>
                 </div>
-                <div class="input-group">
+                <div class="input-group sidebar__input-group">
                   <label class="label">Campaña</label>
                   <select class="js-select select" data-live-search="true" data-width="fit">
                     <option value="Mc Precios 2017">Mc Precios 2017</option>
@@ -139,19 +139,6 @@
                     <option value="Mc Precios 2018">Mc Precios 2018</option>
                     <option value="Mc Precios 2019">Mc Precios 2019</option>
                   </select>
-                </div>
-                <div class="input-group">
-                  <label class="label">Columnas</label>
-                  <select class="js-select select show-tick" multiple data-width="fit" title="Select something">
-                    <option value="Soporte">Soporte</option>
-                    <option value="Dirección">Dirección</option>
-                    <option value="Comienza">Comienza</option>
-                    <option value="Finaliza">Finaliza</option>
-                    <option value="OTS por día">OTS por día</option>
-                  </select>
-                </div>
-                <div class="input-group">
-                  <label class="label"></label>
                 </div>
               </form>
             </div>

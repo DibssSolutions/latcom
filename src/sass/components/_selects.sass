@@ -13,18 +13,24 @@
 			font-size: 14px
 
 .sidebar-form
-	+sm
+	+md
 		display: flex
-		flex-wrap: wrap
-		margin: 0 -20px
+		// flex-wrap: wrap
+		justify-content: space-between
+	+md
+		margin: 0 -10px
 	.input-group
-		+sm
-			padding: 0 20px 20px
+		+md
+			padding: 0 10px
+			max-width: 33.3%
 		&:not(:last-child)
 			margin-bottom: 24px
+			+md
+				margin: 0
 	.filter-option
 		max-width: 95%
-		+text-overflow
+		// +text-overflow
+		
 		// max-width: 200px
 
 .modal-form
@@ -143,6 +149,8 @@
 		border: 1px solid $selectBorder
 		border-radius: $radius
 		margin: 5px 5px 5px 0
+		+sm
+			min-width: 150px
 		.bs-searchbox
 			position: relative
 			padding: 4px 10px
