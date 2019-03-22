@@ -22,5 +22,75 @@
 			</div>
 		</div>
 	</div>
+	<div class="js-slides-wrapper" data-slider-wrapper="img-slider" style="display: none">
+		{% for slide in [
+			{
+				img: 'img1.jpg',
+				name: '916 Minnie Gardens Apt. 180',
+				location: 'Buenos Aires',
+				large: '',
+				download: '',
+				downloadAlbum: ''
+			},
+			{
+				img: 'img1.jpg',
+				name: '3557 Carleton Manors',
+				location: 'Buenos Aires',
+				large: '',
+				download: '',
+				downloadAlbum: ''
+			},
+			{
+				img: 'img1.jpg',
+				name: '391 Nitzsche Islands',
+				location: 'Buenos Aires',
+				large: '',
+				download: '',
+				downloadAlbum: ''
+			},
+			{
+				img: 'img1.jpg',
+				name: '047 Angela Branch',
+				location: 'Buenos Aires',
+				large: '',
+				download: '',
+				downloadAlbum: ''
+			},
+			{
+				img: 'img1.jpg',
+				name: '2354 Denesik Avenue Apt. 067',
+				location: 'Buenos Aires',
+				large: '',
+				download: '',
+				downloadAlbum: ''
+			},
+			{
+				img: 'img1.jpg',
+				name: '34 May Mount',
+				location: 'Buenos Aires',
+				large: '',
+				download: '',
+				downloadAlbum: ''
+			},
+			{
+				img: 'img1.jpg',
+				name: '447 Orion Parkways',
+				location: 'Buenos Aires',
+				large: '',
+				download: '',
+				downloadAlbum: ''
+			},
+			{
+				img: 'img1.jpg',
+				name: '15 Reichert Estate Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque recusandae modi qui sapiente esse placeat repudiandae nostrum, debitis',
+				location: 'Buenos Aires',
+				large: '',
+				download: '',
+				downloadAlbum: ''
+			}
+		] %}
+			{{ mixins.imgSlide(slide) }}
+		{% endfor %}
+	</div>
 	{% include "partials/_modals.html" %}
 {% endblock %}

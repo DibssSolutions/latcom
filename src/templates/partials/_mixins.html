@@ -44,7 +44,7 @@
 {% endmacro %}
 
 {% macro mapSlide(props) %}
-	<div class="map-slide js-map-slide">
+	<div class="map-slide js-slide">
 		<div class="map-slide__wrapper">
 			<div class="map-slide__info">
 				<div class="map-slide__name">{{ props.name }}</div>
@@ -151,7 +151,8 @@
 {% endmacro %}
 
 {% macro imgSlide(props) %}
-	<div class="img-slide">
+
+	<div class="img-slide js-slide">
 		<div class="img-slide__photo">
 			<img src="./img/{{ props.img }}" alt="img">
 		</div>

@@ -8,14 +8,15 @@ let modalSlider;
 let slideIndex;
 BODY.on('click', '.js-gallery-trigger', function() {
   const id = $(this).data('modal-control');
-  slideIndex = $(this).index();
   const slidesWrapper = $(`[data-slider-wrapper=${id}]`);
   const sliderParent = $(`[data-modal=${id}]`);
   modalSlider = $('.js-modal-slider', sliderParent);
   const slides = slidesWrapper.html();
+  const slideCount = $('.js-slide', slidesWrapper).length;
   const prevBtn = $('.js-modal-slider-prev', sliderParent);
   const nextBtn = $('.js-modal-slider-next', sliderParent);
   modalSlider.html(slides);
+  slideIndex = $(this).index() > slideCount ? 0 : $(this).index();
   modalSlider.on('init', () => {
     let mapNode = modalSlider.find('.js-map-modal');
     if (mapNode.length) {
@@ -260,6 +261,8 @@ BODY.on('click', '.js-gallery-trigger', function() {
     dots: false,
     infinite: true,
     speed: 800,
+    fade: true,
+    cssEase: 'linear',
     slidesToShow: 1,
     slideToScroll: 1,
     autoplay: false,
