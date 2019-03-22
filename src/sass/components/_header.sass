@@ -9,13 +9,16 @@
 	&__left
 		+fls(235px)
 		font-size: 0
+		+md
+			margin: auto
+			+fls(71px)
 	&__main
 		flex-grow: 1
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
-		+sm 
-			order: -1
+		+md
+			flex-grow: unset
 	&__search
 		padding-right: 10px
 		+md
@@ -32,9 +35,14 @@
 			z-index: 10
 			opacity: 0
 			visibility: hidden
+			transition: opacity .3s ease-in-out, visibility .3s ease-in-out
 			border-radius: 0 0 7px 7px 
 			box-shadow: 0 3px 5px rgba(0,0,0,.16)
 			background-color: $white 
+		.is-open-menu &
+			+md
+				opacity: 1
+				visibility: visible
 .logo
 	position: relative
 	vertical-align: top
@@ -105,13 +113,6 @@
 			.search_small &
 				font-size: 10px
 
-.search-btn
-	vertical-align: top
-	color: $white
-	background-color: transparent
-	.icon
-		font-size: 15px
-
 .account
 	vertical-align: top
 	display: inline-block
@@ -120,10 +121,13 @@
 		align-items: center
 		font-size: 0
 		background-color: transparent 
+		+md
+			pointer-events: none
 	&__avatar
 		position: relative
 		width: 37px
 		height: 37px
+		flex-shrink: 0 
 		border-radius: 50% 
 		background-position: 50% 50%
 		background-size: cover
@@ -156,17 +160,24 @@
 		padding-right: 14px
 		background-color: transparent 
 		display: block
+		+md
+			width: auto
+			border: none 
 	&__name
 		overflow: hidden
 		white-space: nowrap
 		text-overflow: ellipsis
 		display: block
+		+md
+			white-space: unset
 	&__arrow
 		position: absolute
 		top: 50%
 		margin-top: -4px
 		right: 0
 		font-size: 0
+		+md
+			display: none
 		.icon
 			font-size: 7px
 			color: $blue 
@@ -175,6 +186,14 @@
 		border: 1px solid $selectBorder
 		border-radius: 10px
 		margin: 5px 0
+		+md
+			position: relative !important
+			padding-bottom: 0
+			margin-bottom: 0
+			transform: none !important
+			box-shadow: none
+			border: none
+			display: block
 	&__link
 		display: block
 		width: 100%
@@ -193,23 +212,53 @@
 			font-weight: 700
 			color: $black
 
+.search-btn
+	position: relative
+	vertical-align: top
+	color: $white
+	background-color: transparent
+	+md
+		vertical-align: top
+		display: inline-block
+	&:before
+		position: absolute
+		content: "" 
+		top: -5px
+		left: -5px
+		right: -5px
+		bottom: -5px
+	.icon
+		font-size: 15px
+		
 .menu-btn
 	position: relative
 	width: 20px
-	height: 14px
+	height: 15px
 	background-color: transparent 
 	display: none
 	+md
 		vertical-align: top
 		display: inline-block
+	&:before
+		position: absolute
+		content: "" 
+		top: -5px
+		left: -5px
+		right: -5px
+		bottom: -5px
 	&__line
 		position: absolute
-		top: 0
 		left: 0
 		height: 2px 
 		width: 100%
+		transition: transform .3s
 		border-radius: 2px
 		background-color: $white 
+		&:first-child
+			top: 0
+			.is-open-menu &
+				transform: rotate(-45deg) translateY(9px)
 		&:last-child
-			top: auto
 			bottom: 0
+			.is-open-menu &
+				transform: rotate(45deg) translateY(-9px)
