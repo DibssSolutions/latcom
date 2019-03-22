@@ -3,6 +3,8 @@ ProjectTitle: template
 PageList:
 - file: page.html
   ready: 50
+- file: main-banner.html
+  ready: 50
 - file: listado.html
   ready: 50
 - file: listado-loading.html

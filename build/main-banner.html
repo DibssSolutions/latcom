@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Listado-loading page</title>
+    <title>Index page</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -168,127 +168,62 @@
           </div>
           <!-- end sidebar -->
           <div class="main js-scroll-bar">
-            <!-- begin head -->
-            <div class="head">
-              <h2 class="title">Mc Precios 2018</h2>
-              <nav class="head-links">
-                <ul class="head-links__list">
-                  <li class="head-links__item">
-                    <a href="reportes.html" class="btn">
-                      <span class="btn__text">Reportes</span>
-                      <span class="btn__icon">
-                        <img src="./img/reportes.svg" alt="reportes">
+            <div class="main__inner">
+              <!-- begin head -->
+              <div class="head">
+                <h2 class="title">Fútbol 2018</h2>
+              </div>
+              <!-- end head -->
+              <div class="main-banner">
+                <img src="./img/banner.jpg" alt="banner" class="main-banner__img">
+              </div>
+              <!-- begin megamenu -->
+              <nav class="megamenu">
+                <ul class="megamenu__list row">
+                  <li class="megamenu__item col col-6">
+                    <!-- begin item -->
+                    <a href="reportes.html" class="item item_low">
+                      <span class="item__content">
+                        <span class="item__name">Reportes</span>
+                        <span class="item__icon"><img src="./img/reportes.svg" alt="{ item.icon }}"></span>
                       </span>
                     </a>
+                    <!-- end item -->
                   </li>
-                  <li class="head-links__item">
-                    <a href="fotos.html" class="btn">
-                      <span class="btn__text">Fotos</span>
-                      <span class="btn__icon">
-                        <img src="./img/fotos.svg" alt="fotos">
+                  <li class="megamenu__item col col-6">
+                    <!-- begin item -->
+                    <a href="fotos.html" class="item item_low">
+                      <span class="item__content">
+                        <span class="item__name">Fotos</span>
+                        <span class="item__icon"><img src="./img/fotos.svg" alt="{ item.icon }}"></span>
                       </span>
                     </a>
+                    <!-- end item -->
                   </li>
-                  <li class="head-links__item">
-                    <a href="mapa.html" class="btn">
-                      <span class="btn__text">Mapa</span>
-                      <span class="btn__icon">
-                        <img src="./img/mapa.svg" alt="mapa">
+                  <li class="megamenu__item col col-6">
+                    <!-- begin item -->
+                    <a href="mapa.html" class="item item_low">
+                      <span class="item__content">
+                        <span class="item__name">Mapa</span>
+                        <span class="item__icon"><img src="./img/mapa.svg" alt="{ item.icon }}"></span>
                       </span>
                     </a>
+                    <!-- end item -->
                   </li>
-                  <li class="head-links__item">
-                    <a href="listado.html" class="btn is-active">
-                      <span class="btn__text">Listado</span>
-                      <span class="btn__icon">
-                        <img src="./img/listado.svg" alt="listado">
+                  <li class="megamenu__item col col-6">
+                    <!-- begin item -->
+                    <a href="listado.html" class="item item_low">
+                      <span class="item__content">
+                        <span class="item__name">Listado</span>
+                        <span class="item__icon"><img src="./img/listado.svg" alt="{ item.icon }}"></span>
                       </span>
                     </a>
+                    <!-- end item -->
                   </li>
                 </ul>
               </nav>
+              <!-- end items -->
             </div>
-            <div class="filters-section-wrapper js-filters-wrapper">
-              <div class="filters-mob-overlay js-filters-overlay"></div>
-              <div class="filters-section js-filters">
-                <h3 class="filters-section__title title-md">Listado de soportes</h3>
-                <div class="filters-section__search">
-                  <form class="search search_small">
-                    <div class="search__input">
-                      <input type="text" placeholder="Buscar soportes">
-                    </div>
-                    <button class="search__button" type="button">
-                      <svg class="icon icon-search">
-                        <use xlink:href="img/sprite.svg#icon-search"></use>
-                      </svg>
-                    </button>
-                  </form>
-                </div>
-                <div class="filters-section__filters">
-                  <div class="filters">
-                    <div class="filters__item">
-                      <div class="input-group">
-                        <label class="label label_small">Categoría</label>
-                        <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Todas">
-                          <option value="lorem">lorem</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="ipsum dolor">ipsum dolor</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="filters__item">
-                      <div class="input-group">
-                        <label class="label label_small">Ciudad</label>
-                        <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Buenos Aires">
-                          <option value="lorem">lorem</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="ipsum dolor">ipsum dolor</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="filters__item">
-                      <div class="input-group">
-                        <label class="label label_small">Dirección</label>
-                        <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Todas">
-                          <option value="lorem">lorem</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="ipsum dolor">ipsum dolor</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="filters-fab js-filters-btn">
-                <a href="#" class="fab">
-                  <span class="fab-burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </span>
-                  <span class="fab-cross">
-                    <svg class="icon icon-close">
-                      <use xlink:href="img/sprite.svg#icon-close"></use>
-                    </svg>
-                  </span>
-                </a>
-              </div>
-            </div>
-            <!-- end head -->
-            <section class="list-section is-loading">
-            </section>
           </div>
         </div>
       </div>

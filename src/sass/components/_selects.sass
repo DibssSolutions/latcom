@@ -21,6 +21,7 @@
 		&:not(:last-child)
 			margin-bottom: 24px
 	.filter-option
+		max-width: 95%
 		+text-overflow
 		// max-width: 200px
 
@@ -64,6 +65,8 @@
 			background-repeat: no-repeat
 			background-position: right center
 			transition: transform $tr
+	.filter-option
+		max-width: 95%
 .select_blue
 	.dropdown-toggle
 		&:after
@@ -127,7 +130,6 @@
 				max-height: 150px !important
 				overflow: hidden
 	.dropdown-menu
-		box-shadow: 0 8px 22px rgba(0, 0, 0, 0.37)
 		border-radius: 10px
 		border: 1px solid $selectBorder
 		border-radius: $radius
@@ -229,3 +231,5 @@
 				width: 6px
 				border-radius: 3px
 				z-index: 100
+.dropdown-menu
+	box-shadow: 0 3px 5px rgba($black, .16)

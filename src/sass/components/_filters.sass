@@ -28,12 +28,20 @@
 		width: 100%
 		margin: 0
 	&__item
-		padding: 0 30px
+		// padding: 0 30px
+		padding: 0
 		text-align: left
 		+sm 
 			padding: 10px 0
-			.bootstrap-select.fit-width
+			.label
+				padding: 0 30px
+			.bootstrap-select
+				padding: 10px 30px 
+				&.fit-width
 					width: 100% !important
-			.dropdown-menu
-				border: none
-				// position: relative !important
+				.dropdown-menu
+					border: none
+					max-width: 230px !important
+					// position: relative !important
+					border-radius: 0
+					box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19)

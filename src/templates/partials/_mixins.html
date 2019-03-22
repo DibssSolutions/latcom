@@ -347,3 +347,9 @@
 		{% endfor %}
 	</section>
 {% endmacro %}
+
+{% macro mainBanner(img) %}
+	<div class="main-banner">
+		<img src="./img/{{ img }}" alt="banner" class="main-banner__img">
+	</div>
+{% endmacro %}

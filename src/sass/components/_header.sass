@@ -2,6 +2,8 @@
 	padding: 44px 0 30px
 	display: flex
 	align-items: center
+	+md
+		background-color: $blue 
 	&__left
 		+fls(235px)
 		font-size: 0
@@ -33,6 +35,8 @@
 	position: relative
 	width: 470px
 	font-size: 0
+	+lg
+		width: 260px
 	&_small
 		width: 212px
 	&__input
@@ -158,3 +162,24 @@
 			background-color: transparent
 			font-weight: 700
 			color: $black
+
+.menu-btn
+	position: relative
+	width: 20px
+	height: 14px
+	background-color: transparent 
+	display: none
+	+md
+		vertical-align: top
+		display: inline-block
+	&__line
+		position: absolute
+		top: 0
+		left: 0
+		height: 2px 
+		width: 100%
+		border-radius: 2px
+		background-color: $white 
+		&:last-child
+			top: auto
+			bottom: 0
