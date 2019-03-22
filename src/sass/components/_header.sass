@@ -136,3 +136,25 @@
 		.icon
 			font-size: 7px
 			color: $blue 
+	&__list
+		box-shadow: 0 2px 4px -2px rgba($black,.19)
+		border: 1px solid $selectBorder
+		border-radius: 10px
+		margin: 5px 0
+	&__link
+		display: block
+		width: 100%
+		color: $lightGrey
+		font-family: $avenir
+		font-size: 14px
+		font-weight: 500
+		padding: 6px 10px
+		transition: background-color .3s, color .3s
+		+text-overflow
+		&:hover
+			background-color: #f8f9fa
+		&.active,
+		&:active
+			background-color: transparent
+			font-weight: 700
+			color: $black

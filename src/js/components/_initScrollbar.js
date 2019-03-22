@@ -13,4 +13,16 @@ DOC.ready(() => {
       });
     }
   }
+
+  const perf = document.querySelectorAll('.js-perf');
+  if (!perf) {
+    return;
+  } else {
+    for (var i = 0; i <= perf.length - 1; i++) {
+      perf[i].perfectScrollbar = new PerfectScrollbar(perf[i], {
+        useBothWheelAxes: false,
+        maxScrollbarLength: 60
+      });
+    }
+  }
 });
