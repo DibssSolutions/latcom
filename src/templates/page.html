@@ -9,46 +9,48 @@ title: Index page
 		{% include "partials/_header.html" %}
 		<div class="wrap">
 			{% include "partials/_sidebar.html" %}
-			<div class="main">
-				<!-- begin head -->
-				{{ mixins.head({ title: 'Fútbol 2018' }) }}
-				<!-- end head -->
-				<!-- begin megamenu -->
-				<nav class="megamenu">
-					<ul class="megamenu__list row">
-						{% for item in [
-							{
-								name: 'Reportes',
-								icon: 'reportes'
-							},
-							{
-								name: 'Fotos',
-								icon: 'fotos'
-							},
-							{
-								name: 'Mapa',
-								icon: 'mapa'
-							},
-							{
-								name: 'Listado',
-								icon: 'listado'
-							}
-						] %}
-						<li class="megamenu__item col col-6">
-							<!-- begin item -->
-							<a href="{{ item.name | lower + '.html' }}" class="item">
-								<span class="item__content">
-									<span class="item__name">{{ item.name }}</span>
-									<span class="item__icon"><img src="./img/{{ item.icon }}.svg" alt="{ item.icon }}"></span>
-								</span>
-							</a>
-							<!-- end item -->
-						</li>
-						{% endfor %}
-					</ul>
-				</nav>
-				{% include "partials/_photo-gallery.html" %}
-				<!-- end items -->
+			<div class="main js-scroll-bar">
+				<div class="main__inner">
+					<!-- begin head -->
+					{{ mixins.head({ title: 'Fútbol 2018' }) }}
+					<!-- end head -->
+					<!-- begin megamenu -->
+					<nav class="megamenu">
+						<ul class="megamenu__list row">
+							{% for item in [
+								{
+									name: 'Reportes',
+									icon: 'reportes'
+								},
+								{
+									name: 'Fotos',
+									icon: 'fotos'
+								},
+								{
+									name: 'Mapa',
+									icon: 'mapa'
+								},
+								{
+									name: 'Listado',
+									icon: 'listado'
+								}
+							] %}
+							<li class="megamenu__item col col-6">
+								<!-- begin item -->
+								<a href="{{ item.name | lower + '.html' }}" class="item">
+									<span class="item__content">
+										<span class="item__name">{{ item.name }}</span>
+										<span class="item__icon"><img src="./img/{{ item.icon }}.svg" alt="{ item.icon }}"></span>
+									</span>
+								</a>
+								<!-- end item -->
+							</li>
+							{% endfor %}
+						</ul>
+					</nav>
+					{% include "partials/_photo-gallery.html" %}
+					<!-- end items -->
+				</div>
 			</div>
 		</div>
 	</div>
