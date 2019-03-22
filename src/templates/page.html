@@ -48,29 +48,6 @@ title: Index page
 					</ul>
 				</nav>
 				{% include "partials/_photo-gallery.html" %}
-				<div class="js-gallery-trigger" data-modal-control="map-slider">slider</div>
-				<div class="js-slides-wrapper" data-slider-wrapper="map-slider" style="display: none">
-					{% for slide in [
-						{
-							name: 'Street Furniture',
-							format: 'Formatio medio',
-							city: 'Rio de Janeiro, Brasil',
-							street: '1652 Alexa Row',
-							period: '10/20/2018 - 11/24/2018',
-							img: 'img1.jpg'
-						},
-						{
-							name: 'Street Furniture',
-							format: 'Formatio medio',
-							city: 'Rio de Janeiro, Brasil',
-							street: '1652 Alexa Row',
-							period: '10/20/2018 - 11/24/2018',
-							img: 'photo_1.png'
-						}
-					] %}
-						{{ mixins.mapSlide(slide) }}
-					{% endfor %}
-				</div>
 				<!-- end items -->
 			</div>
 		</div>
