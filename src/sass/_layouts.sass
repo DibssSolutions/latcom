@@ -11,7 +11,7 @@
 
 .wrap
 	display: flex
-	min-height: 630px
+	min-height: 300px
 	height: calc(100vh - 81px)
 	+sm
 		flex-direction: column
@@ -32,7 +32,21 @@
 			// display: none
 
 .main
+	// position: relative
 	padding-top: 30px
 	flex-grow: 1
+	height: 100%
+	overflow-y: auto
 	display: flex
 	flex-direction: column
+	&:before
+		position: absolute
+		content: "" 
+		top: 80px
+		right: 0
+		width: calc((100% - 1280px)/2)
+		height: calc(100vh - 80px)
+		min-width: 45px 
+	.ps__rail-y
+		height: calc(100vh - 80px) !important
+		top: 80px !important
