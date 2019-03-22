@@ -5,11 +5,13 @@
 			{% for item in [
 				{
 					label: 'Cuenta',
-					options: [ 'McDonalds', 'MacFoxy', 'Puzata Khata', 'LOOOOOOONG WORDDDDDDDDDDDDDD' ]
+					options: [ 'McDonalds', 'MacFoxy', 'Puzata Khata', 'LOOOOOOONG WORDDD' ],
+					searchText: 'Select a restaurant'
 				},
 				{
 					label: 'País',
-					options: [ 'Argentina', 'Brazil', 'Urugway' ]
+					options: [ 'Argentina', 'Brazil', 'Urugway' ],
+					searchText: "Select a country"
 				},
 				{
 					label: 'Campaña',
@@ -33,7 +35,8 @@
 						multiple: item.multiple,
 						checkboxes: item.checkboxes,
 						title: item.title,
-						modifier: item.modifier
+						modifier: item.modifier,
+						searchText: item.searchText
 					}) }}
 				</div>
 			{% endfor %}

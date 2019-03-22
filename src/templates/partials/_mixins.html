@@ -25,6 +25,7 @@
 <label class="{% if props.radio %}radio{% else %}checkbox{% endif %}{% if props.class %} {{ props.class }}{% endif %}">
 	<input type="{% if props.radio %}radio{% else %}checkbox{% endif %}" name="{{ props.name or 'checkbox' }}"{% if props.checked %} checked{% endif %}>
 	<span class="{% if props.radio %}radio{% else %}checkbox{% endif %}__text">{{ props.text or 'checkbox' }}</span>
+	<span class="{% if props.radio %}radio{% else %}checkbox{% endif %}__icon"></span>
 </label>
 <!-- end input -->
 {% endmacro %}
@@ -36,6 +37,8 @@
 		{% if props.selectWidth %} data-width="{{ props.selectWidth or '100%'}}"{% endif %}
 		{% if props.title %} title="{{ props.title }}"{% endif %}
 		{% if props.alignRight %} data-dropdown-align-right='true'{% endif %}
+		data-live-search-placeholder='{{ props.searchText or "SEARCH" }}'
+		
 	>
 		{% for option in props.values %}
 			<option value="{{ option }}">{{ option }}</option>
@@ -136,6 +139,14 @@
 							</div>
 					</div>
 					{% endfor %}
+					{% if props.checkboxes %}
+						<div class="filters__item">
+							<label class="label label_small">Mostrar</label>
+							{% for item in props.checkboxes %}
+								{{ checkbox(item) }}
+							{% endfor %}
+						</div>
+					{% endif %}
 				</div>
 			</div>
 		</div>
@@ -210,7 +221,7 @@
 	<section class="list-section">
 		<h3 class="list-section__title">{{ props.title }}</h3>
 		{% for acc in props.accordions %}
-			<div class="accordion js-accordion{% if loop.first %} is-open{% endif %}">
+			<div class="accordion js-accordion">
 				<a href="#" class="accordion__trigger js-accordion-trigger">
 					<span class="list-head">
 						<span class="list-head__plus"></span>
@@ -359,3 +370,4 @@
 		{{ icon('download') }}
 	</a>
 {% endmacro %}
+

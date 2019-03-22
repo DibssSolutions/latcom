@@ -15,7 +15,73 @@
           currentPage: 'fotos'
         }) }}
 				<!-- end head -->
-				{% include "partials/_photo-gallery.html" %}
+				{{ mixins.filters({ 
+					title: 'Fotos de soportes',
+					selects: [
+						{
+							label: 'Categoría',
+							title: 'Todas'
+						},
+						{
+							label: 'Ciudad',
+							title: 'Buenos Aires'
+						},
+						{
+							label: 'Dirección',
+							title: 'Todas',
+							align: true
+						}
+					],
+					checkboxes: [
+							{
+							text: 'Fotos',
+							checked: true
+						 },
+						 {
+							text:'Videos',
+							checked: false
+						 }
+					]
+				}) }}
+
+				<section class="list-section">
+					<h3 class="list-section__title">Buenos Aires</h3>
+					{% for acc in [
+						{
+							title: 'Gran formato',
+							counter: '4',
+							sliderWrap: 'gran-formato'
+						},
+						{
+							title: 'Formato medio',
+							counter: '12',
+							sliderWrap: 'formato-medio'
+						},
+						{
+							title: 'Formato pequeño',
+							counter: '7',
+							sliderWrap: 'formato-pequeno'
+						}
+					] %}
+						<div class="accordion js-accordion{% if loop.first %} is-open{% endif %}">
+							<a href="#" class="accordion__trigger js-accordion-trigger">
+								<span class="list-head">
+									<span class="list-head__plus"></span>
+									<span class="list-head__title">
+										{{ acc.title }}
+									</span>
+									<span class="list-head__counter">
+										({{ acc.counter }})
+									</span>
+								</span>
+							</a>
+							<div class="accordion__photos js-accordion-wrap">
+								{% include "partials/_photo-gallery.html" %}
+							</div>
+						</div>
+					{% endfor %}
+				</section>
+
 				<!-- end items -->
 			</div>
 		</div>
