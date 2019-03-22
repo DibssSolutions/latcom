@@ -42,8 +42,8 @@
             </div>
             <div class="header__account">
               <!-- begin account -->
-              <div class="account">
-                <button class="account__top" type="button">
+              <div class="account dropdown">
+                <button class="account__top" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <span class="account__avatar" style="background-image: url(./img/avatar.png);"></span>
                   <span class="account__current">
                     <span class="account__name">José Cabrera</span>
@@ -54,8 +54,8 @@
                     </span>
                   </span>
                 </button>
-                <ul class="account__list">
-                  <li class="account__item"></li>
+                <ul class="account__list dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li class="account__item"><a href="#">qq</a></li>
                 </ul>
               </div>
               <!-- end account -->
