@@ -23,7 +23,12 @@
 		padding-right: 10px
 		+md
 			position: absolute
-			right: 100%
+			top: -40px
+			left: 50px
+			transition: transform .3s ease-in-out
+		.is-open-search &
+			+md
+				transform: translateY(58px)
 	&__account
 		font-size: 0
 		+md
@@ -68,6 +73,8 @@
 	font-size: 0
 	+lg
 		width: 260px
+	+md
+		width: calc(100vw - 100px)
 	&_small
 		width: 212px
 		+lg 
@@ -118,6 +125,8 @@
 .account
 	vertical-align: top
 	display: inline-block
+	+md
+		width: 100%
 	&__top
 		display: flex
 		align-items: center
@@ -195,6 +204,7 @@
 			transform: none !important
 			box-shadow: none
 			border: none
+			background-color: transparent
 			display: block
 	&__link
 		display: block
@@ -206,6 +216,8 @@
 		padding: 6px 10px
 		transition: background-color .3s, color .3s
 		+text-overflow
+		+md
+			padding-left: 0
 		&:hover
 			background-color: #f8f9fa
 		&.active,
@@ -219,6 +231,7 @@
 	vertical-align: top
 	color: $white
 	background-color: transparent
+	.is-open-search &
 	+md
 		vertical-align: top
 		display: inline-block
@@ -231,7 +244,30 @@
 		bottom: -5px
 	.icon
 		font-size: 15px
-		
+		transition: opacity .3s, transform .3s
+		.is-open-search &
+			opacity: 0
+			transform: scale(0)
+	&__line
+		position: absolute
+		left: -10px
+		height: 2px 
+		width: 20px
+		transition: transform .3s
+		transform-origin: center
+		border-radius: 2px
+		background-color: $white 
+		opacity: 0
+		transition: opacity .3s
+		transform: scale(0)
+		.is-open-search &
+			opacity: 1
+		&_top
+			top: 0
+			transform: rotate(-45deg) translateY(10px) scale(1)
+		&_bottom
+			bottom: 0
+			transform: rotate(45deg) translateY(-10px) scale(1)
 .menu-btn
 	position: relative
 	width: 20px
@@ -253,7 +289,7 @@
 		left: 0
 		height: 2px 
 		width: 100%
-		transition: transform .3s
+		transition: transform .3s ease-in-out
 		border-radius: 2px
 		background-color: $white 
 		&:first-child
