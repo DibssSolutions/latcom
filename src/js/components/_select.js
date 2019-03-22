@@ -5,10 +5,7 @@ import PerfectScrollbar from 'perfect-scrollbar';
 DOC.ready(() => {
   const select = $('.js-select');
   select
-    .selectpicker({
-      liveSearchPlaceholder: 'search'
-      // dropupAuto: false
-    })
+    .selectpicker()
     .on('shown.bs.select', function(
       e,
       clickedIndex,

@@ -19,7 +19,7 @@
 	height: calc(100vh - 111px)
 	+md
 		height: auto
-		flex-direction: column
+		display: block
 
 .sidebar
 	padding-top: 6px
@@ -29,6 +29,8 @@
 	flex-direction: column
 	justify-content: space-between
 	display: flex
+	+lg
+		+fls(190px)
 	+md 
 		+fls(100%)
 		padding: 25px 21px 24px

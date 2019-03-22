@@ -37,6 +37,8 @@
 		{% if props.selectWidth %} data-width="{{ props.selectWidth or '100%'}}"{% endif %}
 		{% if props.title %} title="{{ props.title }}"{% endif %}
 		{% if props.alignRight %} data-dropdown-align-right='true'{% endif %}
+		data-live-search-placeholder='{{ props.searchText or "SEARCH" }}'
+		
 	>
 		{% for option in props.values %}
 			<option value="{{ option }}">{{ option }}</option>

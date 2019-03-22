@@ -70,8 +70,10 @@
     margin-left: 5px
 
 .list-table
-  width: 940px
+  min-width: 560px
   padding-bottom: 12px
+  +md
+    min-width: 940px 
   &__tr
     position: relative
     padding: 16px 32px 15px 38px
@@ -80,6 +82,11 @@
     transition: background-color $tr
     cursor: pointer
     font-family: $avenir
+    display: flex
+    +lg
+      padding: 16px 15px 15px
+    +md
+      padding: 16px 32px 15px 38px 
     +hover
       background-color: #dae2ff
       & > * 
@@ -89,11 +96,9 @@
     &:not(:last-child)
       border-bottom: 1px solid #979797
     & > *
-      display: inline-block
       padding: 0 6px
       color: $black
       +f(14px, 400, 1.214)
-      // transition: font-weight $tr
     &_head
       padding: 18px 32px 12px 38px
       & > *
@@ -114,6 +119,10 @@
     width: 90px
     text-align: center
     font-size: 13px
+    +lg
+      width: 110px
+    +md
+      width: 90px
   &__eye
     position: absolute
     top: 50%
