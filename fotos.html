@@ -113,16 +113,16 @@
               <form class="sidebar__form sidebar-form">
                 <div class="input-group sidebar__input-group">
                   <label class="label">Cuenta</label>
-                  <select class="js-select select" data-live-search="true" data-width="fit">
+                  <select class="js-select select" data-live-search="true" data-width="fit" data-live-search-placeholder='Select a restaurant'>
                     <option value="McDonalds">McDonalds</option>
                     <option value="MacFoxy">MacFoxy</option>
                     <option value="Puzata Khata">Puzata Khata</option>
-                    <option value="LOOOOOOONG WORDDDDDDDDDDDDDD">LOOOOOOONG WORDDDDDDDDDDDDDD</option>
+                    <option value="LOOOOOOONG WORDDD">LOOOOOOONG WORDDD</option>
                   </select>
                 </div>
                 <div class="input-group sidebar__input-group">
                   <label class="label">País</label>
-                  <select class="js-select select" data-live-search="true" data-width="fit">
+                  <select class="js-select select" data-live-search="true" data-width="fit" data-live-search-placeholder='Select a country'>
                     <option value="Argentina">Argentina</option>
                     <option value="Brazil">Brazil</option>
                     <option value="Urugway">Urugway</option>
@@ -130,7 +130,7 @@
                 </div>
                 <div class="input-group sidebar__input-group">
                   <label class="label">Campaña</label>
-                  <select class="js-select select" data-live-search="true" data-width="fit">
+                  <select class="js-select select" data-live-search="true" data-width="fit" data-live-search-placeholder='SEARCH'>
                     <option value="Mc Precios 2017">Mc Precios 2017</option>
                     <option value="Mc Precios 2018">Mc Precios 2018</option>
                     <option value="Mc Precios 2019">Mc Precios 2019</option>
@@ -203,136 +203,515 @@
               </nav>
             </div>
             <!-- end head -->
-            <ul class="photo-gallery row">
-              <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
-                <a href="#" class="photo">
-                  <div class="photo__bg" style="background-image: url(./img/photo_1.png)"></div>
-                  <div class="photo__bottom"> 916 Minnie Gardens Apt. 180 </div>
-                  <div class="photo__center js-perf">
-                    <div class="photo__text-big">916 Minnie Gardens Apt. 180</div>
-                    <div class="photo-city">Buenos Aires</div>
-                    <div class="photo-info">Gran formato</div>
+            <div class="filters-section-wrapper js-filters-wrapper">
+              <div class="filters-mob-overlay js-filters-overlay"></div>
+              <div class="filters-section js-filters">
+                <h3 class="filters-section__title title-md">Fotos de soportes</h3>
+                <div class="filters-section__filters">
+                  <div class="filters">
+                    <div class="filters__item">
+                      <div class="input-group">
+                        <label class="label label_small">Categoría</label>
+                        <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Todas" data-live-search-placeholder='SEARCH'>
+                          <option value="lorem">lorem</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="ipsum dolor">ipsum dolor</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="filters__item">
+                      <div class="input-group">
+                        <label class="label label_small">Ciudad</label>
+                        <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Buenos Aires" data-live-search-placeholder='SEARCH'>
+                          <option value="lorem">lorem</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="ipsum dolor">ipsum dolor</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="filters__item">
+                      <div class="input-group">
+                        <label class="label label_small">Dirección</label>
+                        <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Todas" data-dropdown-align-right='true' data-live-search-placeholder='SEARCH'>
+                          <option value="lorem">lorem</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="ipsum dolor">ipsum dolor</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="filters__item">
+                      <label class="label label_small">Mostrar</label>
+                      <!-- begin input -->
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkbox" checked>
+                        <span class="checkbox__text">Fotos</span>
+                        <span class="checkbox__icon"></span>
+                      </label>
+                      <!-- end input -->
+                      <!-- begin input -->
+                      <label class="checkbox">
+                        <input type="checkbox" name="checkbox">
+                        <span class="checkbox__text">Videos</span>
+                        <span class="checkbox__icon"></span>
+                      </label>
+                      <!-- end input -->
+                    </div>
                   </div>
-                  <div class="photo__add">
-                    <svg class="icon icon-add">
-                      <use xlink:href="img/sprite.svg#icon-add"></use>
+                </div>
+              </div>
+              <div class="filters-fab js-filters-btn">
+                <a href="#" class="fab">
+                  <span class="fab-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                  <span class="fab-cross">
+                    <svg class="icon icon-close">
+                      <use xlink:href="img/sprite.svg#icon-close"></use>
                     </svg>
-                  </div>
+                  </span>
                 </a>
-              </li>
-              <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
-                <a href="#" class="photo">
-                  <div class="photo__bg" style="background-image: url(./img/photo_2.png)"></div>
-                  <div class="photo__bottom"> 3557 Carleton Manors </div>
-                  <div class="photo__center js-perf">
-                    <div class="photo__text-big">3557 Carleton Manors</div>
-                    <div class="photo-city">Buenos Aires</div>
-                    <div class="photo-info">Gran formato</div>
-                  </div>
-                  <div class="photo__add">
-                    <svg class="icon icon-add">
-                      <use xlink:href="img/sprite.svg#icon-add"></use>
-                    </svg>
-                  </div>
+              </div>
+            </div>
+            <section class="list-section">
+              <h3 class="list-section__title">Buenos Aires</h3>
+              <div class="accordion js-accordion is-open">
+                <a href="#" class="accordion__trigger js-accordion-trigger">
+                  <span class="list-head">
+                    <span class="list-head__plus"></span>
+                    <span class="list-head__title"> Gran formato </span>
+                    <span class="list-head__counter"> (4) </span>
+                  </span>
                 </a>
-              </li>
-              <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
-                <a href="#" class="photo">
-                  <div class="photo__bg" style="background-image: url(./img/photo_3.png)"></div>
-                  <div class="photo__bottom"> 391 Nitzsche Islands </div>
-                  <div class="photo__center js-perf">
-                    <div class="photo__text-big">391 Nitzsche Islands</div>
-                    <div class="photo-city">Buenos Aires</div>
-                    <div class="photo-info">Gran formato</div>
-                  </div>
-                  <div class="photo__add">
-                    <svg class="icon icon-add">
-                      <use xlink:href="img/sprite.svg#icon-add"></use>
-                    </svg>
-                  </div>
+                <div class="accordion__photos js-accordion-wrap">
+                  <ul class="photo-gallery row">
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_1.png)"></div>
+                        <div class="photo__bottom"> 916 Minnie Gardens Apt. 180 </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">916 Minnie Gardens Apt. 180</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_2.png)"></div>
+                        <div class="photo__bottom"> 3557 Carleton Manors </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">3557 Carleton Manors</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_3.png)"></div>
+                        <div class="photo__bottom"> 391 Nitzsche Islands </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">391 Nitzsche Islands</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_4.png)"></div>
+                        <div class="photo__bottom"> 047 Angela Branch </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">047 Angela Branch</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_1.png)"></div>
+                        <div class="photo__bottom"> 2354 Denesik Avenue Apt. 067 </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">2354 Denesik Avenue Apt. 067</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_2.png)"></div>
+                        <div class="photo__bottom"> 34 May Mount </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">34 May Mount</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_3.png)"></div>
+                        <div class="photo__bottom"> 447 Orion Parkways </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">447 Orion Parkways</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_4.png)"></div>
+                        <div class="photo__bottom"> 15 Reichert Estate Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque recusandae modi qui sapiente esse placeat repudiandae nostrum, debitis </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">15 Reichert Estate Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque recusandae modi qui sapiente esse placeat repudiandae nostrum, debitis</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion js-accordion">
+                <a href="#" class="accordion__trigger js-accordion-trigger">
+                  <span class="list-head">
+                    <span class="list-head__plus"></span>
+                    <span class="list-head__title"> Formato medio </span>
+                    <span class="list-head__counter"> (12) </span>
+                  </span>
                 </a>
-              </li>
-              <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
-                <a href="#" class="photo">
-                  <div class="photo__bg" style="background-image: url(./img/photo_4.png)"></div>
-                  <div class="photo__bottom"> 047 Angela Branch </div>
-                  <div class="photo__center js-perf">
-                    <div class="photo__text-big">047 Angela Branch</div>
-                    <div class="photo-city">Buenos Aires</div>
-                    <div class="photo-info">Gran formato</div>
-                  </div>
-                  <div class="photo__add">
-                    <svg class="icon icon-add">
-                      <use xlink:href="img/sprite.svg#icon-add"></use>
-                    </svg>
-                  </div>
+                <div class="accordion__photos js-accordion-wrap">
+                  <ul class="photo-gallery row">
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_1.png)"></div>
+                        <div class="photo__bottom"> 916 Minnie Gardens Apt. 180 </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">916 Minnie Gardens Apt. 180</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_2.png)"></div>
+                        <div class="photo__bottom"> 3557 Carleton Manors </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">3557 Carleton Manors</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_3.png)"></div>
+                        <div class="photo__bottom"> 391 Nitzsche Islands </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">391 Nitzsche Islands</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_4.png)"></div>
+                        <div class="photo__bottom"> 047 Angela Branch </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">047 Angela Branch</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_1.png)"></div>
+                        <div class="photo__bottom"> 2354 Denesik Avenue Apt. 067 </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">2354 Denesik Avenue Apt. 067</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_2.png)"></div>
+                        <div class="photo__bottom"> 34 May Mount </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">34 May Mount</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_3.png)"></div>
+                        <div class="photo__bottom"> 447 Orion Parkways </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">447 Orion Parkways</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_4.png)"></div>
+                        <div class="photo__bottom"> 15 Reichert Estate Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque recusandae modi qui sapiente esse placeat repudiandae nostrum, debitis </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">15 Reichert Estate Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque recusandae modi qui sapiente esse placeat repudiandae nostrum, debitis</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion js-accordion">
+                <a href="#" class="accordion__trigger js-accordion-trigger">
+                  <span class="list-head">
+                    <span class="list-head__plus"></span>
+                    <span class="list-head__title"> Formato pequeño </span>
+                    <span class="list-head__counter"> (7) </span>
+                  </span>
                 </a>
-              </li>
-              <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
-                <a href="#" class="photo">
-                  <div class="photo__bg" style="background-image: url(./img/photo_1.png)"></div>
-                  <div class="photo__bottom"> 2354 Denesik Avenue Apt. 067 </div>
-                  <div class="photo__center js-perf">
-                    <div class="photo__text-big">2354 Denesik Avenue Apt. 067</div>
-                    <div class="photo-city">Buenos Aires</div>
-                    <div class="photo-info">Gran formato</div>
-                  </div>
-                  <div class="photo__add">
-                    <svg class="icon icon-add">
-                      <use xlink:href="img/sprite.svg#icon-add"></use>
-                    </svg>
-                  </div>
-                </a>
-              </li>
-              <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
-                <a href="#" class="photo">
-                  <div class="photo__bg" style="background-image: url(./img/photo_2.png)"></div>
-                  <div class="photo__bottom"> 34 May Mount </div>
-                  <div class="photo__center js-perf">
-                    <div class="photo__text-big">34 May Mount</div>
-                    <div class="photo-city">Buenos Aires</div>
-                    <div class="photo-info">Gran formato</div>
-                  </div>
-                  <div class="photo__add">
-                    <svg class="icon icon-add">
-                      <use xlink:href="img/sprite.svg#icon-add"></use>
-                    </svg>
-                  </div>
-                </a>
-              </li>
-              <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
-                <a href="#" class="photo">
-                  <div class="photo__bg" style="background-image: url(./img/photo_3.png)"></div>
-                  <div class="photo__bottom"> 447 Orion Parkways </div>
-                  <div class="photo__center js-perf">
-                    <div class="photo__text-big">447 Orion Parkways</div>
-                    <div class="photo-city">Buenos Aires</div>
-                    <div class="photo-info">Gran formato</div>
-                  </div>
-                  <div class="photo__add">
-                    <svg class="icon icon-add">
-                      <use xlink:href="img/sprite.svg#icon-add"></use>
-                    </svg>
-                  </div>
-                </a>
-              </li>
-              <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
-                <a href="#" class="photo">
-                  <div class="photo__bg" style="background-image: url(./img/photo_4.png)"></div>
-                  <div class="photo__bottom"> 15 Reichert Estate Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque recusandae modi qui sapiente esse placeat repudiandae nostrum, debitis </div>
-                  <div class="photo__center js-perf">
-                    <div class="photo__text-big">15 Reichert Estate Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque recusandae modi qui sapiente esse placeat repudiandae nostrum, debitis</div>
-                    <div class="photo-city">Buenos Aires</div>
-                    <div class="photo-info">Gran formato</div>
-                  </div>
-                  <div class="photo__add">
-                    <svg class="icon icon-add">
-                      <use xlink:href="img/sprite.svg#icon-add"></use>
-                    </svg>
-                  </div>
-                </a>
-              </li>
-            </ul>
+                <div class="accordion__photos js-accordion-wrap">
+                  <ul class="photo-gallery row">
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_1.png)"></div>
+                        <div class="photo__bottom"> 916 Minnie Gardens Apt. 180 </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">916 Minnie Gardens Apt. 180</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_2.png)"></div>
+                        <div class="photo__bottom"> 3557 Carleton Manors </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">3557 Carleton Manors</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_3.png)"></div>
+                        <div class="photo__bottom"> 391 Nitzsche Islands </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">391 Nitzsche Islands</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_4.png)"></div>
+                        <div class="photo__bottom"> 047 Angela Branch </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">047 Angela Branch</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_1.png)"></div>
+                        <div class="photo__bottom"> 2354 Denesik Avenue Apt. 067 </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">2354 Denesik Avenue Apt. 067</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_2.png)"></div>
+                        <div class="photo__bottom"> 34 May Mount </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">34 May Mount</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_3.png)"></div>
+                        <div class="photo__bottom"> 447 Orion Parkways </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">447 Orion Parkways</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider">
+                      <a href="#" class="photo">
+                        <div class="photo__bg" style="background-image: url(./img/photo_4.png)"></div>
+                        <div class="photo__bottom"> 15 Reichert Estate Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque recusandae modi qui sapiente esse placeat repudiandae nostrum, debitis </div>
+                        <div class="photo__center js-perf">
+                          <div class="photo__text-big">15 Reichert Estate Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque recusandae modi qui sapiente esse placeat repudiandae nostrum, debitis</div>
+                          <div class="photo-city">Buenos Aires</div>
+                          <div class="photo-info">Gran formato</div>
+                        </div>
+                        <div class="photo__add">
+                          <svg class="icon icon-add">
+                            <use xlink:href="img/sprite.svg#icon-add"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
             <!-- end items -->
           </div>
         </div>
@@ -478,7 +857,7 @@
             <form class="modal-form">
               <div class="input-group">
                 <label class="label">Cuenta</label>
-                <select class="js-select select select_blue" data-live-search="true" data-width="100%">
+                <select class="js-select select select_blue" data-live-search="true" data-width="100%" data-live-search-placeholder='SEARCH'>
                   <option value="McDonalds">McDonalds</option>
                   <option value="MacFoxy">MacFoxy</option>
                   <option value="Puzata Khata">Puzata Khata</option>
@@ -486,7 +865,7 @@
               </div>
               <div class="input-group">
                 <label class="label">País</label>
-                <select class="js-select select select_blue" data-live-search="true" data-width="100%">
+                <select class="js-select select select_blue" data-live-search="true" data-width="100%" data-live-search-placeholder='SEARCH'>
                   <option value="Argentina">Argentina</option>
                   <option value="Brazil">Brazil</option>
                   <option value="Urugway">Urugway</option>
@@ -494,7 +873,7 @@
               </div>
               <div class="input-group">
                 <label class="label">Campaña</label>
-                <select class="js-select select select_blue" data-live-search="true" data-width="100%">
+                <select class="js-select select select_blue" data-live-search="true" data-width="100%" data-live-search-placeholder='SEARCH'>
                   <option value="Mc Precios 2017">Mc Precios 2017</option>
                   <option value="Mc Precios 2018">Mc Precios 2018</option>
                   <option value="Mc Precios 2019">Mc Precios 2019</option>
