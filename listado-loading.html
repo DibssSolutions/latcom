@@ -130,7 +130,7 @@
                 </div>
                 <div class="input-group sidebar__input-group">
                   <label class="label">Campaña</label>
-                  <select class="js-select select" data-live-search="true" data-width="fit" data-live-search-placeholder='SEARCH'>
+                  <select class="js-select select" data-live-search="true" data-width="fit" data-live-search-placeholder='Buscar dirección'>
                     <option value="Mc Precios 2017">Mc Precios 2017</option>
                     <option value="Mc Precios 2018">Mc Precios 2018</option>
                     <option value="Mc Precios 2019">Mc Precios 2019</option>
@@ -205,64 +205,74 @@
             <div class="filters-section-wrapper js-filters-wrapper">
               <div class="filters-mob-overlay js-filters-overlay"></div>
               <div class="filters-section js-filters">
-                <h3 class="filters-section__title title-md">Listado de soportes</h3>
-                <div class="filters-section__search">
-                  <form class="search search_small">
-                    <div class="search__input">
-                      <input type="text" placeholder="Buscar soportes">
-                    </div>
-                    <button class="search__button" type="button">
-                      <svg class="icon icon-search">
-                        <use xlink:href="img/sprite.svg#icon-search"></use>
-                      </svg>
-                    </button>
-                  </form>
-                </div>
-                <div class="filters-section__filters">
-                  <div class="filters">
-                    <div class="filters__item">
-                      <div class="input-group">
-                        <label class="label label_small">Categoría</label>
-                        <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Todas" data-live-search-placeholder='SEARCH'>
-                          <option value="lorem">lorem</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="ipsum dolor">ipsum dolor</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                        </select>
+                <div class="filters-section__wrap">
+                  <h3 class="filters-section__title title-md">Listado de soportes</h3>
+                  <div class="filters-section__search">
+                    <form class="search search_small">
+                      <div class="search__input">
+                        <input type="text" placeholder="Buscar soportes">
                       </div>
-                    </div>
-                    <div class="filters__item">
-                      <div class="input-group">
-                        <label class="label label_small">Ciudad</label>
-                        <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Buenos Aires" data-live-search-placeholder='SEARCH'>
-                          <option value="lorem">lorem</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="ipsum dolor">ipsum dolor</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                        </select>
+                      <button class="search__button" type="button">
+                        <svg class="icon icon-search">
+                          <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </div>
+                  <div class="filters-section__filters">
+                    <div class="filters">
+                      <div class="filters__item">
+                        <div class="input-group">
+                          <label class="label label_small">Categoría</label>
+                          <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Todas" data-live-search-placeholder='Buscar dirección'>
+                            <option value="lorem">lorem</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="ipsum dolor">ipsum dolor</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                          </select>
+                        </div>
                       </div>
-                    </div>
-                    <div class="filters__item">
-                      <div class="input-group">
-                        <label class="label label_small">Dirección</label>
-                        <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Todas" data-live-search-placeholder='SEARCH'>
-                          <option value="lorem">lorem</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="ipsum dolor">ipsum dolor</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                        </select>
+                      <div class="filters__item">
+                        <div class="input-group">
+                          <label class="label label_small">Ciudad</label>
+                          <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Buenos Aires" data-live-search-placeholder='Buscar dirección'>
+                            <option value="lorem">lorem</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="ipsum dolor">ipsum dolor</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="filters__item">
+                        <div class="input-group">
+                          <label class="label label_small">Dirección</label>
+                          <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Todas" data-dropdown-align-right='true' data-live-search-placeholder='Buscar dirección'>
+                            <option value="lorem">lorem</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="ipsum dolor">ipsum dolor</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
                   </div>
+                </div>
+                <div class="filters-section__download">
+                  <a href="#" class="link-down-load" download>
+                    <svg class="icon icon-download-sm">
+                      <use xlink:href="img/sprite.svg#icon-download-sm"></use>
+                    </svg>
+                    <span class="link-down-load__text">Descargar álbum</span>
+                  </a>
                 </div>
               </div>
               <div class="filters-fab js-filters-btn">
@@ -297,7 +307,7 @@
             <form class="modal-form">
               <div class="input-group">
                 <label class="label">Cuenta</label>
-                <select class="js-select select select_blue" data-live-search="true" data-width="100%" data-live-search-placeholder='SEARCH'>
+                <select class="js-select select select_blue" data-live-search="true" data-width="100%" data-live-search-placeholder='Buscar dirección'>
                   <option value="McDonalds">McDonalds</option>
                   <option value="MacFoxy">MacFoxy</option>
                   <option value="Puzata Khata">Puzata Khata</option>
@@ -305,7 +315,7 @@
               </div>
               <div class="input-group">
                 <label class="label">País</label>
-                <select class="js-select select select_blue" data-live-search="true" data-width="100%" data-live-search-placeholder='SEARCH'>
+                <select class="js-select select select_blue" data-live-search="true" data-width="100%" data-live-search-placeholder='Buscar dirección'>
                   <option value="Argentina">Argentina</option>
                   <option value="Brazil">Brazil</option>
                   <option value="Urugway">Urugway</option>
@@ -313,7 +323,7 @@
               </div>
               <div class="input-group">
                 <label class="label">Campaña</label>
-                <select class="js-select select select_blue" data-live-search="true" data-width="100%" data-live-search-placeholder='SEARCH'>
+                <select class="js-select select select_blue" data-live-search="true" data-width="100%" data-live-search-placeholder='Buscar dirección'>
                   <option value="Mc Precios 2017">Mc Precios 2017</option>
                   <option value="Mc Precios 2018">Mc Precios 2018</option>
                   <option value="Mc Precios 2019">Mc Precios 2019</option>
