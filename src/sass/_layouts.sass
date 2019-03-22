@@ -10,7 +10,7 @@
 	padding: 0 45px 0 60px 
 	max-width: 1280px
 	+clr
-	+sm 
+	+md 
 		padding: 0 20px 
 
 .wrap
@@ -19,7 +19,6 @@
 	height: calc(100vh - 111px)
 	+md
 		height: auto
-	+sm
 		flex-direction: column
 
 .sidebar
@@ -29,16 +28,13 @@
 	flex-direction: column
 	justify-content: space-between
 	display: flex
-	+sm 
-		flex: 0 0 auto
-		max-width: 100%
-	&__top
+	+md 
+		+fls(100%)
 	&__bottom
 		+sm 
 			// display: none
 
 .main
-	// position: relative
 	margin: 0 -30px
 	padding: 0 30px
 	flex-grow: 1
@@ -46,6 +42,10 @@
 	overflow-y: auto
 	display: flex
 	flex-direction: column
+	+md
+		flex-grow: 0
+		margin: 0 -20px
+		padding: 0 20px
 	&:before
 		position: absolute
 		content: "" 
@@ -54,6 +54,8 @@
 		width: calc((100% - 1280px)/2)
 		height: calc(100vh - 110px)
 		min-width: 45px 
+		+md
+			display: none
 	& > .ps__rail-y
 		right: 20px !important
 		height: calc(100vh - 110px) !important
