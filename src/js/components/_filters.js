@@ -14,7 +14,7 @@ closeBtn.on('click', e => {
 });
 
 BODY.on('click', e => {
-  console.log($(e.target));
+
   if (
     $(e.target).closest(filters).length ||
     $(e.target).closest(closeBtn).length ||

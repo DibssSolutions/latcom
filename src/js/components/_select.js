@@ -4,7 +4,25 @@ import PerfectScrollbar from 'perfect-scrollbar';
 
 DOC.ready(() => {
   const select = $('.js-select');
-  select.selectpicker({ liveSearchPlaceholder: 'search' });
+  select
+    .selectpicker({
+      liveSearchPlaceholder: 'search',
+      dropdownAlignRight: select.data('align')
+    })
+    .on('shown.bs.select', function(
+      e,
+      clickedIndex,
+      isSelected,
+      previousValue
+    ) {
+      const parent = $(this).parents('.js-select');
+      const perf = parent.find('.dropdown-menu>.inner.show')[0];
+      console.log(perf);
+      new PerfectScrollbar(perf, {
+        useBothWheelAxes: false,
+        maxScrollbarLength: 60
+      });
+    });
   BODY.find('.js-select .btn').removeClass('btn');
 
   $('.js-select .dropdown-menu').on('click', e => {
@@ -14,9 +32,6 @@ DOC.ready(() => {
     }
   });
 
-  $('.js-select').on('show.bs.select', () => {
-    
-  });
   // const inputs = $('.bs-searchbox input');
   // inputs.each((i, el) => {
   //   $(el).on('input', e => hideLine(e));

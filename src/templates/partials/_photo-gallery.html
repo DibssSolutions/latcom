@@ -48,7 +48,11 @@
 {% import "partials/_mixins.html" as mixins %}
 
 {% macro photo(props) %}
+<<<<<<< HEAD
+  <li class="photo-gallery__item col-3 col-md-6 col-sm-12 js-gallery-trigger" data-modal-control="img-slider">
+=======
   <li class="photo-gallery__item js-gallery-trigger" data-modal-control="img-slider" data-wrapper="img-slider" >
+>>>>>>> 4c708748111083956a9fa21c8f9b87d04e78bc5d
     <a href="#" class="photo">
       <div
         class="photo__bg"
@@ -70,7 +74,7 @@
 {% endmacro %}
 
 
-<ul class="photo-gallery">
+<ul class="photo-gallery row">
   {% for item in [ 
     {
       image: 'photo_1.png',
