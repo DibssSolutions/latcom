@@ -133,7 +133,7 @@
   &__prev
     left: 0
 
-.filters-section-wrapper
+.filters-mob-overlay
   +sm
     position: fixed
     z-index: -1
@@ -144,8 +144,6 @@
     opacity: 0
     visibility: hidden
     min-width: 320px
-    +vertical
-    +gpu
     overflow: auto
     transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
     background-color: rgba($black, 0.7)
@@ -167,3 +165,30 @@
     background-color: $white
     flex-direction: column
     align-items: stretch
+
+// .filters-fab
+//   position: absolute
+//   bottom: 50px
+//   right: 50px
+.filters-section-wrapper
+  position: fixed
+  right: 50px
+  bottom: 50px
+  z-index: 100
+
+.filters-section
+  +sm
+    position: absolute
+    bottom: 24px
+    right: 24px
+    width: 300px
+    +fadeout($tr)
+    z-index: 1150
+    .is-open &
+      +fadein
+
+.filters-fab
+  position: absolute
+  bottom: 0
+  right: 0
+  z-index: 1200

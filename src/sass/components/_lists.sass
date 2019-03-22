@@ -25,6 +25,7 @@
     display: block
   &__content
     display: none
+    overflow: auto
 
 .list-head
   display: flex
@@ -69,15 +70,19 @@
 
 .list-table
   width: 940px
+  padding-bottom: 12px
   &__tr
     position: relative
-    padding: 16px 32px 16px 38px
+    padding: 16px 32px 15px 38px
     text-align: left
     font-size: 0
     transition: background-color $tr
     cursor: pointer
+    font-family: $avenir
     +hover
       background-color: #dae2ff
+      & > * 
+        font-weight: 600
       .list-table__eye
         +fadein
     &:not(:last-child)
@@ -87,22 +92,27 @@
       padding: 0 6px
       color: $black
       +f(14px, 400, 1.214)
+      // transition: font-weight $tr
     &_head
+      padding: 18px 32px 12px 38px
       & > *
         font-weight: 500
   &__counter
-    width: 80px
+    width: 73px
   &__soporte
     width: 186px
   &__direccion
-    width: 200px
+    width: 198px
   &__comienza
-    width: 156px
+    width: 158px
+    font-size: 13px
   &__finaliza
-    width: 156px
+    width: 151px
+    font-size: 13px
   &__ots
     width: 90px
     text-align: center
+    font-size: 13px
   &__eye
     position: absolute
     top: 50%

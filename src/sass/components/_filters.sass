@@ -1,29 +1,39 @@
 .filters-section
-  display: flex
-  align-items: flex-end
-  margin-bottom: 14px
-  padding-top: 10px
-  &__filters
-    margin-left: auto
-    +sm
-      margin-left: 0
-  &__title
-    margin-right: 30px
-  .close-mob-filters-btn
-    display: none
-  &__search
-    padding-bottom: 9px
+	display: flex
+	align-items: flex-end
+	margin-bottom: 14px
+	padding-top: 10px
+	+sm 
+		padding-bottom: 50px
+	&__filters
+		margin-left: auto
+		+sm
+			margin-left: 0
+	&__title
+		margin-right: 30px
+		+sm 
+			display: none
+	.close-mob-filters-btn
+		display: none
+	&__search
+		padding-bottom: 9px
+		+sm 
+			display: none
 
 .filters
-  display: flex
-  margin: 0 -30px
-  +sm
-    flex-direction: column
-    width: 100%
-  &__item
-    padding: 0 30px
-    text-align: left
-    +sm 
-      padding: 10px 0
-      .bootstrap-select.fit-width
-          width: 100% !important
+	display: flex
+	margin: 0 -30px
+	+sm
+		flex-direction: column
+		width: 100%
+		margin: 0
+	&__item
+		padding: 0 30px
+		text-align: left
+		+sm 
+			padding: 10px 0
+			.bootstrap-select.fit-width
+					width: 100% !important
+			.dropdown-menu
+				border: none
+				// position: relative !important
