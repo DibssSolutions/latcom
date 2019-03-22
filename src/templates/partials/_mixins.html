@@ -35,6 +35,7 @@
 		{% if props.multiple %} multiple{% endif %}
 		{% if props.selectWidth %} data-width="{{ props.selectWidth or '100%'}}"{% endif %}
 		{% if props.title %} title="{{ props.title }}"{% endif %}
+		{% if props.alignRight %} data-dropdown-align-right='true'{% endif %}
 	>
 		{% for option in props.values %}
 			<option value="{{ option }}">{{ option }}</option>
@@ -124,12 +125,13 @@
 						{% for item in props.selects %}
 							<div class="filters__item">
 								<div class="input-group">
-									<label class="label">{{ item.label }}</label>
+									<label class="label label_small">{{ item.label }}</label>
 									{{ select({ 
 										title: item.title,
 										modifier: 'blue',
 										values: ['lorem', 2, 3, 'ipsum dolor', 5, 6, 7],
-										selectWidth: 'fit'
+										selectWidth: 'fit',
+										alignRight: item.align
 									}) }}
 								</div>
 						</div>
@@ -218,7 +220,48 @@
 					</span>
 				</a>
 				<div class="accordion__content js-accordion-wrap">
-						
+					{% if loop.first %}
+						{{ table(
+							[
+								{
+									counter: '1',
+									soporte: 'Street Furniture',
+									direccion: '781 Leatha Camp',
+									comienza: '05/10/2018',
+									finaliza: '08/31/2018',
+									ots: '5500',
+									sliderWrap: acc.sliderWrap
+								},
+								{
+									counter: '2',
+									soporte: 'Street Furniture',
+									direccion: '1652 Alexa Row',
+									comienza: '11/07/2018',
+									finaliza: '12/05/2018',
+									ots: '4500',
+									sliderWrap: acc.sliderWrap
+								},
+								{
+									counter: '3',
+									soporte: 'Street Furniture',
+									direccion: '655 Bins Forge',
+									comienza: '12/31/2018',
+									finaliza: '07/03/2018',
+									ots: '5500',
+									sliderWrap: acc.sliderWrap
+								},
+								{
+									counter: '4',
+									soporte: '274 Donna Mall',
+									direccion: '1652 Alexa Row',
+									comienza: '05/13/2018',
+									finaliza: '09/28/2018',
+									ots: '4000',
+									sliderWrap: acc.sliderWrap
+								}
+							]
+						) }}
+					{% else %}
 					{{ table(
 						[
 							 {
@@ -256,9 +299,46 @@
 								finaliza: '09/28/2018',
 								ots: '4000',
 								sliderWrap: acc.sliderWrap
+							},
+							{
+								counter: '1',
+								soporte: 'Street Furniture',
+								direccion: '781 Leatha Camp',
+								comienza: '05/10/2018',
+								finaliza: '08/31/2018',
+								ots: '5500',
+								sliderWrap: acc.sliderWrap
+							},
+							{
+								counter: '2',
+								soporte: 'Street Furniture',
+								direccion: '1652 Alexa Row',
+								comienza: '11/07/2018',
+								finaliza: '12/05/2018',
+								ots: '4500',
+								sliderWrap: acc.sliderWrap
+							},
+							{
+								counter: '3',
+								soporte: 'Street Furniture',
+								direccion: '655 Bins Forge',
+								comienza: '12/31/2018',
+								finaliza: '07/03/2018',
+								ots: '5500',
+								sliderWrap: acc.sliderWrap
+							},
+							{
+								counter: '4',
+								soporte: '274 Donna Mall',
+								direccion: '1652 Alexa Row',
+								comienza: '05/13/2018',
+								finaliza: '09/28/2018',
+								ots: '4000',
+								sliderWrap: acc.sliderWrap
 							}
 						]
 					) }}
+				{% endif %}
 				</div>
 			</div>
 		{% endfor %}
