@@ -1,6 +1,10 @@
 // GENERATE GRID
 +generate_grid()
 
+.out
+	position: relative
+	overflow: hidden
+
 .inner
 	margin: 0 auto
 	padding: 0 45px 0 60px 
@@ -11,13 +15,13 @@
 
 .wrap
 	display: flex
-	min-height: 630px
-	height: calc(100vh - 81px)
+	min-height: 300px
+	height: calc(100vh - 111px)
 	+sm
 		flex-direction: column
 
 .sidebar
-	padding-top: 40px
+	padding-top: 10px
 	padding-bottom: 44px
 	+fls(235px)
 	flex-direction: column
@@ -32,7 +36,22 @@
 			// display: none
 
 .main
-	padding-top: 30px
+	// position: relative
+	margin: 0 -30px
+	padding: 0 30px
 	flex-grow: 1
+	height: 100%
+	overflow-y: auto
 	display: flex
 	flex-direction: column
+	&:before
+		position: absolute
+		content: "" 
+		top: 80px
+		right: 0
+		width: calc((100% - 1280px)/2)
+		height: calc(100vh - 110px)
+		min-width: 45px 
+	& > .ps__rail-y
+		height: calc(100vh - 110px) !important
+		top: 110px !important
