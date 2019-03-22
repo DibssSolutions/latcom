@@ -108,8 +108,8 @@
           <!-- begin sidebar -->
           <div class="sidebar">
             <div class="sidebar__top">
-              <form class="sidebar-form">
-                <div class="input-group">
+              <form class="sidebar__form sidebar-form">
+                <div class="input-group sidebar__input-group">
                   <label class="label">Cuenta</label>
                   <select class="js-select select" data-live-search="true" data-width="fit">
                     <option value="McDonalds">McDonalds</option>
@@ -118,7 +118,7 @@
                     <option value="LOOOOOOONG WORDDDDDDDDDDDDDD">LOOOOOOONG WORDDDDDDDDDDDDDD</option>
                   </select>
                 </div>
-                <div class="input-group">
+                <div class="input-group sidebar__input-group">
                   <label class="label">País</label>
                   <select class="js-select select" data-live-search="true" data-width="fit">
                     <option value="Argentina">Argentina</option>
@@ -126,7 +126,7 @@
                     <option value="Urugway">Urugway</option>
                   </select>
                 </div>
-                <div class="input-group">
+                <div class="input-group sidebar__input-group">
                   <label class="label">Campaña</label>
                   <select class="js-select select" data-live-search="true" data-width="fit">
                     <option value="Mc Precios 2017">Mc Precios 2017</option>
@@ -139,9 +139,6 @@
                     <option value="Mc Precios 2018">Mc Precios 2018</option>
                     <option value="Mc Precios 2019">Mc Precios 2019</option>
                   </select>
-                </div>
-                <div class="input-group">
-                  <label class="label"></label>
                 </div>
               </form>
             </div>
@@ -215,6 +212,14 @@
                 </ul>
               </nav>
               <!-- end items -->
+              <div class="main-info">
+                <div class="main-info__icon">
+                  <svg class="icon icon-arrow-up">
+                    <use xlink:href="img/sprite.svg#icon-arrow-up"></use>
+                  </svg>
+                </div>
+                <div class="main-info__text"> Selecciona una de las opciones para desplegar sus detalles </div>
+              </div>
             </div>
           </div>
         </div>
