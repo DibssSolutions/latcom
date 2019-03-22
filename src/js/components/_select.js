@@ -6,7 +6,7 @@ DOC.ready(() => {
   const select = $('.js-select');
   select
     .selectpicker({
-      liveSearchPlaceholder: 'search'
+      liveSearchPlaceholder: 'Search'
       // dropupAuto: false
     })
     .on('shown.bs.select', function(
