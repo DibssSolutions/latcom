@@ -11,7 +11,6 @@ const modal = () => {
 
     control.on('click', e => {
       e.preventDefault();
-      // BODY.addClass(OVERFLOW_HIDDEN);
       if (!control.hasClass(ACTIVE)) {
         modals.removeClass(OPEN);
         modal.addClass(OPEN);
@@ -32,7 +31,6 @@ const modal = () => {
 
     const hide = () => {
       modal.removeClass(OPEN);
-      // BODY.removeClass(OVERFLOW_HIDDEN);
       controls.removeClass(ACTIVE);
     };
 

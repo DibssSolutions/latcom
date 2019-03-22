@@ -1,6 +1,5 @@
 import slick from 'slick-carousel';
 import EasyGoogleMaps from './_easymap';
-// const EasyGoogleMaps = require('./_easymap');
 
 import { BODY } from './../constants';
 import { LOAD_DATA, buildIcon } from './../utils';
@@ -275,10 +274,9 @@ BODY.on('click', '.js-gallery-trigger', function() {
 });
 const closeModalButton = $('[data-modal-close]');
 closeModalButton.on('click', e => {
-  
   setTimeout(() => {
     modalSlider.slick('unslick');
-  },200);
+  }, 200);
 });
 
 $('[data-modal]').on('click', e => {
