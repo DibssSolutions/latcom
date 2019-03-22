@@ -129,7 +129,7 @@
 									{{ select({ 
 										title: item.title,
 										modifier: 'blue',
-										values: [1, 2, 3, 4, 5, 6, 7],
+										values: ['lorem', 2, 3, 'ipsum dolor', 5, 6, 7],
 										selectWidth: 'fit'
 									}) }}
 								</div>
@@ -151,7 +151,6 @@
 {% endmacro %}
 
 {% macro imgSlide(props) %}
-
 	<div class="img-slide">
 		<div class="img-slide__photo">
 			<img src="./img/{{ props.img }}" alt="img">
@@ -169,6 +168,7 @@
 		</div>
 	</div>
 {% endmacro %}
+
 {% macro table(props) %}
 	<div class="list-table">
 		<div class="list-table__tr list-table__tr_head">
