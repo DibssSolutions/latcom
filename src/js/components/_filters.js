@@ -6,6 +6,7 @@ const overlay = $('.js-filters-overlay');
 const filters = $('.js-filters');
 
 filtersBtn.on('click', e => {
+  e.preventDefault();
   filtersWrapper.toggleClass('is-open');
 });
 
