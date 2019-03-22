@@ -6,8 +6,8 @@ DOC.ready(() => {
   const select = $('.js-select');
   select
     .selectpicker({
-      liveSearchPlaceholder: 'search',
-      dropdownAlignRight: select.data('align')
+      liveSearchPlaceholder: 'search'
+      // dropupAuto: false
     })
     .on('shown.bs.select', function(
       e,
@@ -16,9 +16,9 @@ DOC.ready(() => {
       previousValue
     ) {
       const parent = $(this).parents('.js-select');
-      const perf = parent.find('.dropdown-menu>.inner.show')[0];
-      console.log(perf);
-      new PerfectScrollbar(perf, {
+      const perf = parent.find('.dropdown-menu>.inner.show');
+      if (perf.hasClass('ps')) return;
+      new PerfectScrollbar(perf[0], {
         useBothWheelAxes: false,
         maxScrollbarLength: 60
       });

@@ -138,37 +138,3 @@
   &__prev
     left: 0
 
-.filters-section-wrapper
-  +sm
-    position: fixed
-    z-index: -1
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    opacity: 0
-    visibility: hidden
-    min-width: 320px
-    +vertical
-    +gpu
-    overflow: auto
-    transition: opacity 0.3s, visibility 0.3s, z-index 0.3s
-    background-color: rgba($black, 0.7)
-    padding: 15px
-    .is-open &
-      +fadein
-      z-index: 1100
-
-.filters-section
-  +sm 
-    vertical-align: middle
-    display: inline-block
-    margin: 0 auto
-    max-width: 300px
-    width: 100%
-    padding: 30px 30px 26px 36px
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.37)
-    border-radius: 10px
-    background-color: $white
-    flex-direction: column
-    align-items: stretch

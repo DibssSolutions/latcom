@@ -5,8 +5,12 @@
 	display: block
 	opacity: 0.62
 	color: $lightGrey
-	font-family: $avenir 
-	+f(14px,500,1.35)
+	font-family: $avenir
+	+f(15px,400,1.3)
+	&_small
+		+f(12px, 500, 1)
+		+sm 
+			font-size: 14px
 
 .sidebar-form
 	+md
@@ -25,7 +29,8 @@
 				margin: 0
 	.filter-option
 		max-width: 95%
-		+text-overflow
+		// +text-overflow
+		
 		// max-width: 200px
 
 .modal-form
@@ -46,7 +51,6 @@
 			background-color: #979797
 			+fadein
 			transition: opacity $tr, visibility $tr
-
 
 .select
 	.dropdown-toggle
@@ -80,11 +84,16 @@
 	max-width: 100%
 	&.select_blue
 		.dropdown-toggle
+			.filter-option
+				display: inline-block
+				margin-top: -2px
+				padding-bottom: 1px
 			.filter-option-inner-inner
 				color: $blue
 				font-family: $avenir
-				font-size: 16px
-				font-weight: 600
+				+f(13px, 600, 1.308)
+				+sm 
+					font-size: 16px
 	.filter-option
 		min-width: 55px
 	.dropdown-toggle
@@ -105,6 +114,8 @@
 		position: relative
 		&.ps--active-y
 			padding-right: 20px
+			+sm 
+				padding-right: 10px
 	.no-results
 		display: block
 		padding: 3px 10px
@@ -127,6 +138,9 @@
 	& > .dropdown-menu
 		&.show
 			width: 220px
+			+sm 
+				width: 100%
+				margin: 5px 0
 			& > .inner.show.ps
 				max-height: 150px !important
 				overflow: hidden
@@ -135,6 +149,8 @@
 		border: 1px solid $selectBorder
 		border-radius: $radius
 		margin: 5px 5px 5px 0
+		+sm
+			min-width: 150px
 		.bs-searchbox
 			position: relative
 			padding: 4px 10px
@@ -187,6 +203,7 @@
 					height: 6px
 					background-color: $blue
 					+fadeout($tr)
+
 	.ps__thumb-x,
 	.ps__thumb-y
 		background-color: $blue

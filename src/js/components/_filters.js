@@ -1,24 +1,18 @@
 import { BODY, OPEN } from '../constants';
 
-const openBtn = $('.js-filters-open');
-const closeBtn = $('.js-filters-close');
+const filtersBtn = $('.js-filters-btn');
 const filtersWrapper = $('.js-filters-wrapper');
+const overlay = $('.js-filters-overlay');
 const filters = $('.js-filters');
 
-openBtn.on('click', e => {
-  filtersWrapper.addClass('is-open');
-});
-
-closeBtn.on('click', e => {
-  filtersWrapper.removeClass(OPEN);
+filtersBtn.on('click', e => {
+  filtersWrapper.toggleClass('is-open');
 });
 
 BODY.on('click', e => {
-
   if (
     $(e.target).closest(filters).length ||
-    $(e.target).closest(closeBtn).length ||
-    $(e.target).closest(openBtn).length
+    $(e.target).closest(filtersBtn).length
   )
     return;
   filtersWrapper.removeClass(OPEN);
