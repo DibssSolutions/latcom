@@ -1,22 +1,23 @@
 .list-section
+  +md
+    min-height: 40vh
+  &:not(:last-child)
+    margin-bottom: 23px 
   &.is-loading
     flex-grow: 1
-    // background-image: linear-gradient(0deg, $blue 25%, transparent 25%, transparent 50%, $blue 50%, $blue 75%, transparent 75%, transparent 100%)
-    // background-size: 80px 80px
-    // box-shadow: -800px 0 400px  -400px #f0f0f0 inset
-    // background-image: linear-gradient(-48deg, rgba(#fefefe, 0.5) 0%, rgba(#f0f0f0, 0.5) 100%), linear-gradient(0deg, $blue 25%, transparent 25%, transparent 50%, $blue 50%, $blue 75%, transparent 75%, transparent 100%)
-      
-    // background-size: cover, auto 80px
     background-image: linear-gradient(to bottom, $white 0%, $white 50%, transparent 50%), linear-gradient(-48deg, #fefefe 28%, #f0f0f0 100%)
     background-size: 100% 40px, cover
-    // background-repeat: repeat-y
   &__title
     margin-bottom: 12px
     color: rgba($gray, 0.6)
     +f(18px, 500, 1.3)
-
-
+    +sm
+      margin-bottom: 6px 
+      
 .accordion
+  &_mob-margin
+    +sm
+      margin: 0 -20px
   &:not(:last-child)
     margin-bottom: 4px
   &.is-open
@@ -32,13 +33,21 @@
   display: flex
   align-items: center
   padding: 12px
+  height: 48px
   background-color: rgba(#b4c3ec, 0.11)
+  transition: background-color .3s
+  +hover
+    background-color: rgba(#b4c3ec, 0.3)
   &__plus
     display: block
     margin-right: 12px
     +circle(20)
     background-color: rgba(#ebedf2, 0.84)
+    transition: background-color .3s
     position: relative
+    .is-open &
+      +sm
+        background-color: transparent
     &:before,
     &:after
       content: ''

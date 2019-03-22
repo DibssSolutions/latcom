@@ -5,23 +5,49 @@
       {
         title: 'Gran formato',
         counter: '4',
-        sliderWrap: 'gran-formato'
+        sliderWrap: 'gran-formato',
+        smMargin: true
       },
       {
         title: 'Formato medio',
         counter: '12',
-        sliderWrap: 'formato-medio'
+        sliderWrap: 'formato-medio',
+        smMargin: true
       },
       {
         title: 'Formato pequeño',
         counter: '7',
-        sliderWrap: 'formato-pequeno'
+        sliderWrap: 'formato-pequeno',
+        smMargin: true
+      }
+    ]
+  },
+  {
+    title: 'Buenos Aires',
+    accordions: [
+      {
+        title: 'Gran formato',
+        counter: '4',
+        sliderWrap: 'gran-formato-second',
+        smMargin: true
+      },
+      {
+        title: 'Formato medio',
+        counter: '12',
+        sliderWrap: 'formato-medio-second',
+        smMargin: true
+      },
+      {
+        title: 'Formato pequeño',
+        counter: '7',
+        sliderWrap: 'formato-pequeno-second',
+        smMargin: true
       }
     ]
   }
 ] %}
-
 {% for item in sections %}
   {{ mixins.accordionSection(item) }}
 {% endfor %}
+
 

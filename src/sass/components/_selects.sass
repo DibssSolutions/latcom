@@ -52,6 +52,15 @@
 			transition: opacity $tr, visibility $tr
 
 .select
+	&.show
+		.dropdown-toggle
+			&:after
+				+rotate(180)
+			+sm
+				transition: border-color .3s
+			.filters &
+				+sm
+					border-color: transparent 
 	.dropdown-toggle
 		background-color: transparent
 		border-bottom: 1px solid $selectBorder
@@ -71,7 +80,7 @@
 			background-size: 11px 7px
 			background-repeat: no-repeat
 			background-position: right center
-			transition: transform $tr
+			// transition: transform .2s
 	.filter-option
 		max-width: 95%
 .select_blue
@@ -268,44 +277,42 @@
 .dropdown-menu
 	box-shadow: 0 3px 5px rgba($black, .16)
 
-.checkbox
-	input
-		position: absolute
-		width: 1px
-		height: 1px
-		margin: -1px
-		padding: 0
-		border: 0
-		clip: rect(0 0 0 0)
-		overflow: hidden
 
 .checkbox
 	display: inline-block
 	position: relative
 	cursor: pointer
-	padding-left: 20px
+	padding-left: 15px
 	user-select: none
 	color: $blue
 	+f(13px, 600, 1.2)
 	+sm
-		font-size: 10px
+		padding-left: 17px
+		font-size: 16px
 	&__icon
 		display: block
 		position: absolute
 		top: 50%
-		transform: translateY(-50%)
+		margin-top: -7px 
 		left: 0
-		width: 14px
-		height: 14px
+		width: 10px
+		height: 10px
 		border: 1px solid #7d7d7d
 		border-radius: 2px
+		+sm
+			width: 14px
+			height: 14px
+			margin-top: -8px
 		&:before
 			content: ''
 			+vcenter
-			width: 6px
-			height: 6px
+			width: 3px
+			height: 3px
 			background-color: $blue
 			+fadeout($tr)
+			+sm
+				height: 6px
+				width: 6px
 	input
 		position: absolute
 		width: 1px
@@ -314,7 +321,7 @@
 		padding: 0
 		border: 0
 		clip: rect(0 0 0 0)
-		overflow: hidden
+		opacity: 0
 		&:checked
 			~ .checkbox__icon:before
 				+fadein

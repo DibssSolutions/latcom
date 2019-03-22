@@ -1,27 +1,38 @@
 .filters-section
-	display: flex
-	align-items: flex-end
-	flex-wrap: wrap
 	margin-bottom: 14px
 	padding-top: 10px
 	+lg 
 		padding-bottom: 20px
 	+sm
-		flex-direction: column
-		align-items: stretch
 		position: absolute
-		bottom: 24px
+		bottom: 11px
 		right: 24px
-		padding: 30px 30px 50px
+		padding: 30px 30px 25px
+		min-height: 440px
+		max-height: 80vh
+		overflow: auto
 		max-width: 300px
 		width: 300px
 		box-shadow: 0 8px 22px rgba(0, 0, 0, 0.37)
 		border-radius: 10px
 		background-color: $white
+		flex-direction: column
+		align-items: stretch
+		justify-content: space-between
+		display: flex
 		+fadeout($tr)
 		z-index: 1150
 		.is-open &
 			+fadein
+	+r(360px)
+		height: auto
+	&__wrap
+		display: flex
+		align-items: flex-end
+		flex-wrap: wrap
+		+sm
+			align-items: stretch
+			flex-direction: column
 	+r(360)
 		right: 12px
 		bottom: 12px
@@ -50,19 +61,26 @@
 			padding-bottom: 0
 		+sm 
 			display: none
+	&__download
+		padding-top: 15px
+		display: none
+		+sm
+			display: block
 
 .filters
+	position: relative
+	top: -3px
 	display: flex
 	flex-wrap: wrap
-	// align-items: flex-end
-	margin: 0 -30px
+	margin: 0 -19px
 	+sm
+		top: auto
 		flex-direction: column
 		align-items: stretch
 		width: 100%
 		margin: 0
 	&__item
-		padding: 0 30px
+		padding: 0 19px
 		text-align: left
 		.checkbox
 			margin-top: 6px
@@ -72,6 +90,15 @@
 			padding: 10px 0
 			.bootstrap-select
 				&.show
+					&:before
+						content: ''
+						position: absolute
+						z-index: 1000
+						top: 20px
+						left: -30px
+						right: -30px
+						box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19)
+						height: 1px
 					&:after
 						content: ''
 						position: absolute
@@ -86,7 +113,7 @@
 				&.fit-width
 					width: 100% !important
 				.bs-searchbox
-					padding-left: 0
+					margin-left: -20px
 				.dropdown-menu
 					min-width: 0
 					border: none
@@ -94,7 +121,9 @@
 					position: relative !important
 					border-radius: 0
 					box-shadow: none
+					overflow: visible !important
 					transform: none !important
+					background-color: transparent
 				.dropdown-item
 					padding: 6px 0
 				.inner.show.ps

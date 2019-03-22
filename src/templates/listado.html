@@ -10,34 +10,36 @@ title: Listado page
 		<div class="wrap">
 			{% include "partials/_sidebar.html" %}
 			<div class="main js-scroll-bar">
-				<!-- begin head -->
-				{{ mixins.head({ 
-					title: 'Mc Precios 2018',
-					links: true,
-					currentPage: 'listado'
-				}) }}
-				{{ mixins.filters({ 
-					title: 'Listado de soportes',
-					search: true,
-					selects: [
-						{
-							label: 'Categoría',
-							title: 'Todas'
-						},
-						{
-							label: 'Ciudad',
-							title: 'Buenos Aires'
-						},
-						{
-							label: 'Dirección',
-							title: 'Todas',
-							align: true
-						}
-					]
-				}) }}
-				<!-- end head -->
-				{% include "partials/_lists.html" %}
-				<!-- end items -->
+				<div class="main__inner">
+					<!-- begin head -->
+					{{ mixins.head({ 
+						title: 'Mc Precios 2018',
+						links: true,
+						currentPage: 'listado'
+					}) }}
+					{{ mixins.filters({ 
+						title: 'Listado de soportes',
+						search: true,
+						selects: [
+							{
+								label: 'Categoría',
+								title: 'Todas'
+							},
+							{
+								label: 'Ciudad',
+								title: 'Buenos Aires'
+							},
+							{
+								label: 'Dirección',
+								title: 'Todas',
+								align: true
+							}
+						]
+					}) }}
+					<!-- end head -->
+					{% include "partials/_lists.html" %}
+					<!-- end items -->
+				</div>
 			</div>
 		</div>
 	</div>
@@ -118,6 +120,120 @@ title: Listado page
 		{% endfor %}
 	</div>
 	<div class="js-slides-wrapper" data-slider-wrapper="formato-pequeno" style="display: none">
+		{% for slide in [
+			{
+				name: 'Formato pequeno 1',
+				format: 'Formatio medio',
+				city: 'Rio de Janeiro, Brasil',
+				street: '1652 Alexa Row',
+				period: '10/20/2018 - 11/24/2018',
+				img: 'img1.jpg'
+			},
+			{
+				name: 'Formato pequeno 2',
+				format: 'Formatio medio',
+				city: 'Rio de Janeiro, Brasil',
+				street: '1652 Alexa Row',
+				period: '10/20/2018 - 11/24/2018',
+				img: 'photo_1.png'
+			},
+			{
+				name: 'Formato pequeno 3',
+				format: 'Formatio medio',
+				city: 'Rio de Janeiro, Brasil',
+				street: '1652 Alexa Row',
+				period: '10/20/2018 - 11/24/2018',
+				img: 'photo_1.png'
+			},
+			{
+				name: 'Formato pequeno 4',
+				format: 'Formatio medio',
+				city: 'Rio de Janeiro, Brasil',
+				street: '1652 Alexa Row',
+				period: '10/20/2018 - 11/24/2018',
+				img: 'photo_1.png'
+			}
+		] %}
+			{{ mixins.mapSlide(slide) }}
+		{% endfor %}
+	</div>
+	<div class="js-slides-wrapper" data-slider-wrapper="gran-formato-second" style="display: none">
+		{% for slide in [
+			{
+				name: 'Gran formato 1',
+				format: 'Formatio medio',
+				city: 'Rio de Janeiro, Brasil',
+				street: '1652 Alexa Row',
+				period: '10/20/2018 - 11/24/2018',
+				img: 'img1.jpg'
+			},
+			{
+				name: 'Gran formato 2',
+				format: 'Formatio medio',
+				city: 'Rio de Janeiro, Brasil',
+				street: '1652 Alexa Row',
+				period: '10/20/2018 - 11/24/2018',
+				img: 'photo_1.png'
+			},
+			{
+				name: 'Gran formato 3',
+				format: 'Formatio medio',
+				city: 'Rio de Janeiro, Brasil',
+				street: '1652 Alexa Row',
+				period: '10/20/2018 - 11/24/2018',
+				img: 'photo_1.png'
+			},
+			{
+				name: 'Gran formato 4',
+				format: 'Formatio medio',
+				city: 'Rio de Janeiro, Brasil',
+				street: '1652 Alexa Row',
+				period: '10/20/2018 - 11/24/2018',
+				img: 'photo_1.png'
+			}
+		] %}
+			{{ mixins.mapSlide(slide) }}
+		{% endfor %}
+	</div>
+	<div class="js-slides-wrapper" data-slider-wrapper="formato-medio-second" style="display: none">
+		{% for slide in [
+			{
+				name: 'Formatio medio 1',
+				format: 'Formatio medio',
+				city: 'Rio de Janeiro, Brasil',
+				street: '1652 Alexa Row',
+				period: '10/20/2018 - 11/24/2018',
+				img: 'img1.jpg'
+			},
+			{
+				name: 'Formatio medio 2',
+				format: 'Formatio medio',
+				city: 'Rio de Janeiro, Brasil',
+				street: '1652 Alexa Row',
+				period: '10/20/2018 - 11/24/2018',
+				img: 'photo_1.png'
+			},
+			{
+				name: 'Formatio medio 3',
+				format: 'Formatio medio',
+				city: 'Rio de Janeiro, Brasil',
+				street: '1652 Alexa Row',
+				period: '10/20/2018 - 11/24/2018',
+				img: 'photo_1.png'
+			},
+			{
+				name: 'Formatio medio 4',
+				format: 'Formatio medio',
+				city: 'Rio de Janeiro, Brasil',
+				street: '1652 Alexa Row',
+				period: '10/20/2018 - 11/24/2018',
+				img: 'photo_1.png'
+			}
+		] %}
+			{{ mixins.mapSlide(slide) }}
+		{% endfor %}
+	</div>
+	<div class="js-slides-wrapper" data-slider-wrapper="formato-pequeno-second" style="display: none">
 		{% for slide in [
 			{
 				name: 'Formato pequeno 1',
