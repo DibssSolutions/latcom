@@ -280,9 +280,11 @@ closeModalButton.on('click', e => {
   },200);
 });
 
-BODY.on('click', e => {
-  if ($(e.target).closest('[data-modal-container]').length || $(e.target).closest('.js-gallery-trigger').length) return;
-  setTimeout(() => {
-    modalSlider.slick('unslick');
-  },200);
+$('[data-modal]').on('click', e => {
+  if (modalSlider.hasClass('slick-initialized')) {
+    if ($(e.target).closest('[data-modal-container]').length || $(e.target).closest('.js-gallery-trigger').length) return;
+    setTimeout(() => {
+      modalSlider.slick('unslick');
+    },200);
+  }
 });
