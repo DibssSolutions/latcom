@@ -15,6 +15,34 @@
           currentPage: 'fotos'
         }) }}
 				<!-- end head -->
+				{{ mixins.filters({ 
+					title: 'Fotos de soportes',
+					selects: [
+						{
+							label: 'Categoría',
+							title: 'Todas'
+						},
+						{
+							label: 'Ciudad',
+							title: 'Buenos Aires'
+						},
+						{
+							label: 'Dirección',
+							title: 'Todas',
+							align: true
+						}
+					],
+					checkboxes: [
+							{
+							text: 'Fotos',
+							checked: true
+						 },
+						 {
+							text:'Videos',
+							checked: false
+						 }
+					]
+				}) }}
 				{% include "partials/_photo-gallery.html" %}
 				<!-- end items -->
 			</div>
