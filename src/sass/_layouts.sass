@@ -17,6 +17,8 @@
 	display: flex
 	min-height: 300px
 	height: calc(100vh - 111px)
+	+md
+		height: auto
 	+sm
 		flex-direction: column
 
@@ -53,5 +55,17 @@
 		height: calc(100vh - 110px)
 		min-width: 45px 
 	& > .ps__rail-y
+		right: 20px !important
 		height: calc(100vh - 110px) !important
 		top: 110px !important
+		background-color: #D8D8D8 !important
+		width: 5px 
+		border-radius: 5px
+		opacity: 1 !important
+		.ps__thumb-y
+			right: 0
+			border-radius: 5px
+			background-color: #B7B7B7
+		.ps__thumb-y, .ps__rail-y:focus>.ps__thumb-y, .ps__rail-y:hover>.ps__thumb-y
+			width: 5px
+
