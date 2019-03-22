@@ -1,12 +1,12 @@
 .list-section
-  +md
-    min-height: 40vh
   &:not(:last-child)
     margin-bottom: 23px 
   &.is-loading
     flex-grow: 1
     background-image: linear-gradient(to bottom, $white 0%, $white 50%, transparent 50%), linear-gradient(-48deg, #fefefe 28%, #f0f0f0 100%)
     background-size: 100% 40px, cover
+    +md
+      min-height: 40vh
   &__title
     margin-bottom: 12px
     color: rgba($gray, 0.6)
