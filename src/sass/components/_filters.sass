@@ -54,7 +54,7 @@
 .filters
 	display: flex
 	flex-wrap: wrap
-	align-items: flex-end
+	// align-items: flex-end
 	margin: 0 -30px
 	+sm
 		flex-direction: column
@@ -66,49 +66,46 @@
 		text-align: left
 		+sm 
 			padding: 10px 0
-			// .label
-			// 	padding: 0 30px
-			.bootstrap-select
-				&.show
-					margin-bottom: 24px
-					&:after
-						content: ''
-						position: absolute
-						bottom: -24px
-						left: -30px
-						right: -30px
-						box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19)
-						height: 1px
-				// padding: 10px 30px 
+		.checkbox
+			margin-top: 6px
+			&:not(:last-child)
+				margin-right: 12px
+		.bootstrap-select
+			&.show
+				&:after
+					content: ''
+					position: absolute
+					bottom: 0
+					left: -30px
+					right: -30px
+					box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19)
+					height: 1px
+			& > .dropdown-menu
+				padding: 0
+				margin: 0
+			&.fit-width
+				width: 100% !important
+			.bs-searchbox
+				padding-left: 0
+			.dropdown-menu
+				min-width: 0
+				border: none
+				max-width: 242px 
+				position: relative !important
+				border-radius: 0
+				box-shadow: none
+				transform: none !important
+			.dropdown-item
+				padding: 6px 0
+			.inner.show.ps
+				max-width: 242px
+				margin: 0
 				& > .dropdown-menu
-					// margin-top: -24px
-					padding-bottom: 0
-					margin-bottom: 0
-					padding-top: 0
-					// margin-top: 0
-				&.fit-width
-					width: 100% !important
-				.bs-searchbox
-					padding-left: 0
-				.dropdown-menu
-					min-width: 0
-					border: none
-					max-width: 242px 
-					position: relative !important
-					border-radius: 0
 					box-shadow: none
-					transform: none !important
-				.dropdown-item
-					padding: 6px 0
-				.inner.show.ps
-					max-width: 242px
-					margin: 0
-					& > .dropdown-menu
-						box-shadow: none
-				.ps
-					&.ps--active-y
-						.ps__rail-y
-							right: 0 !important
+			.ps
+				&.ps--active-y
+					.ps__rail-y
+						right: 0 !important
 
 .filters-mob-overlay
 	+sm

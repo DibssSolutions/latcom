@@ -139,6 +139,7 @@
 					{% endfor %}
 					{% if props.checkboxes %}
 						<div class="filters__item">
+							<label class="label label_small">Mostrar</label>
 							{% for item in props.checkboxes %}
 								{{ checkbox(item) }}
 							{% endfor %}
@@ -361,3 +362,10 @@
 		<img src="./img/{{ img }}" alt="banner" class="main-banner__img">
 	</a>
 {% endmacro %}
+
+{% macro downloadBtn(disabled) %}
+	<a href="#" class="download-btn{% if disabled %} is-disabled{% endif %}" download>
+		{{ icon('download') }}
+	</a>
+{% endmacro %}
+
