@@ -9,17 +9,18 @@
 	+f(14px,500,1.35)
 
 .sidebar-form
-	+sm 
+	+sm
 		display: flex
 		flex-wrap: wrap
 		margin: 0 -20px
 	.input-group
-		+sm 
+		+sm
 			padding: 0 20px 20px
 		&:not(:last-child)
 			margin-bottom: 24px
 	.dropdown-menu
 		min-width: 150px
+		max-width: 200px
 	.filter-option
 		+text-overflow
 		max-width: 200px
@@ -71,6 +72,15 @@
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath fill='%234a484a' transform='translate(-280 -565)' d='M290.3 566.452L288.879 565l-3.704 3.96-3.786-3.874-1.389 1.488 5.208 5.325z'/%3E%3C/svg%3E")
 
 .bootstrap-select
+	&.select_blue
+		.dropdown-toggle
+			.filter-option-inner-inner
+				color: $blue
+				font-family: $avenir
+				font-size: 16px
+				font-weight: 600
+	.filter-option
+		min-width: 80px
 	.dropdown-toggle
 		background-color: transparent
 		.filter-option-inner-inner
@@ -79,25 +89,18 @@
 			font-family: $avenir
 			font-size: 17px
 			font-weight: 500
-	&.select_blue
-		.dropdown-toggle
-			.filter-option-inner-inner
-				color: $blue
-				font-family: $avenir
-				font-size: 16px
-				font-weight: 600
+	.dropdown-toggle:focus,
+	& > select.mobile-device:focus + .dropdown-toggle
+		outline: none !important
 	.inner.show
 		padding: 0
 		position: relative
-		padding-right: 10px
-		& ul
-			padding-right: 0
+		&.ps--active-y
+			padding-right: 20px
 	.no-results
-		// max-width: 200px
 		display: block
 		padding: 3px 0
 		margin: 0
-		// background-color: red
 		position: relative
 		z-index: 1000
 		&:before
@@ -108,9 +111,43 @@
 			height: 100%
 			width: 6px
 			background-color: $white
-	&.show-tick
+	.dropdown
+		&.show
+			.dropdown-toggle
+				&:after
+					transform: rotate(180deg)
+	.dropdown-menu
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19)
+		border-radius: 10px
+		box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.19)
+		border: 1px solid $selectBorder
+		border-radius: $radius
+		margin: 5px 5px 5px 0
+		.bs-searchbox
+			position: relative
+			padding: 4px 10px
+			.form-control
+				height: 20px
+				opacity: 0.41
+				color: #2e2e2e
+				font-family: $avenir
+				font-size: 14px
+				font-weight: 500
 		.dropdown-item
-			padding-left: 20px
+			color: $lightGrey
+			font-family: $avenir
+			font-size: 14px
+			font-weight: 500
+			padding: 6px 10px
+			+text-overflow
+			&.active,
+			&:active
+				background-color: transparent
+				font-weight: 700
+				color: $black
+	&.show-tick 
+		.dropdown-item
+			padding-left: 30px
 			&.selected
 				font-weight: 700
 				span.check-mark
@@ -122,9 +159,10 @@
 				display: block
 				position: absolute
 				top: 50%
+				right: auto
 				transform: translateY(-50%)
 				margin-top: -1px
-				left: 0
+				left: 10px
 				width: 14px
 				height: 14px
 				border: 1px solid #7d7d7d
@@ -136,56 +174,7 @@
 					height: 6px
 					background-color: $blue
 					+fadeout($tr)
-
-.dropdown
-	&.show
-		.dropdown-toggle
-			&:after
-				transform: rotate(180deg)
-
-.bootstrap-select
-	.dropdown-toggle:focus,
-	& > select.mobile-device:focus + .dropdown-toggle
-		outline: none !important
-
-.dropdown-menu
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19)
-	border-radius: 10px
-	box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.19)
-	padding: 10px
-	border-radius: $radius
-	margin: 5px 5px 5px 0
-		// .bs-searchbox
-		// 	&:before
-		// 		opacity: 0
-		// 		visibility: hidden
-	.bs-searchbox
-		position: relative
-		padding: 4px 0
-		// &.is-active
-		// 	&:before
-		// 		opacity: 0
-		// 		visibility: hidden
-		.form-control
-			height: 20px
-			opacity: 0.41
-			color: #2e2e2e
-			font-family: $avenir
-			font-size: 14px
-			font-weight: 500
-
-.dropdown-item
-	color: $lightGrey
-	font-family: $avenir
-	font-size: 14px
-	font-weight: 500
-	padding: 6px 0
-	&.active,
-	&:active
-		background-color: transparent
-		font-weight: 700
-		color: $black
-
+			
 .ps__thumb-x,
 .ps__thumb-y
 	background-color: $blue
@@ -224,7 +213,7 @@
 	&.ps--active-y
 		.ps__rail-y
 			left: auto !important
-			right: -5px
-			width: 5px
+			right: 6px !important
+			width: 6px
 			border-radius: 3px
 			z-index: 100

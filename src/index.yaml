@@ -5,5 +5,7 @@ PageList:
   ready: 50
 - file: listado.html
   ready: 50
+- file: listado-loading.html
+  ready: 50
 - file: fotos.html
   ready: 50
