@@ -13,6 +13,10 @@ DOC.ready(() => {
       e.stopPropagation();
     }
   });
+
+  $('.js-select').on('show.bs.select', () => {
+    
+  });
   // const inputs = $('.bs-searchbox input');
   // inputs.each((i, el) => {
   //   $(el).on('input', e => hideLine(e));
