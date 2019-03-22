@@ -1,8 +1,10 @@
 .header
+	position: relative
 	padding: 44px 0 30px
 	display: flex
 	align-items: center
 	+md
+		padding: 25px 0 24px
 		background-color: $blue 
 	&__left
 		+fls(235px)
@@ -16,14 +18,33 @@
 			order: -1
 	&__search
 		padding-right: 10px
+		+md
+			position: absolute
+			right: 100%
 	&__account
 		font-size: 0
+		+md
+			position: absolute
+			top: 100%
+			left: 0
+			width: 100%
+			padding: 20px
+			z-index: 10
+			border-radius: 0 0 7px 7px 
+			box-shadow: 0 3px 5px rgba(0,0,0,.16)
+			background-color: $white 
 .logo
 	position: relative
 	vertical-align: top
 	display: inline-block
-	img
-		display: inline-block
+	svg
+		display: block
+		+md
+			width: 71px
+			height: 14px
+		path
+			+md
+				fill: $white
 	&__text
 		position: absolute
 		top: 0
@@ -81,6 +102,13 @@
 			color: $blue
 			.search_small &
 				font-size: 10px
+
+.search-btn
+	vertical-align: top
+	color: $white
+	background-color: transparent
+	.icon
+		font-size: 15px
 
 .account
 	vertical-align: top
