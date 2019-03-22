@@ -9,15 +9,20 @@
 	+f(14px,500,1.35)
 
 .sidebar-form
-	+sm
+	+md
 		display: flex
-		flex-wrap: wrap
-		margin: 0 -20px
+		// flex-wrap: wrap
+		justify-content: space-between
+	+md
+		margin: 0 -10px
 	.input-group
-		+sm
-			padding: 0 20px 20px
+		+md
+			padding: 0 10px
+			max-width: 33.3%
 		&:not(:last-child)
 			margin-bottom: 24px
+			+md
+				margin: 0
 	.filter-option
 		max-width: 95%
 		+text-overflow
