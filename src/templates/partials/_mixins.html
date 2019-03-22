@@ -354,8 +354,8 @@
 	</a>
 {% endmacro %}
 
-{% macro downloadBtn() %}
-	<a href="#" class="download-btn">
-		{{ mixins.icon() }}
+{% macro downloadBtn(disabled) %}
+	<a href="#" class="download-btn{% if disabled %} is-disabled{% endif %}" download>
+		{{ icon('download') }}
 	</a>
 {% endmacro %}

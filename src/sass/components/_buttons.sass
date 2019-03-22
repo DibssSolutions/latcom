@@ -94,3 +94,27 @@
     +fadein
     transition-delay: .45s
 
+.download-btn
+  position: fixed
+  right: 46px
+  bottom: 32px
+  z-index: 10
+  width: 70px
+  height: 70px
+  border-radius: 50% 
+  +vertical
+  color: $white 
+  transition: box-shadow .3s
+  box-shadow: 0 13px 18px rgba($black, .42) 
+  background-color: #114EEF 
+  +md
+    display: none
+  &.is-disabled
+    opacity: 0.4
+    pointer-events: none
+  +hover
+    box-shadow: 0 5px 12px rgba($black, .42) 
+  .icon
+    font-size: 24px
+    vertical-align: middle
+    display: inline-block
