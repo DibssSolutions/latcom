@@ -5,8 +5,16 @@ import PerfectScrollbar from 'perfect-scrollbar';
 DOC.ready(() => {
   const select = $('.js-select');
   select
-    .selectpicker({ liveSearchPlaceholder: 'search' })
-    .on('shown.bs.select', function(e, clickedIndex, isSelected, previousValue) {
+    .selectpicker({
+      liveSearchPlaceholder: 'search',
+      dropdownAlignRight: select.data('align')
+    })
+    .on('shown.bs.select', function(
+      e,
+      clickedIndex,
+      isSelected,
+      previousValue
+    ) {
       const parent = $(this).parents('.js-select');
       const perf = parent.find('.dropdown-menu>.inner.show')[0];
       console.log(perf);
