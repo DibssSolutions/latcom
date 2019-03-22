@@ -202,80 +202,81 @@
                 </ul>
               </nav>
             </div>
-            <div class="mobile-filters-wrapper js-filters-wrapper">
-              <div class="filters-section-wrapper">
-                <div class="filters-section js-filters">
-                  <h3 class="filters-section__title title-md">Listado de soportes</h3>
-                  <div class="filters-section__search">
-                    <form class="search search_small">
-                      <div class="search__input">
-                        <input type="text" placeholder="Buscar soportes">
+            <div class="filters-section-wrapper js-filters-wrapper">
+              <div class="filters-mob-overlay js-filters-overlay"></div>
+              <div class="filters-section js-filters">
+                <h3 class="filters-section__title title-md">Listado de soportes</h3>
+                <div class="filters-section__search">
+                  <form class="search search_small">
+                    <div class="search__input">
+                      <input type="text" placeholder="Buscar soportes">
+                    </div>
+                    <button class="search__button" type="button">
+                      <svg class="icon icon-search">
+                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+                <div class="filters-section__filters">
+                  <div class="filters">
+                    <div class="filters__item">
+                      <div class="input-group">
+                        <label class="label label_small">Categoría</label>
+                        <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Todas">
+                          <option value="lorem">lorem</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="ipsum dolor">ipsum dolor</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                        </select>
                       </div>
-                      <button class="search__button" type="button">
-                        <svg class="icon icon-search">
-                          <use xlink:href="img/sprite.svg#icon-search"></use>
-                        </svg>
-                      </button>
-                    </form>
-                  </div>
-                  <div class="filters-section__filters">
-                    <div class="filters">
-                      <div class="filters__item">
-                        <div class="input-group">
-                          <label class="label">Categoría</label>
-                          <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Todas">
-                            <option value="lorem">lorem</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="ipsum dolor">ipsum dolor</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                          </select>
-                        </div>
+                    </div>
+                    <div class="filters__item">
+                      <div class="input-group">
+                        <label class="label label_small">Ciudad</label>
+                        <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Buenos Aires">
+                          <option value="lorem">lorem</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="ipsum dolor">ipsum dolor</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                        </select>
                       </div>
-                      <div class="filters__item">
-                        <div class="input-group">
-                          <label class="label">Ciudad</label>
-                          <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Buenos Aires">
-                            <option value="lorem">lorem</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="ipsum dolor">ipsum dolor</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="filters__item">
-                        <div class="input-group">
-                          <label class="label">Dirección</label>
-                          <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Todas">
-                            <option value="lorem">lorem</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="ipsum dolor">ipsum dolor</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                          </select>
-                        </div>
+                    </div>
+                    <div class="filters__item">
+                      <div class="input-group">
+                        <label class="label label_small">Dirección</label>
+                        <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Todas" data-dropdown-align-right='true'>
+                          <option value="lorem">lorem</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="ipsum dolor">ipsum dolor</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                        </select>
                       </div>
                     </div>
                   </div>
-                  <button class="close-mob-filters-btn js-filters-close">
+                </div>
+              </div>
+              <div class="filters-fab js-filters-btn">
+                <a href="#" class="fab">
+                  <span class="fab-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                  <span class="fab-cross">
                     <svg class="icon icon-close">
                       <use xlink:href="img/sprite.svg#icon-close"></use>
                     </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="filters__fab js-filters-open">
-                <a href="#" class="fab">
-                  <svg class="icon icon-fab-filter">
-                    <use xlink:href="img/sprite.svg#icon-fab-filter"></use>
-                  </svg>
+                  </span>
                 </a>
               </div>
             </div>
@@ -436,6 +437,58 @@
                           </svg>
                         </div>
                       </div>
+                      <div class="list-table__tr js-gallery-trigger" data-modal-control="map-slider" data-wrapper="formato-medio">
+                        <div class="list-table__counter">1</div>
+                        <div class="list-table__soporte">Street Furniture</div>
+                        <div class="list-table__direccion">781 Leatha Camp</div>
+                        <div class="list-table__comienza">05/10/2018</div>
+                        <div class="list-table__finaliza">08/31/2018</div>
+                        <div class="list-table__ots">5500</div>
+                        <div class="list-table__eye">
+                          <svg class="icon icon-eye">
+                            <use xlink:href="img/sprite.svg#icon-eye"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="list-table__tr js-gallery-trigger" data-modal-control="map-slider" data-wrapper="formato-medio">
+                        <div class="list-table__counter">2</div>
+                        <div class="list-table__soporte">Street Furniture</div>
+                        <div class="list-table__direccion">1652 Alexa Row</div>
+                        <div class="list-table__comienza">11/07/2018</div>
+                        <div class="list-table__finaliza">12/05/2018</div>
+                        <div class="list-table__ots">4500</div>
+                        <div class="list-table__eye">
+                          <svg class="icon icon-eye">
+                            <use xlink:href="img/sprite.svg#icon-eye"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="list-table__tr js-gallery-trigger" data-modal-control="map-slider" data-wrapper="formato-medio">
+                        <div class="list-table__counter">3</div>
+                        <div class="list-table__soporte">Street Furniture</div>
+                        <div class="list-table__direccion">655 Bins Forge</div>
+                        <div class="list-table__comienza">12/31/2018</div>
+                        <div class="list-table__finaliza">07/03/2018</div>
+                        <div class="list-table__ots">5500</div>
+                        <div class="list-table__eye">
+                          <svg class="icon icon-eye">
+                            <use xlink:href="img/sprite.svg#icon-eye"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="list-table__tr js-gallery-trigger" data-modal-control="map-slider" data-wrapper="formato-medio">
+                        <div class="list-table__counter">4</div>
+                        <div class="list-table__soporte">274 Donna Mall</div>
+                        <div class="list-table__direccion">1652 Alexa Row</div>
+                        <div class="list-table__comienza">05/13/2018</div>
+                        <div class="list-table__finaliza">09/28/2018</div>
+                        <div class="list-table__ots">4000</div>
+                        <div class="list-table__eye">
+                          <svg class="icon icon-eye">
+                            <use xlink:href="img/sprite.svg#icon-eye"></use>
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -463,6 +516,58 @@
                       <div class="list-table__ots">OTS por día</div>
                     </div>
                     <div class="list-table__wrap">
+                      <div class="list-table__tr js-gallery-trigger" data-modal-control="map-slider" data-wrapper="formato-pequeno">
+                        <div class="list-table__counter">1</div>
+                        <div class="list-table__soporte">Street Furniture</div>
+                        <div class="list-table__direccion">781 Leatha Camp</div>
+                        <div class="list-table__comienza">05/10/2018</div>
+                        <div class="list-table__finaliza">08/31/2018</div>
+                        <div class="list-table__ots">5500</div>
+                        <div class="list-table__eye">
+                          <svg class="icon icon-eye">
+                            <use xlink:href="img/sprite.svg#icon-eye"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="list-table__tr js-gallery-trigger" data-modal-control="map-slider" data-wrapper="formato-pequeno">
+                        <div class="list-table__counter">2</div>
+                        <div class="list-table__soporte">Street Furniture</div>
+                        <div class="list-table__direccion">1652 Alexa Row</div>
+                        <div class="list-table__comienza">11/07/2018</div>
+                        <div class="list-table__finaliza">12/05/2018</div>
+                        <div class="list-table__ots">4500</div>
+                        <div class="list-table__eye">
+                          <svg class="icon icon-eye">
+                            <use xlink:href="img/sprite.svg#icon-eye"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="list-table__tr js-gallery-trigger" data-modal-control="map-slider" data-wrapper="formato-pequeno">
+                        <div class="list-table__counter">3</div>
+                        <div class="list-table__soporte">Street Furniture</div>
+                        <div class="list-table__direccion">655 Bins Forge</div>
+                        <div class="list-table__comienza">12/31/2018</div>
+                        <div class="list-table__finaliza">07/03/2018</div>
+                        <div class="list-table__ots">5500</div>
+                        <div class="list-table__eye">
+                          <svg class="icon icon-eye">
+                            <use xlink:href="img/sprite.svg#icon-eye"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="list-table__tr js-gallery-trigger" data-modal-control="map-slider" data-wrapper="formato-pequeno">
+                        <div class="list-table__counter">4</div>
+                        <div class="list-table__soporte">274 Donna Mall</div>
+                        <div class="list-table__direccion">1652 Alexa Row</div>
+                        <div class="list-table__comienza">05/13/2018</div>
+                        <div class="list-table__finaliza">09/28/2018</div>
+                        <div class="list-table__ots">4000</div>
+                        <div class="list-table__eye">
+                          <svg class="icon icon-eye">
+                            <use xlink:href="img/sprite.svg#icon-eye"></use>
+                          </svg>
+                        </div>
+                      </div>
                       <div class="list-table__tr js-gallery-trigger" data-modal-control="map-slider" data-wrapper="formato-pequeno">
                         <div class="list-table__counter">1</div>
                         <div class="list-table__soporte">Street Furniture</div>
