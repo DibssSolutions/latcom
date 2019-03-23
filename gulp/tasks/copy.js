@@ -12,7 +12,11 @@ gulp.task('copy:lib', function() {
         .src(config.src.lib + '/**/*.*')
         .pipe(gulp.dest(config.dest.lib));
 });
-
+gulp.task('copy:json', function() {
+    return gulp
+        .src(config.src.json + '/**/*.*')
+        .pipe(gulp.dest(config.dest.json));
+});
 gulp.task('copy:rootfiles', function() {
     return gulp
         .src(config.src.root + '/*.*')
@@ -31,7 +35,7 @@ gulp.task('copy:img', function() {
 gulp.task('copy', [
     'copy:img',
     // 'copy:rootfiles',
-    // 'copy:lib',
+    'copy:json',
     'copy:fonts'
 ]);
 gulp.task('copy:watch', function() {
