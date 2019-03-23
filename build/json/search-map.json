@@ -9,12 +9,12 @@
                 "default": "img/marker.svg",
                 "active": "img/active-marker.svg",
                 "size": {
-                    "x": 56,
-                    "y": 56
+                    "x": 16,
+                    "y": 21
                 },
                 "centering": {
-                    "x": 56,
-                    "y": 56
+                    "x": 16,
+                    "y": 21
                 }
             }
         }
