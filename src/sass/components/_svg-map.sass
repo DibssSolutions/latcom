@@ -1,5 +1,35 @@
 .svg-map
 	position: relative
 	overflow: hidden
-	height: 334px
-	background-color: #dcdcdc 
+	background-color: #dcdcdc
+	&__inner
+		position: relative
+		height: 334px
+	.zoomButton
+		display: none 
+.mapTooltip
+	position: absolute
+	top: 43px !important
+	left: auto !important
+	right: 47px !important
+	width: 243px
+	max-height: 247px 
+	overflow: auto
+	padding: 18px 20px
+	color: $gray 
+	font-size: 13px
+	box-shadow: 0 9px 17px rgba($black, .09) 
+	border-radius: 5px
+	background-color: $white 
+.tooltip-title
+	color: $blue 
+	+f(20px,500,1.35)
+	&:not(:last-child)
+		margin-bottom: 7px
+.tooltip-label
+	color: rgba($gray, .7)
+	line-height: 1.38
+.tooltip-value
+	+f(14px,600,1.25)
+	&:not(:last-child)
+		margin-bottom: 13px
