@@ -1,0 +1,68 @@
+---
+title: Listado page
+---
+{% extends "layouts/_layout.html" %}
+{% import "partials/_main-map.html" as map %}
+
+{% block content %}
+	
+	<div class="inner">
+		{% include "partials/_header.html" %}
+		<div class="wrap">
+			{% include "partials/_sidebar.html" %}
+			<div class="main js-scroll-bar">
+				<div class="main__inner">
+					{{ mixins.head({ 
+						title: 'Mc Precios 2018',
+						links: true,
+						currentPage: 'mapa'
+					}) }}
+					{{ mixins.filters({
+						title: 'Mapa de soportes',
+						selects: [
+						{
+								label: 'Ciudad',
+								title: 'Buenos Aires'
+							}
+						],
+						mapControls: [
+							{
+								text: 'Gran formato',
+								category: 'gran-formato',
+								checked: true,
+								iconColor: 'green'
+							},
+							{
+								text: 'Formato medio',
+								category: 'formato-medio',
+								checked: true,
+								iconColor: 'orange'
+							},
+							{
+								text: 'Formato digital',
+								category: 'formato-digital',
+								checked: true,
+								iconColor: 'purple'
+							},
+							{
+								text: 'Disp. tácticos',
+								category: 'disp-tacticos',
+								iconColor: 'yellow'
+							},
+							{
+								text: 'Otros',
+								category: 'otros',
+								iconColor: 'grey'
+							}
+						]
+					}) }}
+					<div class="map-wrapper">
+							<div class="main-map js-map" data-center-lat="50.451767" data-center-lng="30.521038" data-json="./json/main-map.json"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}

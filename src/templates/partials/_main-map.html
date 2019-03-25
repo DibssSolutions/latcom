@@ -1,0 +1,37 @@
+{% import "partials/_mixins.html" as mixins %}
+
+{% macro main(props) %}
+  <div class="map-wrapper">
+    <div class="main-map js-map" data-center-lat="50.451767" data-center-lng="30.521038" data-json="./json/main-map.json"></div>
+    <div class="map-controls">
+      {% for item in [
+        {
+          text: 'Gran formato',
+          checked: true,
+          iconColor: 'green'
+        },
+        {
+          text: 'Formato medio',
+          checked: true,
+          iconColor: 'orange'
+        },
+        {
+          text: 'Formato digital',
+          checked: true,
+          iconColor: 'purple'
+        },
+        {
+          text: 'Disp. tácticos',
+          iconColor: 'yellow'
+        },
+        {
+          text: 'Otros',
+          iconColor: 'grey'
+        }
+      ] %}
+        {{ mixins.mapCheckbox(item) }}
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}
+

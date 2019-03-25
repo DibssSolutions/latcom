@@ -108,6 +108,19 @@
 	</div>
 {% endmacro %}
 
+{% macro mapCheckbox(props) %}
+	<label class="toggler">
+		<input class='js-map-category' type='checkbox' name="{{ props.category }}"{% if props.checked %} checked{% endif %} data-category='{{ props.category }}'>
+		{% if not props.noIcon %}
+			<span class="toggler__icon toggler__icon_{{ props.iconColor }}">{{ icon('marker') }}</span>
+		{% endif %}
+		{% if not props.noText %}
+			<span class="toggler__text">{{ props.text }}</span>
+		{% endif %}
+		<span class="toggler__toggle"></span>
+	</label>
+{% endmacro %}
+
 {% macro filters(props) %}
 	<div class="filters-section-wrapper js-filters-wrapper">
 		<div class="filters-mob-overlay js-filters-overlay"></div>
@@ -156,6 +169,15 @@
 					{{ icon('download-sm') }}
 					<span class="link-down-load__text">Descargar álbum</span>
 				</a>
+			</div>
+			<div class="filters-section__map-controls">
+				{% if props.mapControls %}
+					<div class="map-controls">
+						{% for control in props.mapControls %}
+							{{ mapCheckbox(control) }}
+						{% endfor %}
+					</div>
+				{% endif %}
 			</div>
 		</div>
 		<div class="filters-fab js-filters-btn">
@@ -378,4 +400,5 @@
 		{{ icon('download') }}
 	</a>
 {% endmacro %}
+
 
