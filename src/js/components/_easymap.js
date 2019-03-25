@@ -1,6 +1,4 @@
-/*
- eslint-disable
-*/
+/* eslint-disable */
 /**
  * EasyGoogleMaps
  * Description

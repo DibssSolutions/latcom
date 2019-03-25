@@ -7,3 +7,4 @@ import './_accordion';
 import './_toggleTableBtn';
 import './_filters';
 import './_header';
+import './_svgMap';

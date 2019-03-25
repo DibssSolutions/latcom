@@ -18,9 +18,9 @@ BODY.on('click', '.js-gallery-trigger', function() {
   modalSlider.html(slides);
   slideIndex = $(this).index() > (slideCount - 1) ? 0 : $(this).index();
   modalSlider.on('init', () => {
-    let mapNode = modalSlider.find('.js-map-modal');
-    if (mapNode.length) {
-      $(mapNode).each((i, container) => {
+    let maps = modalSlider.find('.js-map-modal');
+    if (maps.length) {
+      $(maps).each((i, container) => {
         let path = $(container).data('json');
         LOAD_DATA({
           path: path,

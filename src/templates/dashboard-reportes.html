@@ -1,0 +1,19 @@
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="inner">
+		{% include "partials/_header.html" %}
+		<div class="wrap">
+			{% include "partials/_sidebar.html" %}
+			<div class="main js-scroll-bar">
+				<div class="svg-map js-svg-map">
+					 <div class="map">Alternative content</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	{{ mixins.downloadBtn() }}
+{% endblock %}

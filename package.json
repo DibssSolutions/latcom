@@ -71,7 +71,10 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap-select": "^1.13.8",
+    "jquery-mapael": "^2.2.0",
+    "jquery.mousewheel": "^3.1.9",
     "perfect-scrollbar": "^1.4.0",
-    "popper.js": "^1.14.7"
+    "popper.js": "^1.14.7",
+    "raphael": "^2.2.8"
   }
 }
