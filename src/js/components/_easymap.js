@@ -132,7 +132,22 @@ export default (function() {
         if (!currentID || currentID && marker.id == currentID) return marker.setMap(null);
       });
     }
+    //SHOW MARKER BY CATEGORY
+    showCategory(category) {
+      let currentCategory = category;
+      this._markers.forEach(marker => {
+        if (!currentCategory || currentCategory && marker.category == currentCategory) return marker.setMap(this._map);
+      });
+    }
+    //HIDE MARKER BY CATEGORY
+    hideCategory(category) {
+      let currentCategory = category;
+      this._markers.forEach(marker => {
+        if (!currentCategory || currentCategory && marker.category == currentCategory) return marker.setMap(null);
+      });
+    }
 
+   
     //*******************************************
     //******************PRIVAT*******************
     //*******************************************
@@ -274,7 +289,8 @@ export default (function() {
         activeIcon: data.icon.active || '',
         iconSize: size,
         iconStyles: iconStyles,
-        id: data.id
+        id: data.id,
+        category: data.category
       });
 
       if (icon.default) marker.setIcon(iconStyles);
@@ -282,6 +298,8 @@ export default (function() {
       return marker;
     }
 
+
+    
     _closeMarkers() {
       this._markers.forEach(marker => this._closeMarker(marker));
     }

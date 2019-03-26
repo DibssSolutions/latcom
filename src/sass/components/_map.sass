@@ -1,0 +1,86 @@
+.map-wrapper
+	margin-top: 20px
+	height: 700px
+	position: relative
+	overflow: hidden
+
+.main-map
+	width: 100%
+	height: 100%
+
+.map-controls
+	padding: 20px 15px
+	background-color: $white
+	border-radius: $radius
+	box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2)
+	max-width: 200px
+	width: 180px
+	& > *:not(:last-child)
+		margin-bottom: 15px
+
+.toggler
+	position: relative
+	cursor: pointer
+	display: flex
+	align-items: center
+	font-size: 0
+	line-height: 1.2
+	user-select: none
+	input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		height: 0
+		&:checked ~ 
+			.toggler__toggle
+				border: 1px solid $blue
+				&:after
+					background-color: $blue
+					transform: translateX(14px)
+			.toggler__text
+				opacity: 1
+			.toggler__icon
+				opacity: 1
+	&__text
+		opacity: 0.4
+		color: #535153
+		font-family: $avenir
+		font-size: 11px
+		font-weight: 500
+	&__toggle
+		position: relative
+		width: 28px
+		height: 14px
+		margin-left: auto
+		background-color: $white
+		border: 1px solid #a7a7a7
+		outline: none
+		border-radius: 10px
+		transition: background-color .3s
+		&:after
+			position: absolute
+			content: ''
+			+circle(10)
+			top: 1px
+			left: 1px
+			background-color: #a7a7a7
+			transition: transform .3s
+	&__icon
+		margin-right: 8px
+		opacity: 0.4
+		&_green
+			color: #00e896
+		&_orange
+			color: #ff9856
+		&_purple
+			color: #9013fe
+		&_yellow
+			color: #edc92d
+		&_grey
+			color: #174d6c
+		.icon
+			font-size: 8px
+
+.big-marker
+	display: inline-block

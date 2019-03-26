@@ -1,0 +1,170 @@
+[
+  {
+    "marker": {
+    "category": "gran-formato",
+      "position": {
+        "lat": 50.451767,
+        "lng": 30.521038
+      },
+      "icon": {
+        "default": "img/marker-green.svg",
+        "active": "img/marker-green-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "category": "gran-formato",
+      "position": {
+        "lat": 50.455727,
+        "lng": 30.521998
+      },
+      "icon": {
+        "default": "img/marker-green.svg",
+        "active": "img/marker-green-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "category": "formato-medio",
+      "position": {
+        "lat": 50.451727,
+        "lng": 30.529998
+      },
+      "icon": {
+        "default": "img/marker-orange.svg",
+        "active": "img/marker-orange-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "category": "formato-digital",
+      "position": {
+        "lat": 50.456727,
+        "lng": 30.539998
+      },
+      "icon": {
+        "default": "img/marker-purple.svg",
+        "active": "img/marker-purple-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "category": "formato-digital",
+      "position": {
+        "lat": 50.459727,
+        "lng": 30.520998
+      },
+      "icon": {
+        "default": "img/marker-purple.svg",
+        "active": "img/marker-purple-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "category": "formato-digital",
+      "position": {
+        "lat": 50.453727,
+        "lng": 30.526998
+      },
+      "icon": {
+        "default": "img/marker-purple.svg",
+        "active": "img/marker-purple-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "category": "disp-tacticos",
+      "position": {
+        "lat": 50.459727,
+        "lng": 30.526998
+      },
+      "icon": {
+        "default": "img/marker-yellow.svg",
+        "active": "img/marker-yellow-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "category": "disp-tacticos",
+      "position": {
+        "lat": 50.459727,
+        "lng": 30.526998
+      },
+      "icon": {
+        "default": "img/marker-yellow.svg",
+        "active": "img/marker-yellow-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  }
+]
