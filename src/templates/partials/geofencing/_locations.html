@@ -1,3 +1,66 @@
-<div class="map-wrapper">
-  <div class="main-map js-map" data-center-lat="50.451767" data-center-lng="30.521038" data-json="./json/geofencing-map.json"></div>
+<div class="main-map">
+  <div
+    class="main-map__inner js-map"
+    data-center-lat="50.451767"
+    data-center-lng="30.521038"
+    data-json="./json/geofencing-map.json"
+  ></div>
+  <div class="main-map__selection">
+    <div class="map-select">
+      <div class="map-select__inner js-mob-map-select-wrapper">
+        <form class="search search_select">
+          <div class="search__input">
+            <input type="text" placeholder="Buscar locaciones" />
+          </div>
+          <button class="search__button" type="button">
+            {{ mixins.icon("search") }}
+          </button>
+        </form>
+        <div class="map-select__list js-map-select-wrapper"></div>
+      </div>
+      <div class="map-select__mob-toggler">
+        <a href="#" class="fab js-mob-map-select-toggler">
+          <span class="fab-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="fab-cross">
+            {{ mixins.icon('close') }}
+          </span>
+          </a>
+      </div>
+    </div>
+  </div>
+
+  {#
+  {{
+    mixins.select({
+      modifier: "geo-map",
+      searchText: "Buscar dirección",
+      mapSelect: true,
+      values: [
+        "6011 King Inlet",
+        "06 Dorian Motorway Suite 317",
+        "75 Enos Glens",
+        "738 Roob Inlet Suite 131",
+        "6561 Hudson Gateway Apt. 498",
+        "66 Bayer Viaduct Apt. 711",
+        "79 Annette Isle Suite 808",
+        "8226 Modesta Junctions Apt. 235",
+        "3746 Colleen Springs",
+        "62 Yundt Bypass Suite 939",
+        "4228 Emily Square Apt. 385",
+        "97 Larkin Forge Suite 988",
+        "96 Millie Forge",
+        "1390 Rodriguez Islands Apt. 555",
+        "699 Wunsch Pass Suite 363",
+        "462 Lemuel Station",
+        "37 River Parkway Apt. 000",
+        "6260 Imogene Route",
+        "47 Blake Island Apt. 390"
+      ]
+    })
+  }}
+  #}
 </div>

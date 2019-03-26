@@ -5,32 +5,29 @@
  * Creates map with expandable markers
  * @name EasyGoogleMaps
  */
-import GoogleMapsLoader from 'google-maps';
-import dot from 'dot';
-
+import GoogleMapsLoader from "google-maps";
+import dot from "dot";
 
 export default (function() {
-
   let INFOBOX = null;
   let template = null;
 
   const utils = {
     isString(props) {
-      return (typeof props == 'string' && props.length);
+      return typeof props == "string" && props.length;
     },
     isObj(props) {
-      return (props != null && !Array.isArray(props) && typeof props == 'object');
+      return props != null && !Array.isArray(props) && typeof props == "object";
     },
     isArr(props) {
       return Array.isArray(props);
     },
     isFunc(fn) {
-      return typeof fn == 'function';
+      return typeof fn == "function";
     }
   };
 
   class Map {
-
     constructor(props) {
       this._props = props || {};
       this._markers = [];
@@ -38,7 +35,7 @@ export default (function() {
       this._onLoad = [];
       this._isLoaded = false;
       this._temporaryStorage = [];
-      this._defaultWidth = '300px';
+      this._defaultWidth = "300px";
     }
 
     //*******************************************
@@ -49,9 +46,8 @@ export default (function() {
       let props = this._props;
 
       GoogleMapsLoader.KEY = props.map.APIKEY;
-      GoogleMapsLoader.load((google) => {
-
-        require(['google-maps-infobox'], (InfoBox) => {
+      GoogleMapsLoader.load(google => {
+        require(["google-maps-infobox"], InfoBox => {
           //set value to the global infobox variable
           INFOBOX = InfoBox;
           this._initMap();
@@ -72,14 +68,19 @@ export default (function() {
 
           //check for morons...
           if (!!!props.markers) return;
-          if (!utils.isObj(props.markers)) return console.error('Data must be an object!!!');
-          if (!Object.keys(props.markers).length) return console.error('Data must be a non-empty object!!!');
+          if (!utils.isObj(props.markers))
+            return console.error("Data must be an object!!!");
+          if (!Object.keys(props.markers).length)
+            return console.error("Data must be a non-empty object!!!");
 
           //If you want to get info from some another file using ajax,
           //you need set path to the file to property 'url'.
           if (props.markers && props.markers.url) {
-            if (!utils.isString(props.markers) && utils.isString(props.markers.url)) {
-              this._loadData((items) => {
+            if (
+              !utils.isString(props.markers) &&
+              utils.isString(props.markers.url)
+            ) {
+              this._loadData(items => {
                 this._addItems(items);
               });
             }
@@ -87,7 +88,6 @@ export default (function() {
             this._addItems(props.markers.items);
           }
         });
-
       });
     }
 
@@ -102,7 +102,7 @@ export default (function() {
         if (!this._isLoaded) {
           this._temporaryStorage.push(props);
           return;
-        };
+        }
 
         this._addItem(props);
         return;
@@ -112,7 +112,7 @@ export default (function() {
         if (!this._isLoaded) {
           this._temporaryStorage = this._temporaryStorage.concat(props);
           return;
-        };
+        }
 
         this._addItems(props);
         return;
@@ -122,32 +122,105 @@ export default (function() {
     show(id) {
       let currentID = id;
       this._markers.forEach(marker => {
-        if (!currentID || currentID && marker.id == currentID) return marker.setMap(this._map);
+        if (!currentID || (currentID && marker.id == currentID))
+          return marker.setMap(this._map);
       });
     }
     //HIDE MARKER BY ID
     hide(id) {
       let currentID = id;
       this._markers.forEach(marker => {
-        if (!currentID || currentID && marker.id == currentID) return marker.setMap(null);
+        if (!currentID || (currentID && marker.id == currentID))
+          return marker.setMap(null);
       });
     }
     //SHOW MARKER BY CATEGORY
     showCategory(category) {
       let currentCategory = category;
       this._markers.forEach(marker => {
-        if (!currentCategory || currentCategory && marker.category == currentCategory) return marker.setMap(this._map);
+        if (
+          !currentCategory ||
+          (currentCategory && marker.category == currentCategory)
+        )
+          return marker.setMap(this._map);
       });
     }
     //HIDE MARKER BY CATEGORY
     hideCategory(category) {
       let currentCategory = category;
       this._markers.forEach(marker => {
-        if (!currentCategory || currentCategory && marker.category == currentCategory) return marker.setMap(null);
+        if (
+          !currentCategory ||
+          (currentCategory && marker.category == currentCategory)
+        )
+          return marker.setMap(null);
       });
     }
 
-   
+    activeMarkerOnHover(id) {
+      let currentID = id;
+      this._markers.forEach(marker => {
+        if (!currentID || (currentID && marker.id == currentID)) {
+          this._toggleMarker(marker, "activeIcon");
+        }
+      });
+    }
+
+    normalMarkers() {
+      this._markers.forEach(marker =>
+        this._toggleMarker(marker, "defaultIcon")
+      );
+    }
+
+    populateSelect(select) {
+      this._markers.forEach(marker => {
+        let li = document.createElement("li");
+        li.className = "map-select__item";
+        li.innerHTML = `
+          <a href='#' class='map-select__link js-map-select' data-map-id='${
+            marker.id
+          }'>
+          ${marker.adress}</a>`;
+        $(select).append(li);
+      });
+    }
+
+    updateCenterCoordinates(id) {
+      let currentID = id;
+      const currentMarker = this._markers.find(
+        marker => marker.id == currentID
+      );
+      const newCoordinates = {
+        lat: currentMarker.latitude,
+        lng: currentMarker.longtitude
+      };
+      return newCoordinates;
+    }
+    // activeSelectOnClick(select) {
+    //   this._markers.forEach(marker => {
+    //     const selects = $(select).find("[data-map-id]");
+    //     const targetSelect = $(select).find(`[data-map-id='${marker.id}']`);
+    //     marker.addListener("click", () => {
+    //       selects.removeClass("is-active");
+    //       targetSelect.toggleClass("is-active");
+    //     });
+    //   });
+    // }
+
+    // activeSelectOnHover(select) {
+    //   this._markers.forEach(marker => {
+    //     const targetSelect = $(select).find(`[data-map-id='${marker.id}']`);
+    //     marker.addListener("mouseover", () => {
+    //       this._toggleMarker(marker, "activeIcon");
+    //       targetSelect.addClass("is-active");
+    //     });
+    //     marker.addListener("mouseout", () => {
+    //       this._toggleMarker(marker, "defaultIcon");
+    //       targetSelect.removeClass("is-active");
+    //     });
+    //   });
+    // }
+
     //*******************************************
     //******************PRIVAT*******************
     //*******************************************
@@ -165,9 +238,9 @@ export default (function() {
       let path = this._container.getAttribute(props.markers.url);
       let xhr = new XMLHttpRequest();
 
-      xhr.open('GET', path, true);
+      xhr.open("GET", path, true);
       xhr.onload = () => {
-        if (xhr.status != 200) return console.error('ошибочка, data not found');
+        if (xhr.status != 200) return console.error("ошибочка, data not found");
         callback(JSON.parse(xhr.responseText));
       };
       xhr.send();
@@ -175,7 +248,7 @@ export default (function() {
 
     _getTemplate() {
       let HTML = document.querySelector(this._props.infobox.template).innerHTML;
-      dot.templateSettings.varname = 'baloon';
+      dot.templateSettings.varname = "baloon";
       return dot.template(HTML);
     }
 
@@ -202,14 +275,18 @@ export default (function() {
 
         this._infoboxes.push(ib);
         //toggle content on click
-        google.maps.event.addListener(marker, 'click', e => this._toggleInfobox(ib, marker));
-        google.maps.event.addListener(ib, 'domready', e => this._addEventOnCloseButton(ib, marker));
+        google.maps.event.addListener(marker, "click", e =>
+          this._toggleInfobox(ib, marker)
+        );
+        google.maps.event.addListener(ib, "domready", e =>
+          this._addEventOnCloseButton(ib, marker)
+        );
       }
     }
 
     _closeOnMapClick() {
       if (!this._props.infobox.onlyOneBox) return;
-      google.maps.event.addListener(this._map, 'click', e => {
+      google.maps.event.addListener(this._map, "click", e => {
         this._closeAllInfobox();
       });
     }
@@ -222,11 +299,15 @@ export default (function() {
       this._setInfoBoxPosition(ib, infobox);
 
       Array.prototype.forEach.call(buttons, button => {
-        button.addEventListener('click', e => {
-          e.preventDefault();
-          this._closeInfobox(ib);
-          this._closeMarker(marker);
-        }, false);
+        button.addEventListener(
+          "click",
+          e => {
+            e.preventDefault();
+            this._closeInfobox(ib);
+            this._closeMarker(marker);
+          },
+          false
+        );
       });
     }
 
@@ -258,10 +339,12 @@ export default (function() {
           this._closeMarkers();
         }
         this._openInfobox(item, marker);
-        if (!!activeIcon && activeIcon.length) this._toggleMarker(marker, 'activeIcon');
+        if (!!activeIcon && activeIcon.length)
+          this._toggleMarker(marker, "activeIcon");
       } else {
         this._closeInfobox(item);
-        if (!!activeIcon && activeIcon.length) this._toggleMarker(marker, 'defaultIcon');
+        if (!!activeIcon && activeIcon.length)
+          this._toggleMarker(marker, "defaultIcon");
       }
     }
 
@@ -277,7 +360,7 @@ export default (function() {
         y: 0
       };
       let iconStyles = {
-        url: icon.default || '',
+        url: icon.default || "",
         scaledSize: new google.maps.Size(size.x, size.y),
         anchor: new google.maps.Point(centering.x, centering.y)
       };
@@ -285,12 +368,15 @@ export default (function() {
       let marker = new google.maps.Marker({
         map: this._map,
         position: data.position,
-        defaultIcon: data.icon.default || '',
-        activeIcon: data.icon.active || '',
+        defaultIcon: data.icon.default || "",
+        activeIcon: data.icon.active || "",
         iconSize: size,
         iconStyles: iconStyles,
-        id: data.id || '',
-        category: data.category || ''
+        id: data.id || "",
+        category: data.category || "",
+        adress: data.adress || "",
+        latitude: data.position.lat,
+        longtitude: data.position.lng
       });
 
       if (icon.default) marker.setIcon(iconStyles);
@@ -298,8 +384,6 @@ export default (function() {
       return marker;
     }
 
-
-    
     _closeMarkers() {
       this._markers.forEach(marker => this._closeMarker(marker));
     }
@@ -340,7 +424,7 @@ export default (function() {
         //margins from map borders
         infoBoxClearance: new google.maps.Size(10, 10),
 
-        boxClass: props.class || 'infobox',
+        boxClass: props.class || "infobox",
         zIndex: props.zIndex || null,
         maxWidth: props.maxWidth || 0,
         boxStyle: style,
@@ -348,9 +432,9 @@ export default (function() {
         //The URL of the image representing the close box.
         //Note: The default is the URL for Google's standard close box.
         //Set this property to "" if no close box is required.
-        closeBoxURL: '',
+        closeBoxURL: "",
 
-        pane: 'floatPane',
+        pane: "floatPane",
 
         //flag opened or closed
         isOpen: false
@@ -359,7 +443,6 @@ export default (function() {
 
     //POPUP POSITION
     _setInfoBoxPosition(infobox, div) {
-
       //get map popup options
       let props = this._props.infobox;
 
@@ -367,28 +450,31 @@ export default (function() {
       let height = div.offsetHeight;
 
       let position = props.position || {};
-      let x = position.x || 'top';
-      let y = position.y || 'center';
+      let x = position.x || "top";
+      let y = position.y || "center";
 
       this._positionX = this._getInfoBoxPositionX(x, width, this._offsetX);
       this._positionY = this._getInfoBoxPositionY(y, height, this._offsetY);
 
       infobox.setOptions({
-        pixelOffset: new google.maps.Size(this._positionX, this._positionY.offset),
+        pixelOffset: new google.maps.Size(
+          this._positionX,
+          this._positionY.offset
+        ),
         alignBottom: this._positionY.align
       });
     }
 
     _getInfoBoxPositionY(y, height, offset) {
       switch (y) {
-        case 'top':
+        case "top":
           return {
             offset: -offset,
             align: true
           };
-        case 'center':
+        case "center":
           return {
-            offset: -height/2 -offset/2,
+            offset: -height / 2 - offset / 2,
             align: false
           };
       }
@@ -401,22 +487,19 @@ export default (function() {
 
     _getInfoBoxPositionX(x, width, offset) {
       switch (x) {
-        case 'left':
-          return -width - offset/2;
-        case 'right':
-          return offset/2;
-
+        case "left":
+          return -width - offset / 2;
+        case "right":
+          return offset / 2;
       }
 
-      return -width/2 - offset/2;
+      return -width / 2 - offset / 2;
     }
 
     //*******************************************
     //******************INFOBOX******************
     //*******************************************
-
   }
 
   return Map;
-
 })();
