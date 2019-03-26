@@ -12,10 +12,9 @@
 		top: 20px
 		right: 20px
 		z-index: 10
-		.bootstrap-select
-			& > .dropdown-menu.show
-				& >.inner.show.ps
-					max-height: 600px !important
+		+sm 
+			bottom: 20px
+			top: auto
 
 .map-controls
 	padding: 20px 15px
@@ -33,9 +32,6 @@
 		margin-bottom: 15px
 
 .map-select
-	padding: 20px 12px
-	border-radius: $radius
-	background-color: $white
 	max-width: 230px
 	width: 100%
 	&__list
@@ -62,6 +58,23 @@
 			color: $blue
 		+hover
 			color: $blue
+	&__mob-toggler
+		display: none
+		+sm 
+			display: block
+			position: absolute
+			bottom: 0
+			right: 0
+	&__inner
+		position: relative
+		padding: 20px 12px
+		border-radius: $radius
+		background-color: $white
+		z-index: 10
+		+sm 
+			+fadeout($tr)
+			&.is-open
+				+fadein
 
 .toggler
 	position: relative
