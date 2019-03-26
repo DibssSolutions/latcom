@@ -2,9 +2,18 @@
 	position: relative
 	overflow: hidden
 	background-color: #dcdcdc
+	+sm
+		margin: 0 -20px 
 	&__inner
 		position: relative
 		height: 334px
+		+sm
+			height: 282px 
+		// svg
+		// 	position: absolute
+		// 	top: 50% !important
+		// 	left: 50% !important
+		// 	transform: translate(-50%,-50%)
 	.zoomButton
 		display: none 
 .mapTooltip
@@ -21,6 +30,9 @@
 	box-shadow: 0 9px 17px rgba($black, .09) 
 	border-radius: 5px
 	background-color: $white 
+	+sm
+		top: 17px !important
+		right: 17px !important
 .tooltip-title
 	color: $blue 
 	+f(20px,500,1.35)
