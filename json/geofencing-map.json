@@ -1,14 +1,15 @@
 [
   {
     "marker": {
-    "id": "1",
+    "adress": "6011 King Inlet",
+    "id": "marker_1",
       "position": {
-        "lat": 50.451767,
+        "lat": 50.441767,
         "lng": 30.521038
       },
       "icon": {
-        "default": "img/marker-green.svg",
-        "active": "img/marker-green-active.svg",
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
         "size": {
           "x": 35,
           "y": 46
@@ -22,14 +23,366 @@
   },
   {
     "marker": {
-      "id": "2",
+      "adress": "06 Dorian Motorway Suite 317",
+      "id": "marker_2",
       "position": {
         "lat": 50.455727,
-        "lng": 30.521998
+        "lng": 30.511998
       },
       "icon": {
-        "default": "img/marker-green.svg",
-        "active": "img/marker-green-active.svg",
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },{
+    "marker": {
+    "adress": "75 Enos Glens",
+    "id": "marker_3",
+      "position": {
+        "lat": 50.458767,
+        "lng": 30.597038
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "adress": "738 Roob Inlet Suite 131",
+      "id": "marker_4",
+      "position": {
+        "lat": 50.491727,
+        "lng": 30.559998
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+    "adress": "6561 Hudson Gateway Apt. 498",
+    "id": "marker_5",
+      "position": {
+        "lat": 50.492767,
+        "lng": 30.589038
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "adress": "66 Bayer Viaduct Apt. 711",
+      "id": "marker_6",
+      "position": {
+        "lat": 50.451727,
+        "lng": 30.559998
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+    "adress": "79 Annette Isle Suite 808",
+    "id": "marker_7",
+      "position": {
+        "lat": 50.497767,
+        "lng": 30.529038
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "adress": "8226 Modesta Junctions Apt. 235",
+      "id": "marker_8",
+      "position": {
+        "lat": 50.451727,
+        "lng": 30.529998
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+    "adress": "3746 Colleen Springs",
+    "id": "marker_9",
+      "position": {
+        "lat": 50.459767,
+        "lng": 30.525038
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "adress": "62 Yundt Bypass Suite 939",
+      "id": "marker_10",
+      "position": {
+        "lat": 50.451727,
+        "lng": 30.529998
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+    "adress": "97 Larkin Forge Suite 988",
+    "id": "marker_11",
+      "position": {
+        "lat": 50.452767,
+        "lng": 30.525038
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "adress": "96 Millie Forge",
+      "id": "marker_12",
+      "position": {
+        "lat": 50.452727,
+        "lng": 30.527998
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+    "adress": "1390 Rodriguez Islands Apt. 555",
+    "id": "marker_13",
+      "position": {
+        "lat": 50.438767,
+        "lng": 30.522038
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "adress": "699 Wunsch Pass Suite 363",
+      "id": "marker_14",
+      "position": {
+        "lat": 50.453727,
+        "lng": 30.528998
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+    "adress": "462 Lemuel Station",
+    "id": "marker_15",
+      "position": {
+        "lat": 50.483767,
+        "lng": 30.527038
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "adress": "37 River Parkway Apt. 000",
+      "id": "marker_16",
+      "position": {
+        "lat": 50.455727,
+        "lng": 30.563998
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+    "adress": "6260 Imogene Route",
+    "id": "marker_17",
+      "position": {
+        "lat": 50.453767,
+        "lng": 30.539038
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "adress": "47 Blake Island Apt. 390",
+      "id": "marker_18",
+      "position": {
+        "lat": 50.416727,
+        "lng": 30.524998
+      },
+      "icon": {
+        "default": "img/marker-blue.svg",
+        "active": "img/marker-blue-active.svg",
         "size": {
           "x": 35,
           "y": 46
@@ -41,4 +394,5 @@
       }
     }
   }
+
 ]
