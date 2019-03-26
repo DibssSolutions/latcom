@@ -228,7 +228,8 @@ if (map.length) {
             }
           },
           infobox: {
-            template: '#infobox'
+            template: '#infobox',
+            onlyOneBox: true
           },
           markers: {
             items: data
@@ -236,68 +237,52 @@ if (map.length) {
         };
         let map = new EasyGoogleMaps(mapOptions);
         map.init();
+
         map.onload(function() {
           const togglers = $('.js-map-category');
-
-          if (!togglers.lenght) return;
-
-          togglers.each((i, el) => {
-            const toggler = $(el);
-            setTimeout(() => updateMarkers(toggler), 10);
-            toggler.on('change', e => updateMarkers($(e.target)));
-          });
-
-          function updateMarkers(el) {
-            const toggler = $(el);
-            const category = $(toggler).data('category');
-            const checkState = toggler.is(':checked');
-            checkState
-              ? map.showCategory(category)
-              : map.hideCategory(category);
+          if (togglers.lenght) {
+            togglers.each((i, el) => {
+              const toggler = $(el);
+              setTimeout(() => updateMarkers(toggler), 10);
+              toggler.on('change', e => updateMarkers($(e.target)));
+            });
           }
 
-          // setTimeout(
-          //   () =>
-          //     map._markers.forEach(marker => {
-          //       marker.addListener('click', function(e) {
-          //         console.log(marker.iconStyles.scaledSize.height);
-          //         marker.iconStyles.scaledSize.height = 40;
-          //       });
-          //     }),
-          //   100
-          // );
+          const mapSelect = $('.js-map-select-wrapper');
+          if (mapSelect.length) {
+            setTimeout(() => {
+              map.populateSelect(mapSelect);
+              // map.activeSelectOnHover(mapSelect);
+              // map.activeSelectOnClick(mapSelect);
 
-          // function toggleBounce() {
-          //   marker.setAnimation(google.maps.Animation.BOUNCE);
-          // }
-          // $(shop).each((index, el) => {
-          //   const shop = $(el);
-          //   const data = $(shop).data();
-          //   const myLatlng = { lat: data.lat, lng: data.lng };
-          //   const id = data.id;
-          //   const gMap = map.realmap;
-          //   var newCenter = new google.maps.LatLng(myLatlng);
+              const selects = $('.js-map-select');
 
-          //   $(shop).on('click', function(e) {
-          //     e.preventDefault();
-          //     if ($(e.target).hasClass('js-photo-gallery-trigger')) return;
-          //     // === SHOPS-LIST ===
-          //     toggleShopsOnClick($(this));
-          //     // === MAP ===
-          //     for (let k = 0; k < map._markers.length; k++) {
-          //       map._markers[k].icon.url = 'img/marker.svg';
-          //       if (map._markers[k].id === `${id}`) {
-          //         map._markers[k].icon.url = 'img/active-marker.svg';
-          //       }
-          //     }
-          //     gMap.panTo(newCenter);
-          //     setTimeout(() => {
-          //       gMap.setCenter(newCenter);
-          //     }, 500);
-          //   });
-          // });
+              selects.on('mouseover', e => {
+                // FIND ID
+                const target = $(e.target);
+                const id = target.data('mapId');
+                // SET ACTIVE ICON
+                map.activeMarkerOnHover(id);
+                // CHANGE MAP POSITION
+                const newCoordinates = map.updateCenterCoordinates(id);
+                const gMap = map.realmap;
+                var newCenter = new google.maps.LatLng(newCoordinates);
+                gMap.panTo(newCenter);
+              });
+
+              selects.on('mouseleave', () => map.normalMarkers());
+            }, 10);
+          }
         });
       }
     });
   });
+}
+
+function updateMarkers(el) {
+  const toggler = $(el);
+  const category = $(toggler).data('category');
+  const checkState = toggler.is(':checked');
+
+  checkState ? map.showCategory(category) : map.hideCategory(category);
 }

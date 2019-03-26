@@ -41,7 +41,7 @@
 		
 	>
 		{% for option in props.values %}
-			<option value="{{ option }}">{{ option }}</option>
+			<option value="{{ option }}"{% if props.mapSelect %} data-content={{ loop.index }}{% endif %}>{{ option }}</option>
 		{% endfor %}
 	</select>
 {% endmacro %}

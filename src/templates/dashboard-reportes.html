@@ -8,10 +8,12 @@
 		<div class="wrap">
 			{% include "partials/_sidebar.html" %}
 			<div class="main js-scroll-bar">
-				<div class="svg-map js-svg-map" data-json="../json/svgmap.json">
-					<div class="svg-map__inner map">Alternative content</div>
+				<div class="main__inner">
+					<div class="svg-map js-svg-map" data-json="../json/svgmap.json">
+						<div class="svg-map__inner map">Alternative content</div>
+					</div>
+					{% include "partials/_geofencing.html" %}
 				</div>
-				{% include "partials/_geofencing.html" %}
 			</div>
 		</div>
 	</div>
