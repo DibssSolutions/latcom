@@ -9,3 +9,4 @@ import './_filters';
 import './_header';
 import './_svgMap';
 import './_map';
+import './_tabs';

@@ -239,17 +239,22 @@ if (map.length) {
         map.onload(function() {
           const togglers = $('.js-map-category');
 
+          if (!togglers.lenght) return;
+
           togglers.each((i, el) => {
             const toggler = $(el);
-            const _category = $(toggler).data('category');
-            toggler.on('change', e => {
-              const el = $(e.target);
-              const checkState = el[0].checked;
-              checkState
-                ? map.showCategory(_category)
-                : map.hideCategory(_category);
-            });
+            setTimeout(() => updateMarkers(toggler), 10);
+            toggler.on('change', e => updateMarkers($(e.target)));
           });
+
+          function updateMarkers(el) {
+            const toggler = $(el);
+            const category = $(toggler).data('category');
+            const checkState = toggler.is(':checked');
+            checkState
+              ? map.showCategory(category)
+              : map.hideCategory(category);
+          }
 
           // setTimeout(
           //   () =>

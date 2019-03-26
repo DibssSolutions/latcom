@@ -1,0 +1,51 @@
+<div class="geofencing">
+  <div class="geofencing__tabs" data-tabs>
+    <div class="tabs">
+      <div class="tabs__header">
+        <div class="tabs__title">
+          <span class="tabs__title-icon">{{ mixins.icon('geofencing') }}</span>
+          <span class="title-md">Geofencing</span>
+        </div>
+        <div class="tabs__controls">
+          <ul class="tabs-list">
+            {% for item in [
+              {
+                text: 'Resultados',
+                tab: 'results'
+              },
+              {
+                text: 'Locaciones',
+                tab: 'locations'
+              },
+              {
+                text: 'Screenshots',
+                tab: 'screenshots'
+              },
+              {
+                text: 'Videos',
+                tab: 'videos'
+              }
+            ] %}
+              <li class="tabs-list__item">
+                <button class="tabs-list__btn" data-tabs-control='{{ item.tab }}'>{{ item.text }}</button>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="tabs__wrapper" data-tabs-wrapper>
+        <div class="tabs__content" data-tabs-container="results">
+          RESULTS
+        </div>
+        <div class="tabs__content" data-tabs-container="locations">
+          {% include "partials/geofencing/_locations.html" %}
+        </div>
+        <div class="tabs__content" data-tabs-container="screenshots">
+          SCREENSHOTS
+        </div>
+        <div class="tabs__content" data-tabs-container="videos">
+          VIDEOS
+        </div>
+      </div>
+    </div>
+  </div>

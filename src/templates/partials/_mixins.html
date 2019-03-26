@@ -164,21 +164,23 @@
 					</div>
 				</div>
 			</div>
-			<div class="filters-section__download">
-				<a href="#" class="link-down-load" download>
-					{{ icon('download-sm') }}
-					<span class="link-down-load__text">Descargar álbum</span>
-				</a>
-			</div>
+			{% if not props.noDownlodBtn %}
+				<div class="filters-section__download">
+					<a href="#" class="link-down-load" download>
+						{{ icon('download-sm') }}
+						<span class="link-down-load__text">Descargar álbum</span>
+					</a>
+				</div>
+			{% endif %}
+			{% if props.mapControls %}
 			<div class="filters-section__map-controls">
-				{% if props.mapControls %}
-					<div class="map-controls">
-						{% for control in props.mapControls %}
-							{{ mapCheckbox(control) }}
-						{% endfor %}
-					</div>
-				{% endif %}
+				<div class="map-controls">
+					{% for control in props.mapControls %}
+						{{ mapCheckbox(control) }}
+					{% endfor %}
+				</div>
 			</div>
+			{% endif %}
 		</div>
 		<div class="filters-fab js-filters-btn">
 			<a href="#" class="fab">

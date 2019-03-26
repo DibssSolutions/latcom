@@ -289,8 +289,8 @@ export default (function() {
         activeIcon: data.icon.active || '',
         iconSize: size,
         iconStyles: iconStyles,
-        id: data.id,
-        category: data.category
+        id: data.id || '',
+        category: data.category || ''
       });
 
       if (icon.default) marker.setIcon(iconStyles);

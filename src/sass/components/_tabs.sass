@@ -1,0 +1,81 @@
+.tabs
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 9px 20px
+		margin-bottom: 20px
+		background-color: rgba($blue, 0.04)
+	&__title
+		color: $blue
+		font-size: 0
+		&-icon
+			margin-top: -2px
+			margin-right: 10px
+			.icon
+				font-size: 23px
+		& > *
+			display: inline-block
+			vertical-align: middle
+	&__controls
+
+	&__wrapper
+		// padding-top: 16px
+		background-color: $blue
+	// 	margin-top: 40px
+	// 	+xs
+	// 		margin-top: 28px
+	&__content
+		position: relative
+		line-height: 2
+	&__list
+		margin-top: 10px
+	&__item
+		padding: 10px 0
+
+.tabs-list
+	display: flex
+	align-items: center
+	justify-content: center
+	+sm
+		flex-wrap: wrap
+	&__item
+		position: relative
+		padding: 1px 18px 1px 17px
+		&:not(:last-child)
+			border-right: 1px solid rgba(151, 151, 151, 0.51)
+			+xs
+				margin-bottom: 30px
+	&__btn
+		background-color: transparent
+		color: $gray
+		font-family: $avenir
+		+f(13px, 500, 1.3077)
+		transition: color $tr
+		&.is-active
+			color: $blue
+
+[data-tabs]
+	overflow: hidden
+	[data-tabs-control]
+		cursor: pointer
+		user-select: none
+		&[disabled],
+		&.is-disabled
+			cursor: not-allowed
+			+nosel
+	[data-tabs-wrapper]
+		position: relative
+	[data-tabs-container]
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: 0
+		visibility: hidden
+		transition: opacity 0.3s, visibility 0.3s
+		&.is-open
+			position: relative
+			opacity: 1
+			visibility: visible

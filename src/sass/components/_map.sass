@@ -1,6 +1,7 @@
 .map-wrapper
 	margin-top: 20px
-	height: 700px
+	height: 500px
+	// height: 200px
 	position: relative
 	overflow: hidden
 
@@ -15,6 +16,11 @@
 	box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2)
 	max-width: 200px
 	width: 180px
+	+sm 
+		padding: 0
+		width: 100%
+		max-width: none
+		box-shadow: none
 	& > *:not(:last-child)
 		margin-bottom: 15px
 
@@ -38,6 +44,8 @@
 				&:after
 					background-color: $blue
 					transform: translateX(14px)
+					+sm
+						transform: translateX(24px)
 			.toggler__text
 				opacity: 1
 			.toggler__icon
@@ -48,6 +56,8 @@
 		font-family: $avenir
 		font-size: 11px
 		font-weight: 500
+		+sm 
+			font-size: 16px
 	&__toggle
 		position: relative
 		width: 28px
@@ -58,6 +68,10 @@
 		outline: none
 		border-radius: 10px
 		transition: background-color .3s
+		+sm
+			width: 50px
+			height: 24px
+			border-radius: 24px
 		&:after
 			position: absolute
 			content: ''
@@ -66,6 +80,9 @@
 			left: 1px
 			background-color: #a7a7a7
 			transition: transform .3s
+			+sm 
+				+circle(20)
+				left: 2px
 	&__icon
 		margin-right: 8px
 		opacity: 0.4
@@ -81,6 +98,8 @@
 			color: #174d6c
 		.icon
 			font-size: 8px
+			+sm 
+				font-size: 22px
 
 .big-marker
 	display: inline-block

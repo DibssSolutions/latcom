@@ -1,0 +1,44 @@
+[
+  {
+    "marker": {
+    "id": "1",
+      "position": {
+        "lat": 50.451767,
+        "lng": 30.521038
+      },
+      "icon": {
+        "default": "img/marker-green.svg",
+        "active": "img/marker-green-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  },
+  {
+    "marker": {
+      "id": "2",
+      "position": {
+        "lat": 50.455727,
+        "lng": 30.521998
+      },
+      "icon": {
+        "default": "img/marker-green.svg",
+        "active": "img/marker-green-active.svg",
+        "size": {
+          "x": 35,
+          "y": 46
+        },
+        "centering": {
+          "x": 18,
+          "y": 23
+        }
+      }
+    }
+  }
+]
