@@ -27,3 +27,20 @@
         {% endfor %}
     </div>
 </div>
+<div class="screenshots-controls">
+    {% for item in [
+                'Contexto Tucumán',
+                'Espn Sports',
+                'Fox Sports',
+                'Universo Fútbol'
+        ] %}
+        <div class="screenshots-controls__item js-screenshots-control">
+            <div class="screenshots-controls__content">
+                {{ item }}
+                <div class="screenshots-controls__icon">
+                    {{ mixins.icon('arrow-right') }}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

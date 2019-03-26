@@ -29,8 +29,10 @@
         background-color: rgba($black,.72)
         z-index: 100
         color: $white
-        display: flex
+        display: none
         align-items: center
+        +sm
+            display: flex
     &__header
         height: 55px
         top: 0
@@ -62,6 +64,14 @@
             display: block
             max-width: 375px
             width: 100%
+            &:after
+                content: ''
+                position: absolute
+                top: 0
+                bottom: 0
+                width: 100vw
+                left: 50%
+                transform: translateX(-50%)
     &__item
         padding: 0 20px
         width: 25%
@@ -109,3 +119,26 @@
         img
             display: block
             width: 100%
+
+.screenshots-controls
+    display: none
+    +sm
+        display: block
+    &__item
+        width: 100%
+        padding: 17px 27px 12px 34px
+        border-bottom: 1px solid $mobileBorder
+    &__content
+        position: relative
+        padding-right: 10px
+        color: $black
+        line-height: 1.39
+    &__icon
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+        font-size: 10px
+        color: #B0C0D7
+        .icon
+            display: block
