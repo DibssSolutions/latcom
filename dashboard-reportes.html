@@ -165,26 +165,67 @@
             <div class="svg-map js-svg-map" data-json="../json/svgmap.json">
               <div class="svg-map__inner map">Alternative content</div>
             </div>
+            <div class="geofencing">
+              <div class="geofencing__tabs" data-tabs>
+                <div class="tabs">
+                  <div class="tabs__header">
+                    <div class="tabs__title">
+                      <span class="tabs__title-icon">
+                        <svg class="icon icon-geofencing">
+                          <use xlink:href="img/sprite.svg#icon-geofencing"></use>
+                        </svg>
+                      </span>
+                      <span class="title-md">Geofencing</span>
+                    </div>
+                    <div class="tabs__controls">
+                      <ul class="tabs-list">
+                        <li class="tabs-list__item">
+                          <button class="tabs-list__btn" data-tabs-control='results'>Resultados</button>
+                        </li>
+                        <li class="tabs-list__item">
+                          <button class="tabs-list__btn" data-tabs-control='locations'>Locaciones</button>
+                        </li>
+                        <li class="tabs-list__item">
+                          <button class="tabs-list__btn" data-tabs-control='screenshots'>Screenshots</button>
+                        </li>
+                        <li class="tabs-list__item">
+                          <button class="tabs-list__btn" data-tabs-control='videos'>Videos</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tabs__wrapper" data-tabs-wrapper>
+                    <div class="tabs__content" data-tabs-container="results"> RESULTS </div>
+                    <div class="tabs__content" data-tabs-container="locations">
+                      <div class="map-wrapper">
+                        <div class="main-map js-map" data-center-lat="50.451767" data-center-lng="30.521038" data-json="./json/geofencing-map.json"></div>
+                      </div>
+                    </div>
+                    <div class="tabs__content" data-tabs-container="screenshots"> SCREENSHOTS </div>
+                    <div class="tabs__content" data-tabs-container="videos"> VIDEOS </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <a href="#" class="download-btn" download>
+          <svg class="icon icon-download">
+            <use xlink:href="img/sprite.svg#icon-download"></use>
+          </svg>
+        </a>
       </div>
-      <a href="#" class="download-btn" download>
-        <svg class="icon icon-download">
-          <use xlink:href="img/sprite.svg#icon-download"></use>
-        </svg>
-      </a>
-    </div>
-    <!-- END content -->
-    <!-- BEGIN scripts -->
-    <script type="text/template" id="infobox"> <div class="baloon">
+      <!-- END content -->
+      <!-- BEGIN scripts -->
+      <script type="text/template" id="infobox"> <div class="baloon">
         <button class="baloon__close js-infobox-close"></button>
         <div className="baloon__content">
           
         </div>
       </div>
     </script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <!-- END scripts -->
+      <script type="text/javascript" src="js/app.js"></script>
+      <!-- END scripts -->
   </body>
 
 </html>
