@@ -1,0 +1,29 @@
+<div class="screenshots js-screenshots-parent">
+    <div class="screenshots__header">
+        Screenshots
+    </div>
+    <div class="screenshots__footer">
+        Contexto Tucumán
+        <button class="screenshots__arrow-left js-screenshots-prev">
+            {{ mixins.icon('arrow-prev') }}
+        </button>
+        <button class="screenshots__arrow-right js-screenshots-next">
+            {{ mixins.icon('arrow-next') }}
+        </button>
+    </div>
+    <div class="screenshots__wrap js-screenshots-slider">
+        {% for item in [
+                'screenshots.jpg',
+                'screenshots.jpg',
+                'screenshots.jpg',
+                'screenshots.jpg'
+            ] %}
+            <div class="screenshots__item screenshots-item">
+                <div class="screenshots-item__wrap">
+                    <div class="screenshots-item__frame"><img src="./img/iphone.png" alt="img"></div>
+                    <div class="screenshots-item__content"><img src="./img/{{ item }}" alt="img"></div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,8 +1,8 @@
 import slick from 'slick-carousel';
 import EasyGoogleMaps from './_easymap';
 
-import { BODY } from './../constants';
-import { LOAD_DATA, buildIcon } from './../utils';
+import { BODY, WIN_WIDTH, widthSM, WIN } from './../constants';
+import { LOAD_DATA, buildIcon, mediaWidth } from './../utils';
 let modalSlider;
 let slideIndex;
 BODY.on('click', '.js-gallery-trigger', function() {
@@ -286,4 +286,54 @@ $('[data-modal]').on('click', e => {
       modalSlider.slick('unslick');
     },200);
   }
+});
+
+
+const screenshotsSlider = $('.js-screenshots-slider');
+const screenshotsSliderrParent = screenshotsSlider.parents('.js-screenshots-parent');
+const prevBtn = $('.js-screenshots-prev', screenshotsSliderrParent);
+const nextBtn = $('.js-screenshots-next', screenshotsSliderrParent);
+const screenshotsSliderInit = () => {
+  if (mediaWidth(767) && !screenshotsSlider.hasClass('slick-initialized')) {
+    console.log(WIN_WIDTH);
+    screenshotsSlider.slick({
+      dots: false,
+      infinite: true,
+      speed: 800,
+      fade: true,
+      cssEase: 'linear',
+      slidesToShow: 1,
+      slideToScroll: 1,
+      autoplay: false,
+      // initialSlide: slideIndex,
+      prevArrow: prevBtn,
+      nextArrow: nextBtn,
+      adaptiveHeight: true
+    });
+  } else {
+    if (!mediaWidth(767) && screenshotsSlider.hasClass('slick-initialized')) screenshotsSlider.slick('unslick');
+  }
+};
+
+// function debounce(func, wait) {
+//   let timeout;
+//   return function() {
+//     // clearTimeout(timeout);
+//     // timeout = setTimeout(() => {
+//     //   timeout = null;
+//     //   func.apply(this, args);
+//     // }, wait);
+    
+//     const functionCall = () => func.apply(this, arguments);
+    
+//     clearTimeout(timeout);
+//     timeout = setTimeout(functionCall, wait);
+//     // if (immediate && !timeout) func.apply(this, [...args]);
+//   };
+// }
+let timeout;
+
+WIN.on('resize', () => {
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {screenshotsSliderInit();},100);
 });
