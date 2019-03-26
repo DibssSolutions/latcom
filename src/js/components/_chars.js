@@ -1,78 +1,81 @@
 import Chart from 'chart.js';
 import '../lib/chartjs-plugin-datalabels.js';
-var ctx = document.querySelector('.js-chart').getContext('2d');
-var data = {
-  labels: ['Jan', 'Feb', 'Mar'],
-  datasets: [{
-    label: false,
-    backgroundColor: '#C7CFDB',
-    hoverBackgroundColor: '#08DB95',
-    data: [56, 63, 67]
-  }]
-};
+if (document.querySelector('.js-chart')) {
+  var ctx = document.querySelector('.js-chart').getContext('2d');
+  var data = {
+    labels: ['Jan', 'Feb', 'Mar'],
+    datasets: [{
+      label: false,
+      backgroundColor: '#C7CFDB',
+      hoverBackgroundColor: '#08DB95',
+      data: [56, 63, 67]
+    }]
+  };
 
-window.chart = new Chart(ctx, {
+  window.chart = new Chart(ctx, {
   // The type of chart we want to create
-  type: 'bar',
+    type: 'bar',
 
-  // The data for our dataset
-  data: data,
+    // The data for our dataset
+    data: data,
 
-  duration: 500,
-  easing: 'easeOutBounce',
+    duration: 500,
+    easing: 'easeOutBounce',
 
-  // Configuration options go here,
-  options: {
-    responsive: true,
-    legend: {
-      display: false
-    },
-    tooltips: {
-      enabled: false
-    },
-    responsive: true,
-    scales: {
-      xAxes: [{
-        stacked: false,
+    // Configuration options go here,
+    options: {
+      responsive: true,
+      legend: {
+        display: false
+      },
+      tooltips: {
+        enabled: false
+      },
+      responsive: true,
+      scales: {
+        xAxes: [{
+          stacked: false,
 
-        gridLines: {
-          display: false,
-          drawBorder: false,
+          gridLines: {
+            display: false,
+            drawBorder: false,
 
-        },
-        ticks: {
-          autoSkip: false
+          },
+          ticks: {
+            autoSkip: false
 
+          }
+        }],
+        yAxes: [{
+          stacked: true,
+          gridLines: {
+            drawBorder: false
+          }
+        }]
+      },
+      plugins: {
+        datalabels: {
+          align: 'start',
+          anchor: 'end',
+          font: {
+            family: '"AvenirNext", Helvetica, sans-serif',
+            size: 13,
+            weight: 500
+          },
+          color: 'rgba(45, 54, 68, 0.6)',
+          display: 'auto'
         }
-      }],
-      yAxes: [{
-        stacked: true,
-        gridLines: {
-          drawBorder: false
-        }
-      }]
-    },
-    plugins: {
-      datalabels: {
-        align: 'start',
-        anchor: 'end',
-        font: {
-          family: '"AvenirNext", Helvetica, sans-serif',
-          size: 13,
-          weight: 500
-        },
-        color: 'rgba(45, 54, 68, 0.6)',
-        display: 'auto'
       }
     }
-  }
-});
+  });
 
-document.getElementById('randomizeData').addEventListener('click', function() {
-  data.datasets[0].data = [10, 30, 31];
-  console.log('dd');
-  window.chart.update();
-});
+  document.getElementById('randomizeData').addEventListener('click', function() {
+    data.datasets[0].data = [10, 30, 31];
+    console.log('dd');
+    window.chart.update();
+  });
+}
+
 
 
 // import Chart from 'chart.js';
