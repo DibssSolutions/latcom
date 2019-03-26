@@ -200,11 +200,67 @@
                     <div class="tabs__wrapper" data-tabs-wrapper>
                       <div class="tabs__content" data-tabs-container="results"> RESULTS </div>
                       <div class="tabs__content" data-tabs-container="locations">
-                        <div class="map-wrapper">
-                          <div class="main-map js-map" data-center-lat="50.451767" data-center-lng="30.521038" data-json="./json/geofencing-map.json"></div>
+                        <div class="main-map">
+                          <div class="main-map__inner js-map" data-center-lat="50.451767" data-center-lng="30.521038" data-json="./json/geofencing-map.json"></div>
+                          <div class="main-map__selection">
+                            <div class="map-select">
+                              <form class="search search_select">
+                                <div class="search__input">
+                                  <input type="text" placeholder="Buscar locaciones" />
+                                </div>
+                                <button class="search__button" type="button">
+                                  <svg class="icon icon-search">
+                                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                                  </svg>
+                                </button>
+                              </form>
+                              <div class="map-select__list js-map-select-wrapper"></div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="tabs__content" data-tabs-container="screenshots"> SCREENSHOTS </div>
+                      <div class="tabs__content" data-tabs-container="screenshots">
+                        <div class="screenshots js-screenshots-parent">
+                          <div class="screenshots__header"> Screenshots </div>
+                          <div class="screenshots__footer"> Contexto Tucumán <button class="screenshots__arrow-left js-screenshots-prev">
+                              <svg class="icon icon-arrow-prev">
+                                <use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
+                              </svg>
+                            </button>
+                            <button class="screenshots__arrow-right js-screenshots-next">
+                              <svg class="icon icon-arrow-next">
+                                <use xlink:href="img/sprite.svg#icon-arrow-next"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="screenshots__wrap js-screenshots-slider">
+                            <div class="screenshots__item screenshots-item">
+                              <div class="screenshots-item__wrap">
+                                <div class="screenshots-item__frame"><img src="./img/iphone.png" alt="img"></div>
+                                <div class="screenshots-item__content"><img src="./img/screenshots.jpg" alt="img"></div>
+                              </div>
+                            </div>
+                            <div class="screenshots__item screenshots-item">
+                              <div class="screenshots-item__wrap">
+                                <div class="screenshots-item__frame"><img src="./img/iphone.png" alt="img"></div>
+                                <div class="screenshots-item__content"><img src="./img/screenshots.jpg" alt="img"></div>
+                              </div>
+                            </div>
+                            <div class="screenshots__item screenshots-item">
+                              <div class="screenshots-item__wrap">
+                                <div class="screenshots-item__frame"><img src="./img/iphone.png" alt="img"></div>
+                                <div class="screenshots-item__content"><img src="./img/screenshots.jpg" alt="img"></div>
+                              </div>
+                            </div>
+                            <div class="screenshots__item screenshots-item">
+                              <div class="screenshots-item__wrap">
+                                <div class="screenshots-item__frame"><img src="./img/iphone.png" alt="img"></div>
+                                <div class="screenshots-item__content"><img src="./img/screenshots.jpg" alt="img"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       <div class="tabs__content" data-tabs-container="videos"> VIDEOS </div>
                     </div>
                   </div>
