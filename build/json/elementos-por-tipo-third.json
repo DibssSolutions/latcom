@@ -1,0 +1,11 @@
+[
+	{
+    "labels": ["MOB. URBANO", "GRAN FORMATO", "FORMATO MEDIO", "DISP. TÁCTICOS", "TRANSP.", "VALLAS MÓVILES", "GEO FENCING", "MUPI DIGITAL", "RELOJES", "VIDEO WALL", "POSTES", "PUBLI OBRA"],
+    "datasets": [{
+      "label": false,
+      "backgroundColor": "#C7CFDB",
+      "hoverBackgroundColor": "#08DB95",
+      "data": [62, 47, 77, 57, 56, 63, 67, 27, 57, 67, 37, 67]
+    }]
+  }
+]
