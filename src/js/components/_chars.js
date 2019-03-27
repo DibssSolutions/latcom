@@ -7,6 +7,7 @@ const wraps = $('.js-chart-wrap');
 wraps.each((i, el) => {
   const container = $(el);
   let chart;
+  let mainData;
   const link = $('.js-chart-select-link', container);
   const activeLink = $('.js-chart-select-link.is-active', container);
   const ctx = $('.js-chart', container)[0].getContext('2d');;
@@ -16,10 +17,10 @@ wraps.each((i, el) => {
   LOAD_DATA({
     path: initData,
     callback: obj => {
-      let data = obj[0];
+      mainData = obj[0];
       const options = {
         type: 'bar',
-        data: data,
+        data: mainData,
         duration: 500,
         easing: 'easeOutBounce',
         options: {
@@ -34,15 +35,12 @@ wraps.each((i, el) => {
           scales: {
             xAxes: [{
               stacked: false,
-
               gridLines: {
                 display: false,
                 drawBorder: false,
-
               },
               ticks: {
                 autoSkip: false
-
               }
             }],
             yAxes: [{
@@ -67,20 +65,18 @@ wraps.each((i, el) => {
           }
         }
       };
-
       chart = new Chart(ctx, options);
-
-      link.on('click', function() {
-        const linkData = $(this).data('json');
-        LOAD_DATA({
-          path: linkData,
-          callback: obj => {
-            data.datasets[0].data = obj[0].datasets[0].data;
-            chart.update();
-          }
-        });
-      });
     } 
+  });
+  link.on('click', function() {
+    const linkData = $(this).data('json');
+    LOAD_DATA({
+      path: linkData,
+      callback: obj => {
+        mainData.datasets[0].data = obj[0].datasets[0].data;
+        chart.update();
+      }
+    });
   });
   
 });
