@@ -166,8 +166,24 @@
               <div class="svg-map js-svg-map" data-json="../json/svgmap.json">
                 <div class="svg-map__inner map">Alternative content</div>
               </div>
-              <canvas class="js-chart"></canvas>
-              <button id="randomizeData">update chart</button>
+              <div class="chart js-chart-wrap">
+                <canvas class="js-chart"></canvas>
+                <div class="chart-select js-chart-select dropdown">
+                  <button class="chart-select__trigger js-chart-select-trigger" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bla</button>
+                  <ul class="chart-select__list chart-select-list dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <!-- dropdown-menu-right -->
+                    <li class="chart-select__item">
+                      <a href="#" class="chart-select__link is-active js-chart-select-link" data-json="../json/elementos-por-tipo-first.json">Item</a>
+                    </li>
+                    <li class="chart-select__item">
+                      <a href="#" class="chart-select__link js-chart-select-link" data-json="../json/elementos-por-tipo-second.json">Item</a>
+                    </li>
+                    <li class="chart-select__item">
+                      <a href="#" class="chart-select__link js-chart-select-link" data-json="../json/elementos-por-tipo-third.json">Item</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
               <div class="geofencing">
                 <div class="geofencing__tabs" data-tabs>
                   <div class="tabs">
