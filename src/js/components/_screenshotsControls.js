@@ -2,6 +2,7 @@ import { OPEN, BODY } from './../constants';
 
 const control = $('.js-screenshots-control');
 const popup = $('.js-screenshots-parent');
+const close = $('.js-screenshots-close', popup);
 const slider = $('.js-screenshots-slider');
 let slideNumber;
 BODY.on('click', '.js-screenshots-control', function() {
@@ -11,5 +12,8 @@ BODY.on('click', '.js-screenshots-control', function() {
   slider.slick('slickGoTo', slideNumber);
 });
 slider.on('click', () => {
+  popup.removeClass(OPEN);
+});
+close.on('click', () => {
   popup.removeClass(OPEN);
 });

@@ -295,7 +295,6 @@ const prevBtn = $('.js-screenshots-prev', screenshotsSliderrParent);
 const nextBtn = $('.js-screenshots-next', screenshotsSliderrParent);
 const screenshotsSliderInit = () => {
   if (mediaWidth(767) && !screenshotsSlider.hasClass('slick-initialized')) {
-    console.log(WIN_WIDTH);
     screenshotsSlider.slick({
       dots: false,
       infinite: true,
@@ -305,7 +304,6 @@ const screenshotsSliderInit = () => {
       slidesToShow: 1,
       slideToScroll: 1,
       autoplay: false,
-      // initialSlide: slideIndex,
       prevArrow: prevBtn,
       nextArrow: nextBtn,
       adaptiveHeight: true
@@ -315,24 +313,15 @@ const screenshotsSliderInit = () => {
   }
 };
 
-// function debounce(func, wait) {
-//   let timeout;
-//   return function() {
-//     // clearTimeout(timeout);
-//     // timeout = setTimeout(() => {
-//     //   timeout = null;
-//     //   func.apply(this, args);
-//     // }, wait);
-    
-//     const functionCall = () => func.apply(this, arguments);
-    
-//     clearTimeout(timeout);
-//     timeout = setTimeout(functionCall, wait);
-//     // if (immediate && !timeout) func.apply(this, [...args]);
-//   };
-// }
-let timeout;
+const controlText = $('.js-screenshots-control-text');
+const screenshotsFooter = screenshotsSliderrParent.find('.js-screenshots-text');
+screenshotsSlider.on('afterChange', function(event, slick, currentSlide) {
+  console.log(currentSlide);
+  const text = $(controlText[currentSlide]).html();
+  screenshotsFooter.html(text);
+});
 
+let timeout;
 WIN.on('resize', () => {
   clearTimeout(timeout);
   timeout = setTimeout(() => {screenshotsSliderInit();},100);
