@@ -17,7 +17,8 @@ DOC.ready(() => {
       if (perf.hasClass('ps')) return;
       new PerfectScrollbar(perf[0], {
         useBothWheelAxes: false,
-        maxScrollbarLength: 60
+        maxScrollbarLength: 60,
+        wheelPropagation: false
       });
     });
   BODY.find('.js-select .btn').removeClass('btn');

@@ -8,15 +8,17 @@
   <div class="main-map__selection">
     <div class="map-select">
       <div class="map-select__inner js-mob-map-select-wrapper">
-        <form class="search search_select">
-          <div class="search__input">
-            <input type="text" placeholder="Buscar locaciones" />
-          </div>
-          <button class="search__button" type="button">
-            {{ mixins.icon("search") }}
-          </button>
-        </form>
-        <div class="map-select__list js-map-select-wrapper"></div>
+        <div class="map-select__search">
+          <form class="search search_select">
+            <div class="search__input">
+              <input type="text" placeholder="Buscar locaciones" />
+            </div>
+            <button class="search__button" type="button">
+              {{ mixins.icon("search") }}
+            </button>
+          </form>
+        </div>
+        <div class="map-select__list js-map-select-wrapper js-map-select-scrollbar"></div>
       </div>
       <div class="map-select__mob-toggler">
         <a href="#" class="fab js-mob-map-select-toggler">

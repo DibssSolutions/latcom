@@ -1,4 +1,6 @@
 import EasyGoogleMaps from './_easymap';
+// import PerfectScrollbar from 'perfect-scrollbar';
+import InitScroll from './_map-select-scrollbar';
 import { BODY } from './../constants';
 import { LOAD_DATA, buildIcon } from './../utils';
 
@@ -18,7 +20,7 @@ if (map.length) {
                 lat: $(container).data('center-lat'),
                 lng: $(container).data('center-lng')
               },
-              zoom: 14,
+              zoom: 12,
               zoomControl: false,
               mapTypeControl: false,
               scaleControl: false,
@@ -239,8 +241,10 @@ if (map.length) {
         map.init();
 
         map.onload(function() {
+
+          // CATEGORIES MARKERS
           const togglers = $('.js-map-category');
-          if (togglers.lenght) {
+          if (togglers.length) {
             togglers.each((i, el) => {
               const toggler = $(el);
               setTimeout(() => updateMarkers(toggler), 10);
@@ -248,12 +252,23 @@ if (map.length) {
             });
           }
 
+          function updateMarkers(el) {
+            const toggler = $(el);
+            const category = $(toggler).data('category');
+            const checkState = toggler.is(':checked');
+            checkState
+              ? map.showCategory(category)
+              : map.hideCategory(category);
+          }
+
+          // MAP SELECT
           const mapSelect = $('.js-map-select-wrapper');
           if (mapSelect.length) {
             setTimeout(() => {
               map.populateSelect(mapSelect);
-              // map.activeSelectOnHover(mapSelect);
-              // map.activeSelectOnClick(mapSelect);
+
+              // Init PerfectScrollBar
+              InitScroll('.js-map-select-scrollbar');
 
               const selects = $('.js-map-select');
 
@@ -277,12 +292,4 @@ if (map.length) {
       }
     });
   });
-}
-
-function updateMarkers(el) {
-  const toggler = $(el);
-  const category = $(toggler).data('category');
-  const checkState = toggler.is(':checked');
-
-  checkState ? map.showCategory(category) : map.hideCategory(category);
 }

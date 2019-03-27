@@ -10,6 +10,7 @@ import './_header';
 import './_svgMap';
 import './_map';
 import './_tabs';
-import './_mob-map-select-toggler';
+import './_mob-map-select';
 import './_chars';
 import './_screenshotsControls';
+import './_tabs-mob-btn';

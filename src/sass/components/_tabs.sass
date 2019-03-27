@@ -3,9 +3,29 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
+		flex-wrap: wrap
 		padding: 9px 20px
 		margin-bottom: 20px
 		background-color: rgba($blue, 0.04)
+		+sm 
+			background-color: transparent
+	&__mobile-header
+		+sm 
+			+fls(100%)
+			display: flex
+			justify-content: space-between
+			align-items: center
+			position: relative
+			padding: 12px 0
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				height: 100%
+				left: -100%
+				right: -100%
+				background-color: rgba($blue, 0.04)
+				z-index: -1
 	&__title
 		color: $blue
 		font-size: 0
@@ -18,7 +38,8 @@
 			display: inline-block
 			vertical-align: middle
 	&__controls
-
+		+sm 
+			padding: 15px 0
 	&__wrapper
 		// padding-top: 16px
 		// background-color: $blue
@@ -28,10 +49,15 @@
 	&__content
 		position: relative
 		line-height: 2
-	&__list
-		margin-top: 10px
+	// &__list
+	// 	margin-top: 10px
 	&__item
 		padding: 10px 0
+	&__mob-buttons
+		display: none
+		+sm 
+			display: block
+
 
 .tabs-list
 	display: flex
@@ -39,21 +65,33 @@
 	justify-content: center
 	+sm
 		flex-wrap: wrap
+		margin: 0 -15px
 	&__item
 		position: relative
 		padding: 1px 18px 1px 17px
+		+sm 
+			padding: 0 15px
+			// border-bottom: 1px solid transparent
 		&:not(:last-child)
 			border-right: 1px solid rgba(151, 151, 151, 0.51)
+			+sm 
+				border-right: none
 			+xs
 				margin-bottom: 30px
 	&__btn
+		display: inline-block
+		padding-bottom: 1px
 		background-color: transparent
 		color: $gray
 		font-family: $avenir
 		+f(13px, 500, 1.3077)
 		transition: color $tr
+		+sm 
+			border-bottom: 1px solid transparent
 		&.is-active
 			color: $blue
+			+sm 
+				border-bottom-color: $blue
 
 [data-tabs]
 	overflow: hidden
