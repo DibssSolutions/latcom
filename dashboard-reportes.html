@@ -172,13 +172,27 @@
                 <div class="geofencing__tabs" data-tabs>
                   <div class="tabs">
                     <div class="tabs__header">
-                      <div class="tabs__title">
-                        <span class="tabs__title-icon">
-                          <svg class="icon icon-geofencing">
-                            <use xlink:href="img/sprite.svg#icon-geofencing"></use>
-                          </svg>
-                        </span>
-                        <span class="title-md">Geofencing</span>
+                      <div class="tabs__mobile-header">
+                        <div class="tabs__title">
+                          <span class="tabs__title-icon">
+                            <svg class="icon icon-geofencing">
+                              <use xlink:href="img/sprite.svg#icon-geofencing"></use>
+                            </svg>
+                          </span>
+                          <span class="title-md">Geofencing</span>
+                        </div>
+                        <div class="tabs__mob-buttons">
+                          <a href="#" class="tabs-mob-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                          </a>
+                          <a href="#" class="tabs-mob-btn is-open">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                          </a>
+                        </div>
                       </div>
                       <div class="tabs__controls">
                         <ul class="tabs-list">
@@ -205,17 +219,19 @@
                           <div class="main-map__selection">
                             <div class="map-select">
                               <div class="map-select__inner js-mob-map-select-wrapper">
-                                <form class="search search_select">
-                                  <div class="search__input">
-                                    <input type="text" placeholder="Buscar locaciones" />
-                                  </div>
-                                  <button class="search__button" type="button">
-                                    <svg class="icon icon-search">
-                                      <use xlink:href="img/sprite.svg#icon-search"></use>
-                                    </svg>
-                                  </button>
-                                </form>
-                                <div class="map-select__list js-map-select-wrapper"></div>
+                                <div class="map-select__search">
+                                  <form class="search search_select">
+                                    <div class="search__input">
+                                      <input type="text" placeholder="Buscar locaciones" />
+                                    </div>
+                                    <button class="search__button" type="button">
+                                      <svg class="icon icon-search">
+                                        <use xlink:href="img/sprite.svg#icon-search"></use>
+                                      </svg>
+                                    </button>
+                                  </form>
+                                </div>
+                                <div class="map-select__list js-map-select-wrapper js-map-select-scrollbar"></div>
                               </div>
                               <div class="map-select__mob-toggler">
                                 <a href="#" class="fab js-mob-map-select-toggler">

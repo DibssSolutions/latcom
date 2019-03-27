@@ -3,7 +3,7 @@
     "marker": {
     "category": "gran-formato",
       "position": {
-        "lat": 50.451767,
+        "lat": 50.411767,
         "lng": 30.521038
       },
       "icon": {
@@ -25,7 +25,7 @@
       "category": "gran-formato",
       "position": {
         "lat": 50.455727,
-        "lng": 30.521998
+        "lng": 30.561998
       },
       "icon": {
         "default": "img/marker-green.svg",
@@ -45,7 +45,7 @@
     "marker": {
       "category": "formato-medio",
       "position": {
-        "lat": 50.451727,
+        "lat": 50.491727,
         "lng": 30.529998
       },
       "icon": {
@@ -67,7 +67,7 @@
       "category": "formato-digital",
       "position": {
         "lat": 50.456727,
-        "lng": 30.539998
+        "lng": 30.579998
       },
       "icon": {
         "default": "img/marker-purple.svg",
@@ -87,7 +87,7 @@
     "marker": {
       "category": "formato-digital",
       "position": {
-        "lat": 50.459727,
+        "lat": 50.429727,
         "lng": 30.520998
       },
       "icon": {
@@ -108,7 +108,7 @@
     "marker": {
       "category": "formato-digital",
       "position": {
-        "lat": 50.453727,
+        "lat": 50.463727,
         "lng": 30.526998
       },
       "icon": {
@@ -129,8 +129,8 @@
     "marker": {
       "category": "disp-tacticos",
       "position": {
-        "lat": 50.459727,
-        "lng": 30.526998
+        "lat": 50.469727,
+        "lng": 30.506998
       },
       "icon": {
         "default": "img/marker-yellow.svg",
@@ -150,8 +150,8 @@
     "marker": {
       "category": "disp-tacticos",
       "position": {
-        "lat": 50.459727,
-        "lng": 30.526998
+        "lat": 50.469727,
+        "lng": 30.596998
       },
       "icon": {
         "default": "img/marker-yellow.svg",
