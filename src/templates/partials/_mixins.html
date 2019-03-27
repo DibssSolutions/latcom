@@ -124,7 +124,7 @@
 {% macro filters(props) %}
 	<div class="filters-section-wrapper js-filters-wrapper">
 		<div class="filters-mob-overlay js-filters-overlay"></div>
-		<div class="filters-section js-filters">
+		<div class="filters-section js-filters{% if props.modifier %} filters-section_{{ props.modifier }}{% endif %}">
 			<div class="filters-section__wrap">
 				<h3 class="filters-section__title title-md">{{ props.title }}</h3>
 				{% if props.search %}
@@ -163,6 +163,15 @@
 						{% endif %}
 					</div>
 				</div>
+				{% if props.mapControls %}
+					<div class="filters-section__map-controls">
+						<div class="map-controls">
+							{% for control in props.mapControls %}
+								{{ mapCheckbox(control) }}
+							{% endfor %}
+						</div>
+					</div>
+				{% endif %}
 			</div>
 			{% if not props.noDownlodBtn %}
 				<div class="filters-section__download">
@@ -171,15 +180,6 @@
 						<span class="link-down-load__text">Descargar álbum</span>
 					</a>
 				</div>
-			{% endif %}
-			{% if props.mapControls %}
-			<div class="filters-section__map-controls">
-				<div class="map-controls">
-					{% for control in props.mapControls %}
-						{{ mapCheckbox(control) }}
-					{% endfor %}
-				</div>
-			</div>
 			{% endif %}
 		</div>
 		<div class="filters-fab js-filters-btn">
