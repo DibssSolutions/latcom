@@ -10,16 +10,17 @@ title: Listado page
 		{% include "partials/_header.html" %}
 		<div class="wrap">
 			{% include "partials/_sidebar.html" %}
-			<div class="main js-scroll-bar">
+			<div class="main main_map js-scroll-bar">
 				<div class="main__inner">
-					{{ mixins.head({ 
-						title: 'Mc Precios 2018',
+					{{ mixins.head({
+						title: 'Fútbol invierno',
 						links: true,
 						currentPage: 'mapa'
 					}) }}
 					{{ mixins.filters({
 						title: 'Mapa de soportes',
 						noDownlodBtn: true,
+						modifier: 'few-content',
 						selects: [
 						{
 								label: 'Ciudad',
@@ -55,11 +56,39 @@ title: Listado page
 								text: 'Otros',
 								category: 'otros',
 								iconColor: 'grey'
+							},
+							{
+								text: 'Gran formato',
+								category: '_gran-formato',
+								checked: true,
+								iconColor: 'green'
+							},
+							{
+								text: 'Formato medio',
+								category: '_formato-medio',
+								checked: true,
+								iconColor: 'orange'
+							},
+							{
+								text: 'Formato digital',
+								category: '_formato-digital',
+								checked: true,
+								iconColor: 'purple'
+							},
+							{
+								text: 'Disp. tácticos',
+								category: '_disp-tacticos',
+								iconColor: 'yellow'
+							},
+							{
+								text: 'Otros',
+								category: '_otros',
+								iconColor: 'grey'
 							}
 						]
 					}) }}
 					<div class="main-map">
-							<div class="main-map__inner js-map" data-center-lat="50.451767" data-center-lng="30.521038" data-json="./json/main-map.json"></div>
+						<div class="main-map__inner js-map" data-center-lat="50.451767" data-center-lng="30.521038" data-json="./json/main-map.json"></div>
 					</div>
 				</div>
 			</div>
