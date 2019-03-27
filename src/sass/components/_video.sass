@@ -1,0 +1,53 @@
+.video-block
+    &__top
+        display: flex
+        +sm
+            flex-wrap: wrap
+    &__bottom
+        margin-top: 26px
+        +sm
+            padding: 0 21px
+    &__video-wrap
+        width: 55%
+        +sm
+            width: 100%
+            padding: 0 29px
+        .slick-list
+            +sm
+                overflow: visible
+        .slick-slide
+            padding: 0 7px
+    &__video
+        height: 290px
+        display: flex
+        align-items: center
+        background-color: $black
+        +sm
+            height: auto
+            position: relative
+            width: 100%
+            padding-bottom: 56%
+            overflow: hidden
+        iframe,
+        video
+            +sm
+                position: absolute
+                top: 0
+                left: 0
+                object-fit: cover
+                object-position: center
+    &__slider
+        // height: 100%
+    &__next,
+    &__prev
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        background-color: transparent
+        z-index: 10
+        svg
+            display: block
+    &__next
+        right: 21px
+    &__prev
+        left: 21px
