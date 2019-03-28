@@ -8,29 +8,48 @@
 		<div class="wrap">
 			{% include "partials/_sidebar.html" %}
 			<div class="main js-scroll-bar">
-				<div class="main__inner">
-					<div class="svg-map js-svg-map" data-json="../json/svgmap.json">
-						<div class="svg-map__inner map">Alternative content</div>
-					</div>
-					<div class="chart js-chart-wrap">
-						<canvas class="js-chart"></canvas>
-						<div class="chart-select js-chart-select dropdown">
-							<button class="chart-select__trigger js-chart-select-trigger" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bla</button>
-							<ul class="chart-select__list chart-select-list dropdown-menu" aria-labelledby="dropdownMenuButton"> 
-								<!-- dropdown-menu-right -->
-								<li class="chart-select__item">
-									<a href="#" class="chart-select__link is-active js-chart-select-link" data-json="../json/elementos-por-tipo-first.json">Item</a>
-								</li>
-								<li class="chart-select__item">
-									<a href="#" class="chart-select__link js-chart-select-link" data-json="../json/elementos-por-tipo-second.json">Item</a>
-								</li>
-								<li class="chart-select__item">
-									<a href="#" class="chart-select__link js-chart-select-link" data-json="../json/elementos-por-tipo-third.json">Item</a>
-								</li>
-							</ul>
+				<div class="main__inner" data-accordion-group data-accordion-multiple>
+					<section class="reports-map" data-accordion-item data-accordion-on-init="768" data-accordion-open>
+						<div class="reports-map__head" data-accordion-trigger>
+							<div class="dashboard-head">
+								<h3 class="title-md">Mapa de cobertura</h3>
+								<span class="mob-accordion-btn"></span>
+							</div>
 						</div>
-					</div>
-					
+						<div class="reports-map__content" data-accordion-container>
+							<div class="svg-map js-svg-map" data-json="../json/svgmap.json">
+								<div class="svg-map__inner map">Alternative content</div>
+							</div>
+						</div>
+					</section>
+					<section class="chart-section" data-accordion-item data-accordion-on-init="768" data-accordion-open>
+						<header class="chart-section__head" data-accordion-trigger>
+							<div class="dashboard-head">
+								<h3 class="title-md">Elementos por tipo</h3>
+								<span class="mob-accordion-btn"></span>
+							</div>
+						</header>
+						<div class="chart-section__content" data-accordion-container>
+							<div class="chart js-chart-wrap">
+								<canvas class="js-chart"></canvas>
+								<div class="chart-select js-chart-select dropdown">
+									<button class="chart-select__trigger js-chart-select-trigger" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bla</button>
+									<ul class="chart-select__list chart-select-list dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<!-- dropdown-menu-right -->
+										<li class="chart-select__item">
+											<a href="#" class="chart-select__link is-active js-chart-select-link" data-json="../json/elementos-por-tipo-first.json">Item</a>
+										</li>
+										<li class="chart-select__item">
+											<a href="#" class="chart-select__link js-chart-select-link" data-json="../json/elementos-por-tipo-second.json">Item</a>
+										</li>
+										<li class="chart-select__item">
+											<a href="#" class="chart-select__link js-chart-select-link" data-json="../json/elementos-por-tipo-third.json">Item</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
 					{% include "partials/_geofencing.html" %}
 				</div>
 			</div>

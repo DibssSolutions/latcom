@@ -168,3 +168,27 @@
     &:nth-child(3)
       width: 4px
 
+.mob-accordion-btn
+  display: block
+  +circle(20)
+  position: relative
+  cursor: pointer
+  &:before,
+  &:after
+    content: ''
+    display: inline-block
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%) scaleY(1)
+    background-color: $blue
+  &:before
+    height: 2px
+    width: 12px
+  &:after
+    height: 12px
+    width: 2px
+    transition: transform 0.5s
+    transform-origin: 50% 50%
+    .is-open &
+      transform: translate(-50%, -50%) scaleY(0)
