@@ -87,7 +87,7 @@
                 </button>
                 <ul class="account__list dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                   <li class="account__item">
-                    <a href="#" class="account__link active">My account</a>
+                    <a href="#" class="account__link is-active">My account</a>
                   </li>
                   <li class="account__item">
                     <a href="#" class="account__link">My dahsboard</a>
@@ -187,11 +187,16 @@
                   <div class="chart js-chart-wrap">
                     <canvas class="js-chart"></canvas>
                     <div class="chart-select js-chart-select dropdown">
-                      <button class="chart-select__trigger js-chart-select-trigger" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bla</button>
+                      <button class="chart-select__trigger" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="chart-select__text js-chart-select-trigger">Buenos Aires</span>
+                        <svg class="icon icon-arrow">
+                          <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                        </svg>
+                      </button>
                       <ul class="chart-select__list chart-select-list dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <!-- dropdown-menu-right -->
                         <li class="chart-select__item">
-                          <a href="#" class="chart-select__link is-active js-chart-select-link" data-json="../json/elementos-por-tipo-first.json">Item</a>
+                          <a href="#" class="chart-select__link is-active js-chart-select-link" data-json="../json/elementos-por-tipo-first.json">Buenos Aires</a>
                         </li>
                         <li class="chart-select__item">
                           <a href="#" class="chart-select__link js-chart-select-link" data-json="../json/elementos-por-tipo-second.json">Item</a>

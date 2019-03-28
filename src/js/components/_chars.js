@@ -10,8 +10,11 @@ const chartSelect = () => {
     const trigger = $('.js-chart-select-trigger', container);
     const link = $('.js-chart-select-link', container);
     link.on('click', function() {
-      const currentText = $(this).text();
+      const this_ = $(this);
+      const currentText = this_.text();
       trigger.text(currentText);
+      link.removeClass(ACTIVE);
+      this_.addClass(ACTIVE);
     });
     if (!link.hasClass(ACTIVE)) link.first().addClass(ACTIVE);
     const currentLink = $('.js-chart-select-link.is-active', container);

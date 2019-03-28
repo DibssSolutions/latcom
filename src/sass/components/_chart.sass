@@ -1,0 +1,44 @@
+.chart-select
+	&__trigger
+		padding: 4px 0
+		max-width: 100% 
+		+f(13px,600,1.35)
+		font-family: $avenir 
+		position: relative
+		color: $blue 
+		padding-right: 15px 
+		border-bottom: 1px solid $selectBorder
+		display: block
+		.icon
+			position: absolute
+			top: 50%
+			right: 0
+			color: $gray
+			line-height: 1
+			line-height: 1.38 
+			margin-top: -4px
+			font-size: 7px
+	&__text
+		+text-overflow
+		display: block
+	&__list
+	&__item
+	&__link
+		display: block
+		width: 100%
+		color: $lightGrey
+		font-family: $avenir
+		font-size: 14px
+		font-weight: 500
+		padding: 6px 10px
+		transition: background-color .3s, color .3s
+		+text-overflow
+		+md
+			padding-left: 0
+		&:hover
+			background-color: #f8f9fa
+		&.is-active,
+		&:active
+			background-color: transparent
+			font-weight: 700
+			color: $black
