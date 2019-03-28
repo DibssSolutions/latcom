@@ -163,52 +163,56 @@
           <!-- end sidebar -->
           <div class="main js-scroll-bar">
             <div class="main__inner" data-accordion-group data-accordion-multiple>
-              <section class="reports-map" data-accordion-item data-accordion-on-init="768" data-accordion-open>
-                <div class="reports-map__head" data-accordion-trigger>
-                  <div class="dashboard-head">
+              <section class="reports-map-section" data-accordion-item data-accordion-on-init="768" data-accordion-open>
+                <div class="reports-map-section__head">
+                  <div class="dashboard-head" data-accordion-trigger>
                     <h3 class="title-md">Mapa de cobertura</h3>
                     <span class="mob-accordion-btn"></span>
                   </div>
                 </div>
-                <div class="reports-map__content" data-accordion-container>
+                <div class="reports-map-section__content" data-accordion-container>
                   <div class="svg-map js-svg-map" data-json="../json/svgmap.json">
                     <div class="svg-map__inner map">Alternative content</div>
                   </div>
                 </div>
               </section>
-              <section class="chart-section" data-accordion-item data-accordion-on-init="768" data-accordion-open>
-                <header class="chart-section__head" data-accordion-trigger>
+              <section class="chart-section js-chart-wrap" data-accordion-item data-accordion-on-init="768" data-accordion-open>
+                <header class="chart-section__head">
                   <div class="dashboard-head">
-                    <h3 class="title-md">Elementos por tipo</h3>
-                    <span class="mob-accordion-btn"></span>
+                    <div class="dashboard-head__mob-visible" data-accordion-trigger>
+                      <h3 class="title-md">Elementos por tipo</h3>
+                      <span class="mob-accordion-btn"></span>
+                    </div>
+                    <div class="dashboard-head__mob-hidden" data-accordion-container>
+                      <div class="chart-section__select chart-select js-chart-select dropdown">
+                        <button class="chart-select__trigger js-chart-select-trigger" type="button" ata-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bla</button>
+                        <ul class="chart-select__list chart-select-list dropdown-menu" ria-labelledby="dropdownMenuButton">
+                          <!-- dropdown-menu-right -->
+                          <li class="chart-select__item">
+                            <a href="#" class="chart-select__link is-active js-chart-select-link" data-json="../json/elementos-por-tipo-first.json">Item</a>
+                          </li>
+                          <li class="chart-select__item">
+                            <a href="#" class="chart-select__link js-chart-select-link" data-json="../json/elementos-por-tipo-second.json">Item</a>
+                          </li>
+                          <li class="chart-select__item">
+                            <a href="#" class="chart-select__link js-chart-select-link" data-json="../json/elementos-por-tipo-third.json">Item</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </header>
                 <div class="chart-section__content" data-accordion-container>
-                  <div class="chart js-chart-wrap">
+                  <div class="chart">
                     <canvas class="js-chart"></canvas>
-                    <div class="chart-select js-chart-select dropdown">
-                      <button class="chart-select__trigger js-chart-select-trigger" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bla</button>
-                      <ul class="chart-select__list chart-select-list dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <!-- dropdown-menu-right -->
-                        <li class="chart-select__item">
-                          <a href="#" class="chart-select__link is-active js-chart-select-link" data-json="../json/elementos-por-tipo-first.json">Item</a>
-                        </li>
-                        <li class="chart-select__item">
-                          <a href="#" class="chart-select__link js-chart-select-link" data-json="../json/elementos-por-tipo-second.json">Item</a>
-                        </li>
-                        <li class="chart-select__item">
-                          <a href="#" class="chart-select__link js-chart-select-link" data-json="../json/elementos-por-tipo-third.json">Item</a>
-                        </li>
-                      </ul>
-                    </div>
                   </div>
                 </div>
               </section>
-              <div class="geofencing">
+              <div class="geofencing" data-accordion-item data-accordion-on-init="768" data-accordion-open>
                 <div class="geofencing__tabs" data-tabs>
                   <div class="tabs">
                     <div class="tabs__header">
-                      <div class="tabs__mobile-header">
+                      <div class="tabs__mobile-header" data-accordion-trigger>
                         <div class="tabs__title">
                           <span class="tabs__title-icon">
                             <svg class="icon icon-geofencing">
@@ -219,7 +223,7 @@
                         </div>
                         <span class="mob-accordion-btn"></span>
                       </div>
-                      <div class="tabs__controls">
+                      <div class="tabs__controls" data-accordion-container>
                         <ul class="tabs-list">
                           <li class="tabs-list__item">
                             <button class="tabs-list__btn" data-tabs-control='results'>Resultados</button>
@@ -236,7 +240,7 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="tabs__wrapper" data-tabs-wrapper>
+                    <div class="tabs__wrapper" data-tabs-wrapper data-accordion-container>
                       <div class="tabs__content" data-tabs-container="results"> RESULTS </div>
                       <div class="tabs__content" data-tabs-container="locations">
                         <div class="main-map">
