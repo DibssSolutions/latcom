@@ -1,17 +1,34 @@
 import Chart from 'chart.js';
 import '../lib/chartjs-plugin-datalabels.js';
 import { LOAD_DATA } from '../utils.js';
+import { ACTIVE } from '../constants';
 
-const wraps = $('.js-chart-wrap');
+const chartSelect = () => {
+  const select = $('.js-chart-select');
+  select.each((i,el) => {
+    const container = $(el);
+    const trigger = $('.js-chart-select-trigger', container);
+    const link = $('.js-chart-select-link', container);
+    link.on('click', function() {
+      const currentText = $(this).text();
+      trigger.text(currentText);
+    });
+    if (!link.hasClass(ACTIVE)) link.first().addClass(ACTIVE);
+    const currentLink = $('.js-chart-select-link.is-active', container);
+    trigger.text(currentLink.text());
+  });
+};
+chartSelect();
 
 const setValue = (value) => {
   if(value > 999) {
-    var temp = (value / 1000) + 'k';
+    var temp = (value / 1000) + 'K';
     return temp;
   }
   return value;
 };
 
+const wraps = $('.js-chart-wrap');
 wraps.each((i, el) => {
   const container = $(el);
   let chart;
@@ -106,3 +123,4 @@ wraps.each((i, el) => {
   });
   
 });
+
