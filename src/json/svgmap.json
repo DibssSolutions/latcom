@@ -1,947 +1,947 @@
 [{
     "AF": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Afghanistan</div>Population : 23811026"
+            "content": "<div class=\"tooltip-title\">Afghanistan</div>Population: 23811026"
         }
     },
     "ZA": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">South Africa</div>Population : 43635718"
+            "content": "<div class=\"tooltip-title\">South Africa</div>Population: 43635718"
         }
     },
     "AL": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Albania</div>Population : 28472433"
+            "content": "<div class=\"tooltip-title\">Albania</div>Population: 28472433"
         }
     },
     "DZ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Algeria</div>Population : 7013507"
+            "content": "<div class=\"tooltip-title\">Algeria</div>Population: 7013507"
         }
     },
     "DE": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Germany</div>Population : 36848343"
+            "content": "<div class=\"tooltip-title\">Germany</div>Population: 36848343"
         }
     },
     "AD": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Andorra</div>Population : 30847009"
+            "content": "<div class=\"tooltip-title\">Andorra</div>Population: 30847009"
         }
     },
     "AO": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Angola</div>Population : 971957"
+            "content": "<div class=\"tooltip-title\">Angola</div>Population: 971957"
         }
     },
     "AG": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Antigua And Barbuda</div>Population : 38155365"
+            "content": "<div class=\"tooltip-title\">Antigua And Barbuda</div>Population: 38155365"
         }
     },
     "SA": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Saudi Arabia</div>Population : 35729605"
+            "content": "<div class=\"tooltip-title\">Saudi Arabia</div>Population: 35729605"
         }
     },
     "AR": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Argentina</div>Population : 32448340"
+            "content": "<div class=\"tooltip-title\">Argentina</div>Population: 32448340"
         }
     },
     "AM": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Armenia</div>Population : 44485739"
+            "content": "<div class=\"tooltip-title\">Armenia</div>Population: 44485739"
         }
     },
     "AU": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Australia</div>Population : 22851324"
+            "content": "<div class=\"tooltip-title\">Australia</div>Population: 22851324"
         }
     },
     "AT": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Austria</div>Population : 3607937"
+            "content": "<div class=\"tooltip-title\">Austria</div>Population: 3607937"
         }
     },
     "AZ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Azerbaijan</div>Population : 9130334"
+            "content": "<div class=\"tooltip-title\">Azerbaijan</div>Population: 9130334"
         }
     },
     "BS": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Bahamas</div>Population : 7391903"
+            "content": "<div class=\"tooltip-title\">Bahamas</div>Population: 7391903"
         }
     },
     "BH": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Bahrain</div>Population : 26617010"
+            "content": "<div class=\"tooltip-title\">Bahrain</div>Population: 26617010"
         }
     },
     "BD": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Bangladesh</div>Population : 13486465"
+            "content": "<div class=\"tooltip-title\">Bangladesh</div>Population: 13486465"
         }
     },
     "BB": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Barbados</div>Population : 11433618"
+            "content": "<div class=\"tooltip-title\">Barbados</div>Population: 11433618"
         }
     },
     "BE": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Belgium</div>Population : 7618576"
+            "content": "<div class=\"tooltip-title\">Belgium</div>Population: 7618576"
         }
     },
     "BZ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Belize</div>Population : 25118048"
+            "content": "<div class=\"tooltip-title\">Belize</div>Population: 25118048"
         }
     },
     "BJ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Benin</div>Population : 48518314"
+            "content": "<div class=\"tooltip-title\">Benin</div>Population: 48518314"
         }
     },
     "BT": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Bhutan</div>Population : 59948816"
+            "content": "<div class=\"tooltip-title\">Bhutan</div>Population: 59948816"
         }
     },
     "BY": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Belarus</div>Population : 13343881"
+            "content": "<div class=\"tooltip-title\">Belarus</div>Population: 13343881"
         }
     },
     "MM": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Myanmar</div>Population : 23970062"
+            "content": "<div class=\"tooltip-title\">Myanmar</div>Population: 23970062"
         }
     },
     "BO": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Bolivia, Plurinational State Of</div>Population : 2006607"
+            "content": "<div class=\"tooltip-title\">Bolivia, Plurinational State Of</div>Population: 2006607"
         }
     },
     "BA": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Bosnia And Herzegovina</div>Population : 25516553"
+            "content": "<div class=\"tooltip-title\">Bosnia And Herzegovina</div>Population: 25516553"
         }
     },
     "BW": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Botswana</div>Population : 22695944"
+            "content": "<div class=\"tooltip-title\">Botswana</div>Population: 22695944"
         }
     },
     "BR": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Brazil</div>Population : 58738678"
+            "content": "<div class=\"tooltip-title\">Brazil</div>Population: 58738678"
         }
     },
     "BN": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Brunei Darussalam</div>Population : 36804471"
+            "content": "<div class=\"tooltip-title\">Brunei Darussalam</div>Population: 36804471"
         }
     },
     "BG": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Bulgaria</div>Population : 48527454"
+            "content": "<div class=\"tooltip-title\">Bulgaria</div>Population: 48527454"
         }
     },
     "BF": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Burkina Faso</div>Population : 3852890"
+            "content": "<div class=\"tooltip-title\">Burkina Faso</div>Population: 3852890"
         }
     },
     "BI": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Burundi</div>Population : 15239520"
+            "content": "<div class=\"tooltip-title\">Burundi</div>Population: 15239520"
         }
     },
     "KH": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Cambodia</div>Population : 46215030"
+            "content": "<div class=\"tooltip-title\">Cambodia</div>Population: 46215030"
         }
     },
     "CM": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Cameroon</div>Population : 59722144"
+            "content": "<div class=\"tooltip-title\">Cameroon</div>Population: 59722144"
         }
     },
     "CA": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Canada</div>Population : 14842843"
+            "content": "<div class=\"tooltip-title\">Canada</div>Population: 14842843"
         }
     },
     "CV": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Cape Verde</div>Population : 48838214"
+            "content": "<div class=\"tooltip-title\">Cape Verde</div>Population: 48838214"
         }
     },
     "CF": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Central African Republic</div>Population : 13391409"
+            "content": "<div class=\"tooltip-title\">Central African Republic</div>Population: 13391409"
         }
     },
     "CL": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Chile</div>Population : 19791247"
+            "content": "<div class=\"tooltip-title\">Chile</div>Population: 19791247"
         }
     },
     "CN": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">China</div>Population : 23843930"
+            "content": "<div class=\"tooltip-title\">China</div>Population: 23843930"
         }
     },
     "CY": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Cyprus</div>Population : 45350385"
+            "content": "<div class=\"tooltip-title\">Cyprus</div>Population: 45350385"
         }
     },
     "CO": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Colombia</div>Population : 11336734"
+            "content": "<div class=\"tooltip-title\">Colombia</div>Population: 11336734"
         }
     },
     "KM": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Comoros</div>Population : 39175391"
+            "content": "<div class=\"tooltip-title\">Comoros</div>Population: 39175391"
         }
     },
     "CG": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Congo</div>Population : 28984274"
+            "content": "<div class=\"tooltip-title\">Congo</div>Population: 28984274"
         }
     },
     "CD": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Congo, The Democratic Republic Of The</div>Population : 40341657"
+            "content": "<div class=\"tooltip-title\">Congo, The Democratic Republic Of The</div>Population: 40341657"
         }
     },
     "KP": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Korea, Democratic People's Republic Of</div>Population : 23204129"
+            "content": "<div class=\"tooltip-title\">Korea, Democratic People's Republic Of</div>Population: 23204129"
         }
     },
     "KR": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Korea, Republic Of</div>Population : 18665198"
+            "content": "<div class=\"tooltip-title\">Korea, Republic Of</div>Population: 18665198"
         }
     },
     "CR": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Costa Rica</div>Population : 58342002"
+            "content": "<div class=\"tooltip-title\">Costa Rica</div>Population: 58342002"
         }
     },
     "CI": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">C\u00d4te D'ivoire</div>Population : 39427655"
+            "content": "<div class=\"tooltip-title\">C\u00d4te D'ivoire</div>Population: 39427655"
         }
     },
     "HR": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Croatia</div>Population : 2196719"
+            "content": "<div class=\"tooltip-title\">Croatia</div>Population: 2196719"
         }
     },
     "CU": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Cuba</div>Population : 8801294"
+            "content": "<div class=\"tooltip-title\">Cuba</div>Population: 8801294"
         }
     },
     "DK": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Denmark</div>Population : 50145237"
+            "content": "<div class=\"tooltip-title\">Denmark</div>Population: 50145237"
         }
     },
     "DJ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Djibouti</div>Population : 18274005"
+            "content": "<div class=\"tooltip-title\">Djibouti</div>Population: 18274005"
         }
     },
     "DM": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Dominica</div>Population : 51267630"
+            "content": "<div class=\"tooltip-title\">Dominica</div>Population: 51267630"
         }
     },
     "EG": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Egypt</div>Population : 30174304"
+            "content": "<div class=\"tooltip-title\">Egypt</div>Population: 30174304"
         }
     },
     "AE": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">United Arab Emirates</div>Population : 32472104"
+            "content": "<div class=\"tooltip-title\">United Arab Emirates</div>Population: 32472104"
         }
     },
     "EC": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Ecuador</div>Population : 42396332"
+            "content": "<div class=\"tooltip-title\">Ecuador</div>Population: 42396332"
         }
     },
     "ER": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Eritrea</div>Population : 3819986"
+            "content": "<div class=\"tooltip-title\">Eritrea</div>Population: 3819986"
         }
     },
     "ES": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Spain</div>Population : 13524853"
+            "content": "<div class=\"tooltip-title\">Spain</div>Population: 13524853"
         }
     },
     "EE": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Estonia</div>Population : 3450729"
+            "content": "<div class=\"tooltip-title\">Estonia</div>Population: 3450729"
         }
     },
     "US": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">United States</div>Population : 27560260"
+            "content": "<div class=\"tooltip-title\">United States</div>Population: 27560260"
         }
     },
     "ET": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Ethiopia</div>Population : 22706912"
+            "content": "<div class=\"tooltip-title\">Ethiopia</div>Population: 22706912"
         }
     },
     "FJ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Fiji</div>Population : 39343567"
+            "content": "<div class=\"tooltip-title\">Fiji</div>Population: 39343567"
         }
     },
     "FI": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Finland</div>Population : 51059238"
+            "content": "<div class=\"tooltip-title\">Finland</div>Population: 51059238"
         }
     },
     "FR": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">France</div>Population : 39281415"
+            "content": "<div class=\"tooltip-title\">France</div>Population: 39281415"
         }
     },
     "GA": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Gabon</div>Population : 1231533"
+            "content": "<div class=\"tooltip-title\">Gabon</div>Population: 1231533"
         }
     },
     "GM": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Gambia</div>Population : 38371069"
+            "content": "<div class=\"tooltip-title\">Gambia</div>Population: 38371069"
         }
     },
     "GE": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Georgia</div>Population : 53625754"
+            "content": "<div class=\"tooltip-title\">Georgia</div>Population: 53625754"
         }
     },
     "GH": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Ghana</div>Population : 53225422"
+            "content": "<div class=\"tooltip-title\">Ghana</div>Population: 53225422"
         }
     },
     "GR": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Greece</div>Population : 42346976"
+            "content": "<div class=\"tooltip-title\">Greece</div>Population: 42346976"
         }
     },
     "GD": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Grenada</div>Population : 31197986"
+            "content": "<div class=\"tooltip-title\">Grenada</div>Population: 31197986"
         }
     },
     "GT": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Guatemala</div>Population : 39228403"
+            "content": "<div class=\"tooltip-title\">Guatemala</div>Population: 39228403"
         }
     },
     "GN": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Guinea</div>Population : 15107904"
+            "content": "<div class=\"tooltip-title\">Guinea</div>Population: 15107904"
         }
     },
     "GQ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Equatorial Guinea</div>Population : 39356363"
+            "content": "<div class=\"tooltip-title\">Equatorial Guinea</div>Population: 39356363"
         }
     },
     "GW": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Guinea-bissau</div>Population : 8464941"
+            "content": "<div class=\"tooltip-title\">Guinea-bissau</div>Population: 8464941"
         }
     },
     "GY": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Guyana</div>Population : 5995309"
+            "content": "<div class=\"tooltip-title\">Guyana</div>Population: 5995309"
         }
     },
     "HT": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Haiti</div>Population : 20394488"
+            "content": "<div class=\"tooltip-title\">Haiti</div>Population: 20394488"
         }
     },
     "HN": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Honduras</div>Population : 35312821"
+            "content": "<div class=\"tooltip-title\">Honduras</div>Population: 35312821"
         }
     },
     "HU": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Hungary</div>Population : 50662561"
+            "content": "<div class=\"tooltip-title\">Hungary</div>Population: 50662561"
         }
     },
     "JM": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Jamaica</div>Population : 41904599"
+            "content": "<div class=\"tooltip-title\">Jamaica</div>Population: 41904599"
         }
     },
     "JP": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Japan</div>Population : 14800799"
+            "content": "<div class=\"tooltip-title\">Japan</div>Population: 14800799"
         }
     },
     "MH": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Marshall Islands</div>Population : 43319473"
+            "content": "<div class=\"tooltip-title\">Marshall Islands</div>Population: 43319473"
         }
     },
     "PW": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Palau</div>Population : 28631470"
+            "content": "<div class=\"tooltip-title\">Palau</div>Population: 28631470"
         }
     },
     "SB": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Solomon Islands</div>Population : 25284396"
+            "content": "<div class=\"tooltip-title\">Solomon Islands</div>Population: 25284396"
         }
     },
     "IN": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">India</div>Population : 33892462"
+            "content": "<div class=\"tooltip-title\">India</div>Population: 33892462"
         }
     },
     "ID": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Indonesia</div>Population : 46529447"
+            "content": "<div class=\"tooltip-title\">Indonesia</div>Population: 46529447"
         }
     },
     "JO": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Jordan</div>Population : 22862292"
+            "content": "<div class=\"tooltip-title\">Jordan</div>Population: 22862292"
         }
     },
     "IR": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Iran, Islamic Republic Of</div>Population : 44112827"
+            "content": "<div class=\"tooltip-title\">Iran, Islamic Republic Of</div>Population: 44112827"
         }
     },
     "IQ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Iraq</div>Population : 23385101"
+            "content": "<div class=\"tooltip-title\">Iraq</div>Population: 23385101"
         }
     },
     "IE": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Ireland</div>Population : 58045865"
+            "content": "<div class=\"tooltip-title\">Ireland</div>Population: 58045865"
         }
     },
     "IS": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Iceland</div>Population : 23995654"
+            "content": "<div class=\"tooltip-title\">Iceland</div>Population: 23995654"
         }
     },
     "IL": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Israel</div>Population : 36618015"
+            "content": "<div class=\"tooltip-title\">Israel</div>Population: 36618015"
         }
     },
     "IT": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Italy</div>Population : 18844342"
+            "content": "<div class=\"tooltip-title\">Italy</div>Population: 18844342"
         }
     },
     "KZ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Kazakhstan</div>Population : 1121853"
+            "content": "<div class=\"tooltip-title\">Kazakhstan</div>Population: 1121853"
         }
     },
     "KE": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Kenya</div>Population : 52622181"
+            "content": "<div class=\"tooltip-title\">Kenya</div>Population: 52622181"
         }
     },
     "KG": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Kyrgyzstan</div>Population : 30878085"
+            "content": "<div class=\"tooltip-title\">Kyrgyzstan</div>Population: 30878085"
         }
     },
     "KI": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Kiribati</div>Population : 25885809"
+            "content": "<div class=\"tooltip-title\">Kiribati</div>Population: 25885809"
         }
     },
     "KW": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Kuwait</div>Population : 8660537"
+            "content": "<div class=\"tooltip-title\">Kuwait</div>Population: 8660537"
         }
     },
     "LA": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Lao People's Democratic Republic</div>Population : 39482495"
+            "content": "<div class=\"tooltip-title\">Lao People's Democratic Republic</div>Population: 39482495"
         }
     },
     "LS": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Lesotho</div>Population : 25021164"
+            "content": "<div class=\"tooltip-title\">Lesotho</div>Population: 25021164"
         }
     },
     "LV": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Latvia</div>Population : 20175128"
+            "content": "<div class=\"tooltip-title\">Latvia</div>Population: 20175128"
         }
     },
     "LB": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Lebanon</div>Population : 3915042"
+            "content": "<div class=\"tooltip-title\">Lebanon</div>Population: 3915042"
         }
     },
     "LR": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Liberia</div>Population : 5167224"
+            "content": "<div class=\"tooltip-title\">Liberia</div>Population: 5167224"
         }
     },
     "LY": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Libya</div>Population : 47125376"
+            "content": "<div class=\"tooltip-title\">Libya</div>Population: 47125376"
         }
     },
     "LI": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Liechtenstein</div>Population : 7327923"
+            "content": "<div class=\"tooltip-title\">Liechtenstein</div>Population: 7327923"
         }
     },
     "LT": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Lithuania</div>Population : 59888492"
+            "content": "<div class=\"tooltip-title\">Lithuania</div>Population: 59888492"
         }
     },
     "LU": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Luxembourg</div>Population : 216992"
+            "content": "<div class=\"tooltip-title\">Luxembourg</div>Population: 216992"
         }
     },
     "MK": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Macedonia, The Former Yugoslav Republic Of</div>Population : 35418845"
+            "content": "<div class=\"tooltip-title\">Macedonia, The Former Yugoslav Republic Of</div>Population: 35418845"
         }
     },
     "MG": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Madagascar</div>Population : 22909820"
+            "content": "<div class=\"tooltip-title\">Madagascar</div>Population: 22909820"
         }
     },
     "MY": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Malaysia</div>Population : 39934012"
+            "content": "<div class=\"tooltip-title\">Malaysia</div>Population: 39934012"
         }
     },
     "MW": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Malawi</div>Population : 45222425"
+            "content": "<div class=\"tooltip-title\">Malawi</div>Population: 45222425"
         }
     },
     "MV": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Maldives</div>Population : 17979696"
+            "content": "<div class=\"tooltip-title\">Maldives</div>Population: 17979696"
         }
     },
     "ML": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Mali</div>Population : 12636444"
+            "content": "<div class=\"tooltip-title\">Mali</div>Population: 12636444"
         }
     },
     "MT": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Malta</div>Population : 17054727"
+            "content": "<div class=\"tooltip-title\">Malta</div>Population: 17054727"
         }
     },
     "MA": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Morocco</div>Population : 11024145"
+            "content": "<div class=\"tooltip-title\">Morocco</div>Population: 11024145"
         }
     },
     "MU": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Mauritius</div>Population : 52836057"
+            "content": "<div class=\"tooltip-title\">Mauritius</div>Population: 52836057"
         }
     },
     "MR": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Mauritania</div>Population : 12073419"
+            "content": "<div class=\"tooltip-title\">Mauritania</div>Population: 12073419"
         }
     },
     "MX": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Mexico</div>Population : 34303763"
+            "content": "<div class=\"tooltip-title\">Mexico</div>Population: 34303763"
         }
     },
     "FM": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Micronesia, Federated States Of</div>Population : 38012781"
+            "content": "<div class=\"tooltip-title\">Micronesia, Federated States Of</div>Population: 38012781"
         }
     },
     "MD": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Moldova, Republic Of</div>Population : 48266049"
+            "content": "<div class=\"tooltip-title\">Moldova, Republic Of</div>Population: 48266049"
         }
     },
     "MC": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Monaco</div>Population : 26836371"
+            "content": "<div class=\"tooltip-title\">Monaco</div>Population: 26836371"
         }
     },
     "MN": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Mongolia</div>Population : 44884244"
+            "content": "<div class=\"tooltip-title\">Mongolia</div>Population: 44884244"
         }
     },
     "ME": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Montenegro</div>Population : 56928956"
+            "content": "<div class=\"tooltip-title\">Montenegro</div>Population: 56928956"
         }
     },
     "MZ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Mozambique</div>Population : 2397799"
+            "content": "<div class=\"tooltip-title\">Mozambique</div>Population: 2397799"
         }
     },
     "NA": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Namibia</div>Population : 32590924"
+            "content": "<div class=\"tooltip-title\">Namibia</div>Population: 32590924"
         }
     },
     "NP": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Nepal</div>Population : 31949295"
+            "content": "<div class=\"tooltip-title\">Nepal</div>Population: 31949295"
         }
     },
     "NI": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Nicaragua</div>Population : 28463293"
+            "content": "<div class=\"tooltip-title\">Nicaragua</div>Population: 28463293"
         }
     },
     "NE": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Niger</div>Population : 3209433"
+            "content": "<div class=\"tooltip-title\">Niger</div>Population: 3209433"
         }
     },
     "NG": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Nigeria</div>Population : 34952704"
+            "content": "<div class=\"tooltip-title\">Nigeria</div>Population: 34952704"
         }
     },
     "NO": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Norway</div>Population : 8602041"
+            "content": "<div class=\"tooltip-title\">Norway</div>Population: 8602041"
         }
     },
     "NZ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">New Zealand</div>Population : 3156420"
+            "content": "<div class=\"tooltip-title\">New Zealand</div>Population: 3156420"
         }
     },
     "OM": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Oman</div>Population : 48829074"
+            "content": "<div class=\"tooltip-title\">Oman</div>Population: 48829074"
         }
     },
     "UG": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Uganda</div>Population : 9587335"
+            "content": "<div class=\"tooltip-title\">Uganda</div>Population: 9587335"
         }
     },
     "UZ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Uzbekistan</div>Population : 17895608"
+            "content": "<div class=\"tooltip-title\">Uzbekistan</div>Population: 17895608"
         }
     },
     "PK": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Pakistan</div>Population : 1598962"
+            "content": "<div class=\"tooltip-title\">Pakistan</div>Population: 1598962"
         }
     },
     "PS": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Palestine, State Of</div>Population : 47534848"
+            "content": "<div class=\"tooltip-title\">Palestine, State Of</div>Population: 47534848"
         }
     },
     "PA": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Panama</div>Population : 22010443"
+            "content": "<div class=\"tooltip-title\">Panama</div>Population: 22010443"
         }
     },
     "PG": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Papua New Guinea</div>Population : 13033120"
+            "content": "<div class=\"tooltip-title\">Papua New Guinea</div>Population: 13033120"
         }
     },
     "PY": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Paraguay</div>Population : 14431543"
+            "content": "<div class=\"tooltip-title\">Paraguay</div>Population: 14431543"
         }
     },
     "NL": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Netherlands</div>Population : 57354880"
+            "content": "<div class=\"tooltip-title\">Netherlands</div>Population: 57354880"
         }
     },
     "PE": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Peru</div>Population : 47887653"
+            "content": "<div class=\"tooltip-title\">Peru</div>Population: 47887653"
         }
     },
     "PH": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Philippines</div>Population : 37067703"
+            "content": "<div class=\"tooltip-title\">Philippines</div>Population: 37067703"
         }
     },
     "PL": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Poland</div>Population : 2344787"
+            "content": "<div class=\"tooltip-title\">Poland</div>Population: 2344787"
         }
     },
     "PT": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Portugal</div>Population : 46467295"
+            "content": "<div class=\"tooltip-title\">Portugal</div>Population: 46467295"
         }
     },
     "QA": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Qatar</div>Population : 32934589"
+            "content": "<div class=\"tooltip-title\">Qatar</div>Population: 32934589"
         }
     },
     "DO": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Dominican Republic</div>Population : 43202481"
+            "content": "<div class=\"tooltip-title\">Dominican Republic</div>Population: 43202481"
         }
     },
     "RO": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Romania</div>Population : 15879321"
+            "content": "<div class=\"tooltip-title\">Romania</div>Population: 15879321"
         }
     },
     "GB": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">United Kingdom</div>Population : 13000216"
+            "content": "<div class=\"tooltip-title\">United Kingdom</div>Population: 13000216"
         }
     },
     "RU": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Russian Federation</div>Population : 12716876"
+            "content": "<div class=\"tooltip-title\">Russian Federation</div>Population: 12716876"
         }
     },
     "RW": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Rwanda</div>Population : 14590579"
+            "content": "<div class=\"tooltip-title\">Rwanda</div>Population: 14590579"
         }
     },
     "KN": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Saint Kitts And Nevis</div>Population : 15725769"
+            "content": "<div class=\"tooltip-title\">Saint Kitts And Nevis</div>Population: 15725769"
         }
     },
     "SM": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">San Marino</div>Population : 44931772"
+            "content": "<div class=\"tooltip-title\">San Marino</div>Population: 44931772"
         }
     },
     "VC": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Saint Vincent And The Grenadines</div>Population : 52750141"
+            "content": "<div class=\"tooltip-title\">Saint Vincent And The Grenadines</div>Population: 52750141"
         }
     },
     "LC": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Saint Lucia</div>Population : 24235123"
+            "content": "<div class=\"tooltip-title\">Saint Lucia</div>Population: 24235123"
         }
     },
     "SV": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">El Salvador</div>Population : 52424756"
+            "content": "<div class=\"tooltip-title\">El Salvador</div>Population: 52424756"
         }
     },
     "WS": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Samoa</div>Population : 20590085"
+            "content": "<div class=\"tooltip-title\">Samoa</div>Population: 20590085"
         }
     },
     "ST": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Sao Tome And Principe</div>Population : 8900006"
+            "content": "<div class=\"tooltip-title\">Sao Tome And Principe</div>Population: 8900006"
         }
     },
     "SN": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Senegal</div>Population : 55289237"
+            "content": "<div class=\"tooltip-title\">Senegal</div>Population: 55289237"
         }
     },
     "RS": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Serbia</div>Population : 26766907"
+            "content": "<div class=\"tooltip-title\">Serbia</div>Population: 26766907"
         }
     },
     "SC": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Seychelles</div>Population : 27953281"
+            "content": "<div class=\"tooltip-title\">Seychelles</div>Population: 27953281"
         }
     },
     "SL": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Sierra Leone</div>Population : 6582098"
+            "content": "<div class=\"tooltip-title\">Sierra Leone</div>Population: 6582098"
         }
     },
     "SG": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Singapore</div>Population : 1056045"
+            "content": "<div class=\"tooltip-title\">Singapore</div>Population: 1056045"
         }
     },
     "SK": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Slovakia</div>Population : 49192847"
+            "content": "<div class=\"tooltip-title\">Slovakia</div>Population: 49192847"
         }
     },
     "SI": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Slovenia</div>Population : 5249484"
+            "content": "<div class=\"tooltip-title\">Slovenia</div>Population: 5249484"
         }
     },
     "SO": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Somalia</div>Population : 21462042"
+            "content": "<div class=\"tooltip-title\">Somalia</div>Population: 21462042"
         }
     },
     "SD": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Sudan</div>Population : 24388675"
+            "content": "<div class=\"tooltip-title\">Sudan</div>Population: 24388675"
         }
     },
     "SS": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">South Sudan</div>Population : 20493201"
+            "content": "<div class=\"tooltip-title\">South Sudan</div>Population: 20493201"
         }
     },
     "LK": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Sri Lanka</div>Population : 40456821"
+            "content": "<div class=\"tooltip-title\">Sri Lanka</div>Population: 40456821"
         }
     },
     "SE": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Sweden</div>Population : 59155463"
+            "content": "<div class=\"tooltip-title\">Sweden</div>Population: 59155463"
         }
     },
     "CH": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Switzerland</div>Population : 18590249"
+            "content": "<div class=\"tooltip-title\">Switzerland</div>Population: 18590249"
         }
     },
     "SR": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Suriname</div>Population : 51108594"
+            "content": "<div class=\"tooltip-title\">Suriname</div>Population: 51108594"
         }
     },
     "SZ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Swaziland</div>Population : 11903415"
+            "content": "<div class=\"tooltip-title\">Swaziland</div>Population: 11903415"
         }
     },
     "SY": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Syrian Arab Republic</div>Population : 35427985"
+            "content": "<div class=\"tooltip-title\">Syrian Arab Republic</div>Population: 35427985"
         }
     },
     "TJ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Tajikistan</div>Population : 26713895"
+            "content": "<div class=\"tooltip-title\">Tajikistan</div>Population: 26713895"
         }
     },
     "TZ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Tanzania, United Republic Of</div>Population : 41829651"
+            "content": "<div class=\"tooltip-title\">Tanzania, United Republic Of</div>Population: 41829651"
         }
     },
     "TD": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Chad</div>Population : 7567392"
+            "content": "<div class=\"tooltip-title\">Chad</div>Population: 7567392"
         }
     },
     "CZ": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Czech Republic</div>Population : 15795233"
+            "content": "<div class=\"tooltip-title\">Czech Republic</div>Population: 15795233"
         }
     },
     "TH": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Thailand</div>Population : 1962735"
+            "content": "<div class=\"tooltip-title\">Thailand</div>Population: 1962735"
         }
     },
     "TL": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Timor-leste</div>Population : 43196997"
+            "content": "<div class=\"tooltip-title\">Timor-leste</div>Population: 43196997"
         }
     },
     "TG": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Togo</div>Population : 25576877"
+            "content": "<div class=\"tooltip-title\">Togo</div>Population: 25576877"
         }
     },
     "TO": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Tonga</div>Population : 35822833"
+            "content": "<div class=\"tooltip-title\">Tonga</div>Population: 35822833"
         }
     },
     "TT": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Trinidad And Tobago</div>Population : 47289896"
+            "content": "<div class=\"tooltip-title\">Trinidad And Tobago</div>Population: 47289896"
         }
     },
     "TN": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Tunisia</div>Population : 15901257"
+            "content": "<div class=\"tooltip-title\">Tunisia</div>Population: 15901257"
         }
     },
     "TM": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Turkmenistan</div>Population : 34109995"
+            "content": "<div class=\"tooltip-title\">Turkmenistan</div>Population: 34109995"
         }
     },
     "TR": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Turkey</div>Population : 41226410"
+            "content": "<div class=\"tooltip-title\">Turkey</div>Population: 41226410"
         }
     },
     "TV": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Tuvalu</div>Population : 55998502"
+            "content": "<div class=\"tooltip-title\">Tuvalu</div>Population: 55998502"
         }
     },
     "VU": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Vanuatu</div>Population : 10483056"
+            "content": "<div class=\"tooltip-title\">Vanuatu</div>Population: 10483056"
         }
     },
     "VE": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Venezuela, Bolivarian Republic Of</div>Population : 31294870"
+            "content": "<div class=\"tooltip-title\">Venezuela, Bolivarian Republic Of</div>Population: 31294870"
         }
     },
     "VN": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Viet Nam</div>Population : 7671588"
+            "content": "<div class=\"tooltip-title\">Viet Nam</div>Population: 7671588"
         }
     },
     "UA": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Ukraine</div>Population : 11241678"
+            "content": "<div class=\"tooltip-title\">Ukraine</div>Population: 11241678"
         }
     },
     "UY": {
@@ -951,17 +951,17 @@
     },
     "YE": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Yemen</div>Population : 45209629"
+            "content": "<div class=\"tooltip-title\">Yemen</div>Population: 45209629"
         }
     },
     "ZM": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Zambia</div>Population : 673992"
+            "content": "<div class=\"tooltip-title\">Zambia</div>Population: 673992"
         }
     },
     "ZW": {
         "tooltip": {
-            "content": "<div class=\"tooltip-title\">Zimbabwe</div>Population : 45922550"
+            "content": "<div class=\"tooltip-title\">Zimbabwe</div>Population: 45922550"
         }
     }
 }]

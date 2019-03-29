@@ -53,6 +53,7 @@ class ACCORDION {
       const that = this;
       const multFlug = group[0].hasAttribute(this.multiple);
       items.on('click', function(e) {
+        e.preventDefault();
         const item = $(this);
         const thisContainer = item.find(that.container);
         const initWidth = item.data(that.initFlug);
