@@ -50,8 +50,10 @@
       padding-bottom: 0
   &__content
     +sm
-      overflow: auto
+      overflow: hidden
+      position: relative
       margin-right: -20px
+      padding-bottom: 20px
   &__items
     margin: 0 -7px
     +sm 
@@ -123,6 +125,9 @@
     +sm 
       margin: 0 -20px
       padding: 0 20px
+  &__content
+    +sm 
+      margin: 0 -20px
 
 .chart-section
   position: relative
@@ -137,3 +142,8 @@
       padding-bottom: 30px
     +sm 
       padding-bottom: 0
+  &__content
+    +sm 
+      position: relative
+      overflow: hidden
+      padding-bottom: 10px
