@@ -1,5 +1,5 @@
 import PerfectScrollbar from 'perfect-scrollbar';
-var ps = new PerfectScrollbar('.js-scroll-bar');
+// var ps = new PerfectScrollbar('.js-scroll-bar');
 
 const containers = document.querySelectorAll('.js-scroll-bar');
 if (containers) {

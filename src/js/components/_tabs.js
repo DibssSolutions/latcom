@@ -68,7 +68,6 @@ export default (() => {
         const container = this.getTabContainer(control, containers);
 
         control.on('click', e => {
-          console.log(222);
           e.preventDefault();
           if (this.checkTabState(control, container)|| control.hasClass(ACTIVE)) return;
           controls.removeClass(ACTIVE);
