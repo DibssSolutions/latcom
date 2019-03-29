@@ -43,7 +43,7 @@
 					]
 				}) }}
 
-				<section class="list-section">
+				<section class="list-section" data-accordion-group>
 					<h3 class="list-section__title">Buenos Aires</h3>
 					{% for acc in [
 						{
@@ -62,8 +62,8 @@
 							sliderWrap: 'formato-pequeno'
 						}
 					] %}
-						<div class="accordion js-accordion{% if loop.first %} is-open{% endif %}">
-							<a href="#" class="accordion__trigger js-accordion-trigger">
+						<div class="accordion {% if loop.first %} is-open{% endif %}" data-accordion-item data-accordion-on-init="5000"{% if loop.first %} data-accordion-open{% endif %}>
+							<a href="#" class="accordion__trigger" data-accordion-trigger>
 								<span class="list-head">
 									<span class="list-head__plus"></span>
 									<span class="list-head__title">
@@ -74,7 +74,7 @@
 									</span>
 								</span>
 							</a>
-							<div class="accordion__photos js-accordion-wrap">
+							<div class="accordion__photos" data-accordion-container>
 								{% include "partials/_photo-gallery.html" %}
 							</div>
 						</div>

@@ -1,0 +1,54 @@
+<section class="inversion-section" data-accordion-item data-accordion-on-init="768" data-accordion-open>
+  <header class="inversion-section__head">
+    <div class="dashboard-head" data-accordion-trigger>
+      <div class="dashboard-head__mob-visible" data-accordion-trigger>
+        <h3 class="dashboard-head__title">Inversión y alcance</h3>
+        <span class="mob-accordion-btn"></span>
+      </div>
+      <div class="dashboard-head__mob-hidden" data-accordion-container>
+        <div class="input-group">
+          <label class="label label_small">Filtro</label>
+          {{ mixins.select({
+            title: 'Opciones',
+            modifier: 'blue',
+            alignRight: true,
+            values: [ 'value_1', 'value_2', 'value_3', 'value_4' ],
+            selectWidth: 'fit'
+          }) }}
+      </div>
+    </div>
+  </header>
+  <div class="inversion-section__content js-scroll-bar" data-accordion-container>
+    <div class="inversion-section__items row">
+      {% for item in [
+        {
+          key: 'Inversión',
+          value: '256.78K'
+        },
+        {
+          key: 'OTS Totales',
+          value: '3.254.123'
+        },
+        {
+          key: 'Costo por soporte',
+          value: '$543'
+        },
+        {
+          key: 'Inversión prom. por soporte',
+          value: '2.18K'
+        },
+        {
+          key: 'Prom. OTS por soporte',
+          value: '125.324'
+        }
+      ] %}
+          <div class="{% if loop.index === 1 or loop.index === 2 %}col-6{% else %}col-4{% endif %}">
+              <a href="#" class="inversion-item{% if loop.index === 1 or loop.index === 2 %} is-active{% endif %}">
+                  <div class="inversion-item__name">{{ item.key }}</div>
+                  <div class="inversion-item__value">{{ item.value }}</div>
+              </a>
+          </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -17,13 +17,13 @@ export default (() => {
     init() {
       this.initializeCache();
       this.initializeEvents();
-      this.mobDrop();
+      // this.mobDrop();
     }
 
     initHover() {
       this.initializeCache();
       this.initializeEventsHover();
-      this.mobDrop();
+      // this.mobDrop();
     }
 
     initializeCache() {

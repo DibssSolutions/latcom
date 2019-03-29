@@ -38,16 +38,13 @@ const initSvgMaps = () => {
               const container = $(el);
               const map = container.find('.map');
               let timeout;
-              var optionsAreas = {'areas': {}};
-              optionsAreas.areas['UY'] = {
-                attrs: {
-                  fill: '#1c7efb'
-                }
-              };
-              $(el).trigger('update', [
-                {mapOptions: optionsAreas, animDuration: 1000, replace: true}
-              ]);
-              $('[data-id="UY"]').trigger('keyup');
+              const uruguay = $('[data-id="UY"]');
+              const allpath = $($('path', container));
+
+              uruguay.trigger('mouseover');
+              allpath.on('mouseover', () => {
+                uruguay.trigger('mouseout');
+              });
 
               const setZoom = () => {
                 if (mediaWidth(767) && options.map.zoom.init.level !== 30) {
