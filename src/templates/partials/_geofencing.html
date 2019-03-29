@@ -3,9 +3,9 @@
     <div class="tabs">
       <div class="tabs__header">
         <div class="tabs__mobile-header" data-accordion-trigger>
-          <div class="tabs__title">
+          <div class="tabs__title-wrapper">
             <span class="tabs__title-icon">{{ mixins.icon('geofencing') }}</span>
-            <span class="title-md">Geofencing</span>
+            <span class="tabs__title">Geofencing</span>
           </div>
           <span class="mob-accordion-btn"></span>
         </div>
@@ -44,10 +44,10 @@
           {% include "partials/geofencing/_locations.html" %}
         </div>
         <div class="tabs__content" data-tabs-container="screenshots">
-          {% include "partials/screenshots/_screenshots.html" %}
+          {% include "partials/geofencing/_screenshots.html" %}
         </div>
         <div class="tabs__content" data-tabs-container="videos">
-            {% include "partials/video/_video.html" %}
+            {% include "partials/geofencing/_video.html" %}
         </div>
       </div>
     </div>

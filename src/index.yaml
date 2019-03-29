@@ -11,7 +11,7 @@ PageList:
   ready: 100
 - file: fotos.html
   ready: 100
-- file: dashboard-reportes.html
+- file: reportes.html
   ready: 100
 - file: mapa.html
   ready: 100

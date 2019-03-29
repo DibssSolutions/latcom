@@ -1,0 +1,49 @@
+<div class="screenshots js-screenshots-parent">
+    <div class="screenshots__header">
+        <div class="screenshots__header-text">Screenshots</div>
+        <button class="screenshots__close js-screenshots-close">
+            {{ mixins.icon('close-thin') }}
+        </button>
+    </div>
+    <div class="screenshots__footer">
+        <div class="js-screenshots-text">Contexto Tucumán</div>
+        <button class="screenshots__arrow-left js-screenshots-prev">
+            {{ mixins.icon('arrow-prev') }}
+        </button>
+        <button class="screenshots__arrow-right js-screenshots-next">
+            {{ mixins.icon('arrow-next') }}
+        </button>
+    </div>
+    <div class="screenshots__wrap js-screenshots-slider">
+        {% for item in [
+                'screenshots.jpg',
+                'screenshot4.jpg',
+                'screenshots.jpg',
+                'screenshot4.jpg'
+            ] %}
+            <div class="screenshots__item screenshots-item">
+                <div class="screenshots-item__wrap">
+                    <div class="screenshots-item__frame"><img src="./img/iphone.png" alt="img"></div>
+                    <div class="screenshots-item__content"><img src="./img/{{ item }}" alt="img"></div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="screenshots-controls">
+    {% for item in [
+                'Contexto Tucumán',
+                'Espn Sports',
+                'Fox Sports',
+                'Universo Fútbol'
+        ] %}
+        <div class="screenshots-controls__item js-screenshots-control">
+            <div class="screenshots-controls__content">
+                <div class="js-screenshots-control-text">{{ item }}</div>
+                <div class="screenshots-controls__icon">
+                    {{ mixins.icon('arrow-right') }}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
