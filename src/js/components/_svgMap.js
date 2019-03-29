@@ -39,10 +39,8 @@ const initSvgMaps = () => {
               const map = container.find('.map');
               let timeout;
               const uruguay = $('[data-id="UY"]');
-              const tooltip = $('.mapTooltip');
               const allpath = $($('path', container));
-              
-              tooltip.wrapAll('<div class="mapTooltip-wrap"></div>');
+
               uruguay.trigger('mouseover');
               allpath.on('mouseover', () => {
                 uruguay.trigger('mouseout');
