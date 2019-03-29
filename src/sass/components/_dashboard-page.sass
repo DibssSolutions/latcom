@@ -1,39 +1,139 @@
 .geofencing
-  padding: 70px 0
-  +sm 
+  padding-bottom: 70px
+  +sm
     margin: 0 -20px
 
 .dashboard-head
   display: flex
-  align-items: center
+  align-items: flex-end
   justify-content: space-between
   flex-wrap: wrap
-  padding-bottom: 21px
   +sm 
     cursor: pointer
+    margin: 0 -20px
   &__mob-hidden,
   &__mob-visible
     +sm 
       +fls(100%)
   &__mob-visible
-    +sm 
+    +sm
       display: flex
       align-items: center
       justify-content: space-between
+      background-color: rgba($blue, 0.04)
+      padding: 10px 20px
+  &__mob-hidden
+    padding: 5px 20px 15px
+  &__title
+    font-family: $avenir 
+    +f(25px, 500, 1.24)
+    font-size: 25px
+    font-weight: 500
+    +sm 
+      +f(20px, 500, 1.25)
   .mob-accordion-btn
     display: none
     +sm
       display: block
-      float: right
+
+.inversion-section
+  margin-bottom: 51px
+  +md 
+    margin-bottom: 28px
+  +sm 
+    padding-top: 18px
+    margin-bottom: 30px
+  &__head
+    padding-bottom: 16px
+    +sm 
+      padding-bottom: 24px
+      padding-bottom: 0
+  &__content
+    +sm
+      overflow: auto
+      margin-right: -20px
+  &__items
+    margin: 0 -7px
+    +sm 
+      flex-wrap: nowrap
+      margin: 0 -3px
+    .col-4,
+    .col-6
+      padding: 0 7px 12px
+      +sm 
+        flex: 0 0 auto
+        width: auto
+        max-width: none
+        padding: 0 3px
+
+.inversion-item
+  display: block
+  padding: 22px 28px 16px
+  border-radius: 5px
+  color: $white
+  position: relative
+  background-image: linear-gradient(46deg, #a8bbd6 0%, #c7cfdb 100%)
+  +sm 
+    padding: 14px 12px 11px
+    min-width: 196px
+  +hover
+    &:after
+      +fadein
+  &.is-active
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.25)
+    &:after
+      +fadein
+  &:after
+    content: ''
+    +coverdiv
+    border-radius: 5px
+    background-image: linear-gradient(231deg, #2782f8 0%, #114bef 100%)
+    +fadeout($tr)
+  &__name
+    position: relative
+    min-height: 70px
+    font-size: 17px
+    font-weight: 500
+    z-index: 5
+    +sm
+      font-size: 15px
+      margin-bottom: 15px
+      min-height: 0
+      white-space: nowrap
+  &__value
+    position: relative
+    // margin-top: 48px
+    font-size: 40px
+    line-height: 1.325
+    z-index: 5
+    +sm
+      margin: 0
+      font-size: 32px
 
 .reports-map-section
-  padding-bottom: 58px
+  padding-bottom: 62px
+  +md 
+    padding-bottom: 40px
+  +sm 
+    padding-bottom: 30px
+  &__head
+    padding-bottom: 17px
+    +md 
+      padding-bottom: 10px
+    +sm 
+      margin: 0 -20px
+      padding: 0 20px
 
 .chart-section
   position: relative
-  // &__select
-  //   position: absolute
-  //   right: 0
-  //   top: 0
-  //   +sm 
-  //     position: relative
+  padding-bottom: 57px
+  +md 
+    padding-bottom: 40px
+  +sm 
+    padding-bottom: 30px
+  &__head
+    padding-bottom: 51px
+    +md 
+      padding-bottom: 30px
+    +sm 
+      padding-bottom: 0
