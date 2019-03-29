@@ -131,3 +131,119 @@ const initCharts = () => {
 setTimeout(initCharts, 100);
 
 
+const initLinearChart = () => {
+  const chart = $('.js-linear-chart');
+  chart.each( (i, el) => {
+    let data;
+    let chartLinear;
+    const ctx = $(el);
+    const dataPath = $(el).data('json');
+    LOAD_DATA({
+      path: dataPath,
+      callback: object => {
+        data = object[0];
+        const options = {
+          type: 'line',
+          data: data,
+          duration: 500,
+          easing: 'easeOutBounce',
+          options: {
+            responsive: true,
+            scaleStepWidth: 300,
+            legend: {
+              display: false
+            },
+            layout: {
+              padding: {
+                top: 50
+              }
+            },
+            tooltips: {
+              mode: 'point',
+              titleFontSize: 9,
+              titleFontStyle: 'medium',
+              titleFontFamily: "'AvenirNext', Helvetica, sans-serif",
+              bodyFontFamily: "'AvenirNext', Helvetica, sans-serif",
+              bodyFontSize: 18,
+              bodyFontStyle: 'bold',
+              xPadding: 11,
+              yPadding: 7,
+              xAlign: 'center',
+              // yAlign: 'bottom',
+              caretPadding: 10,
+              displayColors: false,
+              callbacks: {
+                labelColor: (TooltipItem, chart) => {
+                  console.log(TooltipItem);
+                  console.log(chart);
+                  chart.tooltip._model.backgroundColor = chart.tooltip._data.datasets[TooltipItem.datasetIndex].tooltipBackground;
+                  // chart.tooltip._model.backgroundColor
+                },
+                // beforeLabel: (TooltipItem, object) => {
+                //   console.log(object);
+                  
+                //   return TooltipItem.value;
+                // },
+                // label: (TooltipItem, object) => {
+                //   return '';
+                // }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                stacked: true,
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  fontFamily: "'AvenirNext', Helvetica, sans-serif",
+                  fontSize: 10,
+                  fontStyle: 600,
+                  padding: 5,
+                  lineHeight: 1.2,
+                  fontColor: 'rgba(74, 72, 74,.68)'
+                }
+              }],
+              yAxes: [{
+                // stacked: true,
+                gridLines: {
+                  drawBorder: false,
+                  zeroLineColor: '#fff',
+                  tickMarkLength: 5
+                },
+                ticks: {
+                  fontFamily: "'AvenirNext', Helvetica, sans-serif",
+                  fontSize: 10,
+                  padding: 15,
+                  fontColor: 'rgba(74, 72, 74,.68)',
+                  fontStyle: 600,
+                  // callback: value => setValue(value),
+                  // maxTicksLimit: 4,
+                  // minTicksLimit: 2
+                }
+              }]
+            },
+            plugins: {
+              datalabels: {
+                align: 'start',
+                anchor: 'end',
+                font: {
+                  family: '"AvenirNext", Helvetica, sans-serif',
+                  size: 13,
+                  weight: 500
+                },
+                color: 'rgba(45, 54, 68, 0.6)',
+                display: 'auto',
+                formatter: value => setValue('')
+              }
+            }
+          }
+        };
+        chartLinear = new Chart(ctx, options);
+      }
+    });
+  });
+};
+setTimeout(initLinearChart,100);
+

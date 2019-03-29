@@ -1,0 +1,18 @@
+[
+	{
+    "labels": ["1 ENE", "4 ENE", "7 ENE", "10 ENE", "13 ENE", "16 ENE", "19 ENE", "22 ENE", "25 ENE", "28 ENE", "1 FEB"],
+    "datasets": [
+            {
+                "label": "",
+                "backgroundColor": "#FF3F5E",
+                "fill": false,
+                "borderColor": "#FF3F5E",
+                "pointRadius": "5",
+                "pointHoverRadius": "9",
+                "lineTension": 0,
+                "data": [0.45, 0.52, 0.49, 0.41, 0.51, 0.45, 0.48, 0.58, 0.51, 0.53, 0.47],
+                "tooltipBackground": "rgba(255, 63, 94, .8)"
+            }
+        ]
+    }
+]
