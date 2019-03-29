@@ -47,4 +47,5 @@ gulp.task('copy', [
 ]);
 gulp.task('copy:watch', function() {
     gulp.watch(config.src.img+'/*', ['copy']);
+    gulp.watch(config.src.json+'/*', ['copy']);
 });

@@ -1,11 +1,11 @@
 [
 	{
-    "labels": ["MOB. URBANO", "GRAN FORMATO", "FORMATO MEDIO", "DISP. TÁCTICOS", "TRANSP.", "VALLAS MÓVILES", "GEO FENCING", "MUPI DIGITAL", "RELOJES", "VIDEO WALL", "POSTES", "PUBLI OBRA"],
+    "labels": [["MOB.", " URBANO"], ["GRAN", "FORMATO"], ["FORMATO", "MEDIO"], ["DISP.", "TÁCTICOS"], "TRANSP.", ["VALLAS", "MÓVILES"], ["GEO", "FENCING"], ["MUPI", "DIGITAL"], "RELOJES", ["VIDEO", "WALL"], "POSTES", ["PUBLI", "OBRA"]],
     "datasets": [{
       "label": false,
       "backgroundColor": "#C7CFDB",
       "hoverBackgroundColor": "#08DB95",
-      "data": [56, 63, 67, 27, 62, 47, 77, 57, 57, 67, 37, 67]
+      "data": [40000, 130000, 75000, 90000, 60000, 20000, 70000, 40000, 87000, 103000, 18000, 51000]
     }]
   }
 ]

@@ -198,7 +198,6 @@
 {% endmacro %}
 
 {% macro imgSlide(props) %}
-
 	<div class="img-slide js-slide">
 		<div class="img-slide__photo">
 			<img src="./img/{{ props.img }}" alt="img">
@@ -247,14 +246,12 @@
 	</div>
 {% endmacro %}
 
-{# {% set accordionTable =  %} #}
-
 {% macro accordionSection(props) %}
-	<section class="list-section">
+	<section class="list-section" data-accordion-group>
 		<h3 class="list-section__title">{{ props.title }}</h3>
 		{% for acc in props.accordions %}
-			<div class="accordion js-accordion {% if acc.smMargin %} accordion_mob-margin{% endif %}">
-				<a href="#" class="accordion__trigger js-accordion-trigger">
+			<div class="accordion {% if acc.smMargin %} accordion_mob-margin{% endif %}" data-accordion-item data-accordion-on-init="5000"{% if loop.first %} data-accordion-open{% endif %}>
+				<a href="#" class="accordion__trigger" data-accordion-trigger>
 					<span class="list-head">
 						<span class="list-head__plus"></span>
 						<span class="list-head__title">
@@ -265,7 +262,7 @@
 						</span>
 					</span>
 				</a>
-				<div class="accordion__content js-accordion-wrap js-scroll-bar">
+				<div class="accordion__content js-scroll-bar" data-accordion-container>
 					{% if loop.first %}
 						{{ table(
 							[

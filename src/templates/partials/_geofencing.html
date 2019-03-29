@@ -1,26 +1,15 @@
-<div class="geofencing">
+<div class="geofencing" data-accordion-item data-accordion-on-init="768" data-accordion-open>
   <div class="geofencing__tabs" data-tabs>
     <div class="tabs">
       <div class="tabs__header">
-        <div class="tabs__mobile-header">
+        <div class="tabs__mobile-header" data-accordion-trigger>
           <div class="tabs__title">
             <span class="tabs__title-icon">{{ mixins.icon('geofencing') }}</span>
             <span class="title-md">Geofencing</span>
           </div>
-          <div class="tabs__mob-buttons">
-            <a href="#" class="tabs-mob-btn">
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-            <a href="#" class="tabs-mob-btn is-open">
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </div>
+          <span class="mob-accordion-btn"></span>
         </div>
-        <div class="tabs__controls">
+        <div class="tabs__controls" data-accordion-container>
           <ul class="tabs-list">
             {% for item in [
               {
@@ -47,7 +36,7 @@
           </ul>
         </div>
       </div>
-      <div class="tabs__wrapper" data-tabs-wrapper>
+      <div class="tabs__wrapper" data-tabs-wrapper data-accordion-container>
         <div class="tabs__content" data-tabs-container="results">
           RESULTS
         </div>
