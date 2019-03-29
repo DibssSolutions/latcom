@@ -8,12 +8,10 @@
 		position: relative
 		height: 334px
 		+sm
-			height: 282px 
-		// svg
-		// 	position: absolute
-		// 	top: 50% !important
-		// 	left: 50% !important
-		// 	transform: translate(-50%,-50%)
+			height: 365px 
+		svg
+			path
+				cursor: pointer
 	.zoomButton
 		display: none 
 .mapTooltip
@@ -31,17 +29,42 @@
 	border-radius: 5px
 	background-color: $white 
 	+sm
-		top: 17px !important
-		right: 17px !important
+		top: auto !important
+		right: 0 !important
+		bottom: 0
+		width: 100%
+		border-radius: 5px 5px 0 0 
+.mapTooltip-wrap
+	.mapTooltip[style*="block"]
+		+sm
+			display: grid !important
+			grid-template-columns: 1fr 1fr 1.5fr 1fr 0.5fr
+		
 .tooltip-title
 	color: $blue 
 	+f(20px,500,1.35)
+	+sm
+		padding-right: 5px
+		font-size: 15px
+		grid-column: 1
+		grid-row: 1 / 3
 	&:not(:last-child)
 		margin-bottom: 7px
 .tooltip-label
 	color: rgba($gray, .7)
 	line-height: 1.38
+	grid-area: 1
+	+sm
+		padding: 0 0 5px 15px
+		font-size: 9px
+		height: 100%
 .tooltip-value
 	+f(14px,600,1.25)
+	+sm
+		padding-left: 15px
+		width: 100%
+		font-size: 11px
 	&:not(:last-child)
 		margin-bottom: 13px
+		+sm
+			margin-bottom: 0
