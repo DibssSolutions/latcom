@@ -338,4 +338,10 @@ videoSlider.slick({
   autoplay: false,
   prevArrow: '<button class="video-block__prev" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="21.373" height="40.417" viewBox="0 0 21.373 40.417"><path d="M2.37.4A1.279,1.279,0,0,0,.546.366,1.317,1.317,0,0,0,.513,2.213L18.252,20.149.513,38.085a1.3,1.3,0,0,0-.138,1.953A1.271,1.271,0,0,0,2.307,39.9l18.7-18.844a1.3,1.3,0,0,0,0-1.811Z" transform="translate(21.373 40.417) rotate(-180)" fill="#fff"/></svg></button>',
   nextArrow: '<button class="video-block__next" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="21.373" height="40.417" viewBox="0 0 21.373 40.417"><path d="M2.37.4A1.279,1.279,0,0,0,.546.366,1.317,1.317,0,0,0,.513,2.213L18.252,20.149.513,38.085a1.3,1.3,0,0,0-.138,1.953A1.271,1.271,0,0,0,2.307,39.9l18.7-18.844a1.3,1.3,0,0,0,0-1.811Z" fill="#fff"/></svg></button>',
-});
+})
+  .on('beforeChange', function(event, slick, currentSlide) {
+    videoSlider.find('video').each((i,video) => {
+      if (!video) return;
+      video.pause();
+    });
+  });

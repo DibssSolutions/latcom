@@ -23,7 +23,9 @@
       background-color: rgba($blue, 0.04)
       padding: 10px 20px
   &__mob-hidden
-    padding: 5px 20px 15px
+    padding: 5px 0 0 10px
+    +sm
+      padding: 20px 0 20px 20px
   &__title
     font-family: $avenir 
     +f(25px, 500, 1.24)
@@ -31,6 +33,10 @@
     font-weight: 500
     +sm 
       +f(20px, 500, 1.25)
+  &__content
+    overflow: visible !important
+    +md
+      overflow: hidden !important
   .mob-accordion-btn
     display: none
     +sm
@@ -49,11 +55,12 @@
       padding-bottom: 24px
       padding-bottom: 0
   &__content
+    overflow: visible !important
     +sm
-      overflow: hidden
+      overflow: hidden !important
       position: relative
-      margin-right: -20px
-      padding-bottom: 20px
+      margin: 0 -20px
+      padding: 0 0 20px 20px 
   &__items
     margin: 0 -7px
     +sm 
@@ -104,7 +111,6 @@
       white-space: nowrap
   &__value
     position: relative
-    // margin-top: 48px
     font-size: 40px
     line-height: 1.325
     z-index: 5
@@ -117,8 +123,11 @@
   +md 
     padding-bottom: 40px
   +sm 
-    margin-bottom: 30px
     padding-bottom: 0
+    margin-bottom: 20px
+    transition: margin-bottom .3s
+  &.is-open
+    margin-bottom: 0
   &__head
     padding-bottom: 17px
     +md 
@@ -145,6 +154,9 @@
     +sm 
       padding-bottom: 0
   &__content
+    overflow: visible !important
+    +md
+      overflow: hidden !important
     +sm 
       position: relative
       overflow: hidden

@@ -14,3 +14,16 @@ body
 	&.is-overflow-hidden
 		overflow: hidden
 
+.mob-hide
+	+sm
+		display: none !important
+
+.mob-show
+	display: none
+	+sm
+		display: block !important
+
+.mob-flex-show
+	display: none
+	+sm
+		display: flex !important

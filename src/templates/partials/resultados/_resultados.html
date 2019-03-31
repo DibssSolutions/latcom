@@ -19,7 +19,7 @@
                     }
                 ] %}
                 <div class="col-4 col-sm-12">
-                    <div class="reports-row__item{% if item.color %} reports-row__item_{{ item.color }}{% endif %}">
+                    <div class="reports-row__item{% if item.color %} reports-row__item_{{ item.color }}{% endif %}{% if loop.last %} mob-hide{% endif %}">
                         <div class="reports-row__name">{{ item.key }}</div>
                         <div class="reports-row__value">{{ item.value }}</div>
                     </div>
@@ -27,12 +27,16 @@
             {% endfor %}
         </div>
     </div>
-    <div class="resultados__chart">
+    <div class="resultados__chart js-scroll-bar">
         <div class="chart">
             <canvas class="js-linear-chart" data-json="../json/linear-chart-two-lines.json"></canvas>
         </div>
     </div>
-    <div class="resultados__chart">
+    <div class="reports-row__item reports-row__item_red mob-flex-show">
+        <div class="reports-row__name">CTR</div>
+        <div class="reports-row__value">0,467</div>
+    </div>
+    <div class="resultados__chart js-scroll-bar">
         <div class="chart">
             <canvas class="js-linear-chart" data-json="../json/linear-chart-one-line.json"></canvas>
         </div>

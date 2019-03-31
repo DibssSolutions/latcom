@@ -38,9 +38,12 @@ const initSvgMaps = () => {
               const container = $(el);
               const map = container.find('.map');
               let timeout;
-              $('[data-id="UY"]').trigger('mouseover');
-              $('path', ).on('mouseout', () => {
-                $('[data-id="UY"]').trigger('mouseout');
+              const uruguay = $('[data-id="UY"]');
+              const allpath = $($('path', container));
+
+              uruguay.trigger('mouseover');
+              allpath.on('mouseover', () => {
+                uruguay.trigger('mouseout');
               });
 
               const setZoom = () => {

@@ -108,6 +108,8 @@
 		+sm 
 			border-bottom: 1px solid transparent
 			padding-bottom: 3px
+		+hover
+			color: $blue 
 		&.is-active
 			color: $blue
 			font-weight: 600
@@ -115,7 +117,12 @@
 				border-bottom-color: $blue
 
 [data-tabs]
+	margin-left: -30px
+	padding-left: 30px
 	overflow: hidden
+	+md
+		padding-left: 0
+		margin-left: 0
 	[data-tabs-control]
 		cursor: pointer
 		user-select: none

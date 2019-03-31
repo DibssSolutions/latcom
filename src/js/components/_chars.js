@@ -155,7 +155,7 @@ const initLinearChart = () => {
             },
             layout: {
               padding: {
-                top: 50
+                top: 70
               }
             },
             tooltips: {
@@ -169,24 +169,13 @@ const initLinearChart = () => {
               xPadding: 11,
               yPadding: 7,
               xAlign: 'center',
-              // yAlign: 'bottom',
+              yAlign: 'bottom',
               caretPadding: 10,
               displayColors: false,
               callbacks: {
                 labelColor: (TooltipItem, chart) => {
-                  console.log(TooltipItem);
-                  console.log(chart);
                   chart.tooltip._model.backgroundColor = chart.tooltip._data.datasets[TooltipItem.datasetIndex].tooltipBackground;
-                  // chart.tooltip._model.backgroundColor
-                },
-                // beforeLabel: (TooltipItem, object) => {
-                //   console.log(object);
-                  
-                //   return TooltipItem.value;
-                // },
-                // label: (TooltipItem, object) => {
-                //   return '';
-                // }
+                }
               }
             },
             responsive: true,
@@ -206,7 +195,6 @@ const initLinearChart = () => {
                 }
               }],
               yAxes: [{
-                // stacked: true,
                 gridLines: {
                   drawBorder: false,
                   zeroLineColor: '#fff',
@@ -217,24 +205,12 @@ const initLinearChart = () => {
                   fontSize: 10,
                   padding: 15,
                   fontColor: 'rgba(74, 72, 74,.68)',
-                  fontStyle: 600,
-                  // callback: value => setValue(value),
-                  // maxTicksLimit: 4,
-                  // minTicksLimit: 2
+                  fontStyle: 600
                 }
               }]
             },
             plugins: {
               datalabels: {
-                align: 'start',
-                anchor: 'end',
-                font: {
-                  family: '"AvenirNext", Helvetica, sans-serif',
-                  size: 13,
-                  weight: 500
-                },
-                color: 'rgba(45, 54, 68, 0.6)',
-                display: 'auto',
                 formatter: value => setValue('')
               }
             }

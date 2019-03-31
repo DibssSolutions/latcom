@@ -13,7 +13,7 @@ title: Reportes page
 			<div class="main js-scroll-bar">
 				<div class="main__inner" data-accordion-group data-accordion-multiple>
 					{{ mixins.head({ 
-						title: 'Fútbol 2018',
+						title: 'Reportes',
 						links: true,
 						currentPage: 'reportes'
 					}) }}
@@ -41,13 +41,13 @@ title: Reportes page
 									<span class="mob-accordion-btn"></span>
 								</div>
 								<div class="dashboard-head__mob-hidden" data-accordion-container>
+									<label class="label label_small">Ciudad</label>
 									<div class="chart-section__select chart-select js-chart-select dropdown">
 										<button class="chart-select__trigger" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<span class="chart-select__text js-chart-select-trigger">Buenos Aires</span>
 											{{ mixins.icon('arrow') }}
 										</button>
 										<ul class="chart-select__list chart-select-list dropdown-menu dropdown-menu-right" ria-labelledby="dropdownMenuButton">
-											<!-- dropdown-menu-right -->
 											<li class="chart-select__item">
 												<a href="#" class="chart-select__link is-active js-chart-select-link" data-json="../json/elementos-por-tipo-first.json">Buenos Aires</a>
 											</li>
