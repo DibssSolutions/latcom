@@ -72,6 +72,7 @@
     "bootstrap": "^4.3.1",
     "bootstrap-select": "^1.13.8",
     "chart.js": "^2.8.0",
+    "chartjs-plugin-datalabels": "^0.6.0",
     "jquery-mapael": "^2.2.0",
     "jquery.mousewheel": "^3.1.9",
     "perfect-scrollbar": "^1.4.0",

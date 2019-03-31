@@ -1,7 +1,8 @@
 import Chart from 'chart.js';
-import '../lib/chartjs-plugin-datalabels.js';
-import { LOAD_DATA } from '../utils.js';
-import { ACTIVE } from '../constants';
+import datalabels from 'chartjs-plugin-datalabels';
+import { LOAD_DATA } from './utils.js'; 
+import { ACTIVE } from './constants';
+Chart.plugins.register(datalabels);
 
 const chartSelect = () => {
   const select = $('.js-chart-select');
@@ -52,6 +53,7 @@ const initCharts = () => {
           data: mainData,
           duration: 500,
           easing: 'easeOutBounce',
+          // plugins: [datalabels],
           options: {
             responsive: true,
             scaleStepWidth: 300,

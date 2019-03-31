@@ -1,7 +1,7 @@
 import mapael from 'jquery-mapael';
-import '../../../node_modules/jquery-mapael/js/maps/world_countries.js';
-import { LOAD_DATA, mediaWidth } from '../utils.js';
-import { WIN } from '../constants';
+import '../../node_modules/jquery-mapael/js/maps/world_countries.js';
+import { LOAD_DATA, mediaWidth } from './utils.js';
+import { WIN } from './constants';
 
 const maps = $('.js-svg-map');
 const initSvgMaps = () => {
