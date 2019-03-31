@@ -8,7 +8,6 @@ let slideNumber;
 BODY.on('click', '.js-screenshots-control', function() {
   popup.addClass(OPEN);
   slideNumber = $(this).index() > (control.length - 1) ? 0 : $(this).index();
-  console.log(slideNumber);
   slider.slick('slickGoTo', slideNumber);
 });
 slider.on('click', () => {

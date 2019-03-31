@@ -316,7 +316,6 @@ const screenshotsSliderInit = () => {
 const controlText = $('.js-screenshots-control-text');
 const screenshotsFooter = screenshotsSliderrParent.find('.js-screenshots-text');
 screenshotsSlider.on('afterChange', function(event, slick, currentSlide) {
-  console.log(currentSlide);
   const text = $(controlText[currentSlide]).html();
   screenshotsFooter.html(text);
 });
