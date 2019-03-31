@@ -164,7 +164,7 @@
           <div class="main js-scroll-bar">
             <div class="main__inner" data-accordion-group data-accordion-multiple>
               <div class="head">
-                <h2 class="title">Fútbol 2018</h2>
+                <h2 class="title">Reportes</h2>
                 <nav class="head-links">
                   <ul class="head-links__list">
                     <li class="head-links__item">
@@ -279,6 +279,7 @@
                       <span class="mob-accordion-btn"></span>
                     </div>
                     <div class="dashboard-head__mob-hidden" data-accordion-container>
+                      <label class="label label_small">Ciudad</label>
                       <div class="chart-section__select chart-select js-chart-select dropdown">
                         <button class="chart-select__trigger" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <span class="chart-select__text js-chart-select-trigger">Buenos Aires</span>
@@ -287,7 +288,6 @@
                           </svg>
                         </button>
                         <ul class="chart-select__list chart-select-list dropdown-menu dropdown-menu-right" ria-labelledby="dropdownMenuButton">
-                          <!-- dropdown-menu-right -->
                           <li class="chart-select__item">
                             <a href="#" class="chart-select__link is-active js-chart-select-link" data-json="../json/elementos-por-tipo-first.json">Buenos Aires</a>
                           </li>
@@ -358,19 +358,23 @@
                                 </div>
                               </div>
                               <div class="col-4 col-sm-12">
-                                <div class="reports-row__item reports-row__item_red">
+                                <div class="reports-row__item reports-row__item_red mob-hide">
                                   <div class="reports-row__name">CTR</div>
                                   <div class="reports-row__value">0,467</div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div class="resultados__chart">
+                          <div class="resultados__chart js-scroll-bar">
                             <div class="chart">
                               <canvas class="js-linear-chart" data-json="../json/linear-chart-two-lines.json"></canvas>
                             </div>
                           </div>
-                          <div class="resultados__chart">
+                          <div class="reports-row__item reports-row__item_red mob-flex-show">
+                            <div class="reports-row__name">CTR</div>
+                            <div class="reports-row__value">0,467</div>
+                          </div>
+                          <div class="resultados__chart js-scroll-bar">
                             <div class="chart">
                               <canvas class="js-linear-chart" data-json="../json/linear-chart-one-line.json"></canvas>
                             </div>
@@ -514,15 +518,19 @@
                             <div class="video-block__video-wrap js-video-slider-parent">
                               <div class="video-block__slider js-video-slider">
                                 <div class="video-block__video">
+                                  <div class="video-block__label">Famous fries</div>
                                   <video preload="nauto" width="100%" height="100%" src="./video/red-hot-chili-peppers-otherside.mp4" controls> Your browser doesn't support HTML5 video tag. </video>
                                 </div>
                                 <div class="video-block__video">
+                                  <div class="video-block__label">Famous fries</div>
                                   <video preload="nauto" width="100%" height="100%" src="./video/red-hot-chili-peppers-otherside.mp4" controls> Your browser doesn't support HTML5 video tag. </video>
                                 </div>
                                 <div class="video-block__video">
+                                  <div class="video-block__label">Famous fries</div>
                                   <video preload="nauto" width="100%" height="100%" src="./video/red-hot-chili-peppers-otherside.mp4" controls> Your browser doesn't support HTML5 video tag. </video>
                                 </div>
                                 <div class="video-block__video">
+                                  <div class="video-block__label">Famous fries</div>
                                   <video preload="nauto" width="100%" height="100%" src="./video/red-hot-chili-peppers-otherside.mp4" controls> Your browser doesn't support HTML5 video tag. </video>
                                 </div>
                               </div>
