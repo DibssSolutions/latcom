@@ -241,7 +241,6 @@ if (map.length) {
         map.init();
 
         map.onload(function() {
-
           // CATEGORIES MARKERS
           const togglers = $('.js-map-category');
           if (togglers.length) {
@@ -272,8 +271,9 @@ if (map.length) {
 
               const selects = $('.js-map-select');
 
-              selects.on('mouseover', e => {
+              selects.on('mouseover touchstart', e => {
                 // FIND ID
+                e.preventDefault();
                 const target = $(e.target);
                 const id = target.data('mapId');
                 // SET ACTIVE ICON
@@ -285,7 +285,7 @@ if (map.length) {
                 gMap.panTo(newCenter);
               });
 
-              selects.on('mouseleave', () => map.normalMarkers());
+              selects.on('mouseleave touchend', () => map.normalMarkers());
             }, 10);
           }
         });

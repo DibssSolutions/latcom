@@ -1,0 +1,40 @@
+<div class="resultados">
+    <div class="resultados__items">
+        <div class="reports-row row">
+            {% for item in [
+                    {
+                        key: 'Printings',
+                        value: '1.690.272',
+                        color: 'violet'
+                    },
+                    {
+                        key: 'Clicks',
+                        value: '7.897',
+                        color: 'yellow'
+                    },
+                    {
+                        key: 'CTR',
+                        value: '0,467',
+                        color: 'red'
+                    }
+                ] %}
+                <div class="col-4 col-sm-12">
+                    <div class="reports-row__item{% if item.color %} reports-row__item_{{ item.color }}{% endif %}">
+                        <div class="reports-row__name">{{ item.key }}</div>
+                        <div class="reports-row__value">{{ item.value }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="resultados__chart">
+        <div class="chart">
+            <canvas class="js-linear-chart" data-json="../json/linear-chart-two-lines.json"></canvas>
+        </div>
+    </div>
+    <div class="resultados__chart">
+        <div class="chart">
+            <canvas class="js-linear-chart" data-json="../json/linear-chart-one-line.json"></canvas>
+        </div>
+    </div>
+</div>

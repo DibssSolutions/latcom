@@ -1,0 +1,29 @@
+[
+	{
+    "labels": ["1 ENE", "4 ENE", "7 ENE", "10 ENE", "13 ENE", "16 ENE", "19 ENE", "22 ENE", "25 ENE", "28 ENE", "1 FEB"],
+    "datasets": [
+            {
+                "label": "",
+                "backgroundColor": "#FFB027",
+                "fill": false,
+                "borderColor": "#FFB027",
+                "pointRadius": "5",
+                "pointHoverRadius": "9",
+                "lineTension": 0,
+                "data": [20000, 14000, 16000, 10500, 20000, 22000, 17000, 26000, 19000, 15000, 21000],
+                "tooltipBackground": "rgba(255, 176, 39, .8)"
+            },
+            {
+                "label": "",
+                "backgroundColor": "#9129C8",
+                "fill": false,
+                "borderColor": "#9129C8",
+                "pointRadius": "5",
+                "pointHoverRadius": "9",
+                "lineTension": 0,
+                "data": [50000, 60000, 66120, 83000, 47000, 60000, 67500, 55000, 79000, 53000, 62000],
+                "tooltipBackground": "rgba(145, 41, 200, .8)"
+            }
+        ]
+    }
+]
