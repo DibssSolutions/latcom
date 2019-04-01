@@ -7,6 +7,33 @@
     background-size: 100% 40px, cover
     +md
       min-height: 40vh
+  &.is-fotos-loader
+    position: relative
+    flex-grow: 1
+    background-color: #f2f2f2
+    background-size: 25% 143px
+    overflow: hidden
+    background-image: linear-gradient(to bottom,#fff 0%,#fff 20px,transparent 20px),linear-gradient(0,#f2f2f2 25%,#f2f2f2 100%)
+    +md
+      min-height: 40vh
+    &:before
+      position: absolute
+      content: "" 
+      top: 0
+      left: -20px
+      width: 100%
+      height: 100%
+      background-size: 25% 20px
+      background-image: linear-gradient(90deg,#fff 0%,#fff 20px,transparent 20px)
+    &:after
+      position: absolute
+      top: 100%
+      left: 100%
+      content: "" 
+      width: 2px
+      height: 2px
+      border-radius: 50% 
+      box-shadow: 0 0 600px 600px rgba($white, 0.9)
   &__title
     margin-bottom: 12px
     color: rgba($gray, 0.6)
@@ -162,3 +189,4 @@
     +arr(7, 5, $blue, b)
     margin-top: -2px
     transition: transform $tr
+

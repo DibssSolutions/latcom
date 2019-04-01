@@ -1,0 +1,54 @@
+---
+title: Fotos loading
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="inner">
+		{% include "partials/_header.html" %}
+		<div class="wrap">
+			{% include "partials/_sidebar.html" %}
+			<div class="main js-scroll-bar">
+				<!-- begin head -->
+				{{ mixins.head({ 
+          title: 'Mc Precios 2018',
+          links: true,
+          currentPage: 'fotos'
+        }) }}
+				<!-- end head -->
+				{{ mixins.filters({ 
+					title: 'Fotos de soportes',
+					selects: [
+						{
+							label: 'Categoría',
+							title: 'Todas'
+						},
+						{
+							label: 'Ciudad',
+							title: 'Buenos Aires'
+						},
+						{
+							label: 'Dirección',
+							title: 'Todas'
+						}
+					],
+					checkboxes: [
+							{
+							text: 'Fotos',
+							checked: true
+						 },
+						 {
+							text:'Videos',
+							checked: false
+						 }
+					]
+				}) }}
+
+				<section class="list-section is-fotos-loader"></section>
+				<!-- end items -->
+			</div>
+		</div>
+	</div>
+	{{ mixins.downloadBtn(true) }}
+{% endblock %}
