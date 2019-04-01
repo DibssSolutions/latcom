@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Index page</title>
+    <title>Fotos loading</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -162,163 +162,150 @@
           </div>
           <!-- end sidebar -->
           <div class="main js-scroll-bar">
-            <div class="main__inner">
-              <!-- begin head -->
-              <div class="head">
-                <h2 class="title">Fútbol 2018</h2>
-              </div>
-              <!-- end head -->
-              <a href="#" class="main-banner">
-                <img src="./img/banner.jpg" alt="banner" class="main-banner__img">
-              </a>
-              <!-- begin megamenu -->
-              <nav class="megamenu">
-                <ul class="megamenu__list row">
-                  <li class="megamenu__item col col-6">
-                    <!-- begin item -->
-                    <a href="reportes.html" class="item item_low">
-                      <span class="item__content">
-                        <span class="item__name">Reportes</span>
-                        <span class="item__icon"><img src="./img/reportes.svg" alt="{ item.icon }}"></span>
+            <!-- begin head -->
+            <div class="head">
+              <h2 class="title">Mc Precios 2018</h2>
+              <nav class="head-links">
+                <ul class="head-links__list">
+                  <li class="head-links__item">
+                    <a href="reportes.html" class="btn">
+                      <span class="btn__text">Reportes</span>
+                      <span class="btn__icon">
+                        <img src="./img/reportes.svg" alt="reportes">
                       </span>
                     </a>
-                    <!-- end item -->
                   </li>
-                  <li class="megamenu__item col col-6">
-                    <!-- begin item -->
-                    <a href="fotos.html" class="item item_low">
-                      <span class="item__content">
-                        <span class="item__name">Fotos</span>
-                        <span class="item__icon"><img src="./img/fotos.svg" alt="{ item.icon }}"></span>
+                  <li class="head-links__item">
+                    <a href="fotos.html" class="btn is-active">
+                      <span class="btn__text">Fotos</span>
+                      <span class="btn__icon">
+                        <img src="./img/fotos.svg" alt="fotos">
                       </span>
                     </a>
-                    <!-- end item -->
                   </li>
-                  <li class="megamenu__item col col-6">
-                    <!-- begin item -->
-                    <a href="mapa.html" class="item item_low">
-                      <span class="item__content">
-                        <span class="item__name">Mapa</span>
-                        <span class="item__icon"><img src="./img/mapa.svg" alt="{ item.icon }}"></span>
+                  <li class="head-links__item">
+                    <a href="mapa.html" class="btn">
+                      <span class="btn__text">Mapa</span>
+                      <span class="btn__icon">
+                        <img src="./img/mapa.svg" alt="mapa">
                       </span>
                     </a>
-                    <!-- end item -->
                   </li>
-                  <li class="megamenu__item col col-6">
-                    <!-- begin item -->
-                    <a href="listado.html" class="item item_low">
-                      <span class="item__content">
-                        <span class="item__name">Listado</span>
-                        <span class="item__icon"><img src="./img/listado.svg" alt="{ item.icon }}"></span>
+                  <li class="head-links__item">
+                    <a href="listado.html" class="btn">
+                      <span class="btn__text">Listado</span>
+                      <span class="btn__icon">
+                        <img src="./img/listado.svg" alt="listado">
                       </span>
                     </a>
-                    <!-- end item -->
                   </li>
                 </ul>
               </nav>
-              <!-- end items -->
-              <div class="main-info">
-                <div class="main-info__icon">
-                  <svg class="icon icon-arrow-up">
-                    <use xlink:href="img/sprite.svg#icon-arrow-up"></use>
-                  </svg>
+            </div>
+            <!-- end head -->
+            <div class="filters-section-wrapper js-filters-wrapper">
+              <div class="filters-mob-overlay js-filters-overlay"></div>
+              <div class="filters-section js-filters">
+                <div class="filters-section__wrap">
+                  <h3 class="filters-section__title title-md">Fotos de soportes</h3>
+                  <div class="filters-section__filters">
+                    <div class="filters">
+                      <div class="filters__item">
+                        <div class="input-group">
+                          <label class="label label_small">Categoría</label>
+                          <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Todas" data-live-search-placeholder='Buscar dirección'>
+                            <option value="lorem">lorem</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="ipsum dolor">ipsum dolor</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="filters__item">
+                        <div class="input-group">
+                          <label class="label label_small">Ciudad</label>
+                          <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Buenos Aires" data-live-search-placeholder='Buscar dirección'>
+                            <option value="lorem">lorem</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="ipsum dolor">ipsum dolor</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="filters__item">
+                        <div class="input-group">
+                          <label class="label label_small">Dirección</label>
+                          <select class="js-select select select_blue" data-live-search="true" data-width="fit" title="Todas" data-live-search-placeholder='Buscar dirección'>
+                            <option value="lorem">lorem</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="ipsum dolor">ipsum dolor</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="filters__item">
+                        <label class="label label_small">Mostrar</label>
+                        <!-- begin input -->
+                        <label class="checkbox">
+                          <input type="checkbox" name="checkbox" checked>
+                          <span class="checkbox__text">Fotos</span>
+                          <span class="checkbox__icon"></span>
+                        </label>
+                        <!-- end input -->
+                        <!-- begin input -->
+                        <label class="checkbox">
+                          <input type="checkbox" name="checkbox">
+                          <span class="checkbox__text">Videos</span>
+                          <span class="checkbox__icon"></span>
+                        </label>
+                        <!-- end input -->
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="main-info__text"> Selecciona una de las opciones para desplegar sus detalles </div>
+                <div class="filters-section__download">
+                  <a href="#" class="link-down-load" download>
+                    <svg class="icon icon-download-sm">
+                      <use xlink:href="img/sprite.svg#icon-download-sm"></use>
+                    </svg>
+                    <span class="link-down-load__text">Descargar álbum</span>
+                  </a>
+                </div>
+              </div>
+              <div class="filters-fab js-filters-btn">
+                <a href="#" class="fab">
+                  <span class="fab-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                  <span class="fab-cross">
+                    <svg class="icon icon-close">
+                      <use xlink:href="img/sprite.svg#icon-close"></use>
+                    </svg>
+                  </span>
+                </a>
               </div>
             </div>
+            <section class="list-section is-fotos-loader"></section>
+            <!-- end items -->
           </div>
         </div>
       </div>
-      <div class="modal" data-modal="selectsModal">
-        <div class="modal__container" data-modal-container>
-          <div class="modal__inner">
-            <button class="modal__close" data-modal-close>
-              <svg class="icon icon-close">
-                <use xlink:href="img/sprite.svg#icon-close"></use>
-              </svg>
-            </button>
-            <form class="modal-form">
-              <div class="input-group">
-                <label class="label">Cuenta</label>
-                <select class="js-select select select_blue" data-live-search="true" data-width="100%" data-live-search-placeholder='Buscar dirección'>
-                  <option value="McDonalds">McDonalds</option>
-                  <option value="MacFoxy">MacFoxy</option>
-                  <option value="Puzata Khata">Puzata Khata</option>
-                </select>
-              </div>
-              <div class="input-group">
-                <label class="label">País</label>
-                <select class="js-select select select_blue" data-live-search="true" data-width="100%" data-live-search-placeholder='Buscar dirección'>
-                  <option value="Argentina">Argentina</option>
-                  <option value="Brazil">Brazil</option>
-                  <option value="Urugway">Urugway</option>
-                </select>
-              </div>
-              <div class="input-group">
-                <label class="label">Campaña</label>
-                <select class="js-select select select_blue" data-live-search="true" data-width="100%" data-live-search-placeholder='Buscar dirección'>
-                  <option value="Mc Precios 2017">Mc Precios 2017</option>
-                  <option value="Mc Precios 2018">Mc Precios 2018</option>
-                  <option value="Mc Precios 2019">Mc Precios 2019</option>
-                  <option value="Mc Precios 2017">Mc Precios 2017</option>
-                  <option value="Mc Precios 2018">Mc Precios 2018</option>
-                  <option value="Mc Precios 2019">Mc Precios 2019</option>
-                  <option value="Mc Precios 2017">Mc Precios 2017</option>
-                  <option value="Mc Precios 2018">Mc Precios 2018</option>
-                  <option value="Mc Precios 2019">Mc Precios 2019</option>
-                </select>
-              </div>
-              <div class="input-group">
-                <label class="label"></label>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="modal-slider js-modal-slider-parent" data-modal="map-slider">
-        <div class="modal-slider__container" data-modal-container>
-          <div class="modal-slider__inner">
-            <button class="modal-slider__next js-modal-slider-next">
-              <svg class="icon icon-arrow-next">
-                <use xlink:href="img/sprite.svg#icon-arrow-next"></use>
-              </svg>
-            </button>
-            <button class="modal-slider__prev js-modal-slider-prev">
-              <svg class="icon icon-arrow-prev">
-                <use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
-              </svg>
-            </button>
-            <button class="modal-slider__close" data-modal-close>
-              <svg class="icon icon-close-thin">
-                <use xlink:href="img/sprite.svg#icon-close-thin"></use>
-              </svg>
-            </button>
-            <div class="modal-slider__slider js-modal-slider"></div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-slider js-modal-slider-parent" data-modal="img-slider">
-        <div class="modal-slider__container modal-slider__container_small" data-modal-container>
-          <div class="modal-slider__inner">
-            <button class="modal-slider__next js-modal-slider-next">
-              <svg class="icon icon-arrow-next">
-                <use xlink:href="img/sprite.svg#icon-arrow-next"></use>
-              </svg>
-            </button>
-            <button class="modal-slider__prev js-modal-slider-prev">
-              <svg class="icon icon-arrow-prev">
-                <use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
-              </svg>
-            </button>
-            <button class="modal-slider__close" data-modal-close>
-              <svg class="icon icon-close-thin">
-                <use xlink:href="img/sprite.svg#icon-close-thin"></use>
-              </svg>
-            </button>
-            <div class="modal-slider__slider js-modal-slider"></div>
-          </div>
-        </div>
-      </div>
+      <a href="#" class="download-btn is-disabled" download>
+        <svg class="icon icon-download">
+          <use xlink:href="img/sprite.svg#icon-download"></use>
+        </svg>
+      </a>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
