@@ -15,5 +15,9 @@ PageList:
   ready: 100
 - file: reportes.html
   ready: 100
+- file: all-reports.html
+  ready: 100
 - file: mapa.html
+  ready: 100
+- file: search.html
   ready: 100

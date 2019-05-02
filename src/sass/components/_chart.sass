@@ -50,3 +50,34 @@
 		margin-left: 0
 	+sm
 		min-width: 830px
+	&_pie
+		padding-left: 30px
+		width: 370px
+		min-width: 0
+		display: flex
+		align-items: center
+		+md
+			padding-left: 0
+		+sm
+			min-width: 0
+			width: 280px
+			display: block
+	&__canvas
+		flex-shrink: 0
+		width: 214px
+		margin: 0 -55px 0 0
+	&__labels
+		padding-left: 34px
+		flex: 1 1 auto
+	&__label
+		display: flex
+		+sm
+			margin-top: 10px
+		&:not(:last-child)
+			margin-bottom: 12px
+	&__label-color
+		margin: 2px 14px 0 0
+		padding: 0
+		+circle(12)
+	&__label-text
+		flex: 1 1 auto

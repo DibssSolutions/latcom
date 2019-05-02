@@ -1,0 +1,345 @@
+---
+title: Reportes page
+reportes: true
+---
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="inner">
+		{% include "partials/_header.html" %}
+		<div class="wrap">
+			{% include "partials/_sidebar.html" %}
+			<div class="main js-scroll-bar">
+				<div class="main__inner" data-accordion-group data-accordion-multiple>
+					<section class="chart-section js-chart-wrap" data-accordion-item data-accordion-on-init="768" data-accordion-open>
+						<header class="chart-section__head">
+							<div class="dashboard-head">
+								<div class="dashboard-head__mob-visible" data-accordion-trigger>
+									<h3 class="dashboard-head__title">Inversión por geografía</h3>
+									<span class="mob-accordion-btn"></span>
+								</div>
+								<div class="dashboard-head__mob-hidden" data-accordion-container>
+									<div class="dashboard-head__groups">
+										<div class="text-label">País</div>
+										<div class="input-group">
+											<a href="#" class="head-link">Ciudad</a>
+										</div>
+										<div class="input-group">
+										  <label class="label label_small">Ciudad</label>
+		  									<div class="chart-section__select chart-select js-chart-select dropdown">
+		  										<button class="chart-select__trigger" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		  											<span class="chart-select__text js-chart-select-trigger">Buenos Aires</span>
+		  											{{ mixins.icon('arrow') }}
+		  										</button>
+		  										<ul class="chart-select__list chart-select-list dropdown-menu dropdown-menu-right" ria-labelledby="dropdownMenuButton">
+		  											<li class="chart-select__item">
+		  												<a href="#" class="chart-select__link is-active js-chart-select-link" data-json="./json/elementos-por-tipo-first.json">Buenos Aires</a>
+		  											</li>
+		  											<li class="chart-select__item">
+		  												<a href="#" class="chart-select__link js-chart-select-link" data-json="./json/elementos-por-tipo-second.json">Item</a>
+		  											</li>
+		  											<li class="chart-select__item">
+		  												<a href="#" class="chart-select__link js-chart-select-link" data-json="./json/elementos-por-tipo-third.json">Item</a>
+		  											</li>
+		  										</ul>
+		  									</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</header>
+						<div class="chart-section__content js-scroll-bar" data-accordion-container>
+							<div class="chart">
+								<canvas class="js-chart"></canvas>
+							</div>
+						</div>
+					</section>
+					<section class="reports-map-section" data-accordion-item data-accordion-on-init="768" data-accordion-open>
+						<header class="reports-map-section__head">
+							<div class="dashboard-head">
+								<div class="dashboard-head__mob-visible" data-accordion-trigger>
+									<h3 class="dashboard-head__title">Mapa de cobertura</h3>
+									<span class="mob-accordion-btn"></span>
+								</div>
+							</div>
+						</header>
+						<div class="reports-map-section__content" data-accordion-container>
+							<div class="svg-map js-svg-map" data-json="./json/svgmap.json">
+								<div class="svg-map__inner map">Alternative content</div>
+							</div>
+						</div>
+					</section>
+					<section class="inversion-section" data-accordion-item data-accordion-on-init="768" data-accordion-open>
+					  <header class="inversion-section__head">
+					    <div class="dashboard-head" data-accordion-trigger>
+					      <div class="dashboard-head__mob-visible" data-accordion-trigger>
+					        <h3 class="dashboard-head__title">Inversión por campaña</h3>
+					        <span class="mob-accordion-btn"></span>
+					      </div>
+					      <div class="dashboard-head__mob-hidden" data-accordion-container>
+					      <div class="dashboard-head__groups">
+					      	<div class="input-group">
+					      	  <label class="label label_small">Campaña</label>
+					      	    {{ mixins.select({
+					      	      title: 'Fútbol 2018',
+					      	      modifier: 'blue',
+					      	      alignRight: true,
+					      	      values: [ 'value_1', 'value_2', 'value_3', 'value_4' ],
+					      	      selectWidth: 'fit'
+					      	    }) }}
+					      	</div>
+					      	<div class="input-group">
+					      	  <label class="label label_small">Período</label>
+					      	    {{ mixins.select({
+					      	      title: 'Este mes',
+					      	      modifier: 'blue',
+					      	      alignRight: true,
+					      	      values: [ 'value_1', 'value_2', 'value_3', 'value_4' ],
+					      	      selectWidth: 'fit'
+					      	    }) }}
+					      	</div>
+					      	<div class="input-group">
+					      	  <label class="label label_small">País</label>
+					      	    {{ mixins.select({
+					      	      title: 'Argentina',
+					      	      modifier: 'blue',
+					      	      alignRight: true,
+					      	      values: [ 'value_1', 'value_2', 'value_3', 'value_4' ],
+					      	      selectWidth: 'fit'
+					      	    }) }}
+					      	</div>
+					      </div>
+					    </div>
+					  </header>
+					  <div class="inversion-section__content js-scroll-bar" data-accordion-container>
+					    <div class="inversion-section__items row">
+					      {% for item in [
+					        {
+					          key: 'Inversión',
+					          value: '15.678K'
+					        },
+					        {
+					          key: 'OTS Totales',
+					          value: '74.000'
+					        }
+					      ] %}
+					          <div class="{% if loop.index === 1 or loop.index === 2 %}col-6{% else %}col-4{% endif %}">
+					              <a href="#" class="inversion-item{% if loop.index === 1 or loop.index === 2 %} is-active{% endif %}">
+					                  <div class="inversion-item__name">{{ item.key }}</div>
+					                  <div class="inversion-item__value">{{ item.value }}</div>
+					              </a>
+					          </div>
+					      {% endfor %}
+					    </div>
+					  </div>
+					</section>
+					<section class="table-section" data-accordion-item data-accordion-on-init="768" data-accordion-open>
+					  <header class="table-section__head">
+					    <div class="dashboard-head" data-accordion-trigger>
+					      <div class="dashboard-head__mob-visible" data-accordion-trigger>
+					      	<div class="dashboard-head__left-wrap">
+					      		<h3 class="dashboard-head__title">Campañas activas</h3>
+					      		<div class="dashboard-head__search mob-hide">
+					      			<form class="search search_small">
+					      				<div class="search__input">
+					      					<input type="text" placeholder="Buscar soportes">
+					      				</div>
+					      				<button class="search__button" type="button">{{ mixins.icon('search') }}</button>
+					      			</form>
+					      		</div>
+					      	</div>
+					        <span class="mob-accordion-btn"></span>
+					      </div>
+					      <div class="dashboard-head__mob-hidden" data-accordion-container>
+					      <div class="dashboard-head__groups">
+					      	<div class="input-group mob-show">
+					      		<form class="search search_small">
+					      			<div class="search__input">
+					      				<input type="text" placeholder="Buscar soportes">
+					      			</div>
+					      			<button class="search__button" type="button">{{ mixins.icon('search') }}</button>
+					      		</form>
+					      	</div>
+					      	<div class="input-group">
+					      	  <label class="label label_small">País</label>
+					      	    {{ mixins.select({
+					      	      title: 'Todos',
+					      	      modifier: 'blue',
+					      	      alignRight: true,
+					      	      values: [ 'value_1', 'value_2', 'value_3', 'value_4' ],
+					      	      selectWidth: 'fit'
+					      	    }) }}
+					      	</div>
+					      </div>
+					    </div>
+					  </header>
+					  <div class="table-section__content js-scroll-bar" data-accordion-container>
+					  	<!-- begin list-table -->
+					   	<div class="list-table list-table_bdbot">
+					 		<div class="list-table__tr list-table__tr_head">
+					   		<div class="list-table__counter">#</div>
+					   		<div class="list-table__soporte">
+					   			<button class="list-sort-btn js-table-sort-btn" type='button'>
+					   				<span>Campaña</span>
+					   			</button>
+					   		</div>
+					   		<div class="list-table__direccion">País</div>
+					   		<div class="list-table__investment">Inversión</div>
+					   		<div class="list-table__period">Período</div>
+					 		</div>
+					 		<div class="list-table__wrap">
+					 			{% for tr in [
+					 				{
+					 					soporte: 'Fútbol 2018',
+					 					direccion: 'Brasi',
+					 					comienza: '10K',
+					 					finaliza: '10/10/2018-10/11/2018'
+					 				},
+					 				{
+					 					soporte: 'Fútbol Abril',
+					 					direccion: 'Argentina',
+					 					comienza: '10K',
+					 					finaliza: '10/10/2018-10/11/2018'
+					 				},
+					 				{
+					 					soporte: 'Tennis 2018',
+					 					direccion: 'Uruguay',
+					 					comienza: '22K',
+					 					finaliza: '10/10/2018-10/11/2018'
+					 				},
+					 				{
+					 					soporte: 'Bebidas 2018',
+					 					direccion: 'USA',
+					 					comienza: '13K',
+					 					finaliza: '10/10/2018-10/11/2018'
+					 				}
+					 			] %}
+					 			<div class="list-table__tr js-gallery-trigger">
+				 					<div class="list-table__counter">{{ loop.index }}</div>
+				 					<div class="list-table__soporte">{{ tr.soporte }}</div>
+				 					<div class="list-table__direccion">{{ tr.direccion }}</div>
+				 					<div class="list-table__investment">{{ tr.comienza }}</div>
+				 					<div class="list-table__period">{{ tr.finaliza }}</div>
+				 				</div>
+					 			{% endfor %}
+					 		</div>
+					   	</div>
+					  	<!-- end list-table -->
+					   	<div class="table-section__footer">
+					   		{{ mixins.breadcrumbs() }}
+					   	</div>
+					  </div>
+					</section>
+					<section class="supports-section" data-accordion-item data-accordion-on-init="768" data-accordion-open>
+					  <header class="supports-section__head">
+					    <div class="dashboard-head" data-accordion-trigger>
+					      <div class="dashboard-head__mob-visible" data-accordion-trigger>
+					      	<div class="dashboard-head__left-wrap">
+					      		<h3 class="dashboard-head__title">Mis soportes</h3>
+					      	</div>
+					        <span class="mob-accordion-btn"></span>
+					      </div>
+					      <div class="dashboard-head__mob-hidden" data-accordion-container>
+					      <div class="dashboard-head__groups">
+					      	<div class="input-group">
+					      	  <label class="label label_small">Período</label>
+					      	    {{ mixins.select({
+					      	      title: 'Este mes',
+					      	      modifier: 'blue',
+					      	      alignRight: true,
+					      	      values: [ 'value_1', 'value_2', 'value_3', 'value_4' ],
+					      	      selectWidth: 'fit'
+					      	    }) }}
+					      	</div>
+					      	<div class="input-group">
+					      	  <label class="label label_small">País</label>
+					      	    {{ mixins.select({
+					      	      title: 'Todos',
+					      	      modifier: 'blue',
+					      	      alignRight: true,
+					      	      values: [ 'value_1', 'value_2', 'value_3', 'value_4' ],
+					      	      selectWidth: 'fit'
+					      	    }) }}
+					      	</div>
+					      </div>
+					    </div>
+					  </header>
+					  <div class="supports-section__content" data-accordion-container>
+					  	<div class="supports-section__left">
+					  		<div class="supports-section__title">Formatos utlizados</div>
+					  		<div class="supports-section__chart chart chart_pie">
+					  			<div class="chart__canvas">
+					  				<canvas class="js-pie-chart" data-json="./json/pie.json"></canvas>
+					  			</div>
+					  			<div class="chart__labels">
+					  				{% for item in [{
+										text: 'Gran formato',
+										color: '#9127F8'
+					  				}, {
+										text: 'Formato medio',
+										color: '#FFBF1B'
+						  			}, {
+										text: 'Formato pequeño',
+										color: '#FF597F'
+						  			}] %}
+				  				    <div class="chart__label">
+				  				    	<div class="chart__label-color" style="background-color: {{ item.color }};"></div>
+				  				    	<div class="chart__label-text">{{ item.text }}</div>
+				  				    </div>
+					  				{% endfor %}
+					  			</div>
+					  		</div>
+					  	</div>
+					  	<div class="supports-section__right js-scroll-bar">
+					  		<div class="supports-section__title">Inversión por soporte</div>
+			  			  	<!-- begin list-table -->
+			  			   	<table class="table">
+			  			 		<thead>
+			  			 			<tr>
+			  			 				<th></th>
+			  			 				<th>OTS</th>
+			  			 				<th>Inversión</th>
+			  			 				<th>Costo x Cont. x Sop</th>
+			  			 			</tr>
+			  			 		</thead>
+			  			 		<tbody>
+			  			 			{% for item in [
+			  			 				{
+			  			 					name: 'Gran formato',
+			  			 					ots: '50.000',
+			  			 					inv: '10K',
+			  			 					cost: '$0.5'
+			  			 				},
+			  			 				{
+			  			 					name: 'Formato medio',
+			  			 					ots: '50.000',
+			  			 					inv: '10K',
+			  			 					cost: '$0.5'
+			  			 				},
+			  			 				{
+			  			 					name: 'Formato pequeño',
+			  			 					ots: '50.000',
+			  			 					inv: '22K',
+			  			 					cost: '$0.5'
+			  			 				}
+			  			 			] %}
+			  			 			<tr>
+			  			 				<td><span class="td-medium">{{ item.name }}</span></td>
+			  			 				<td>{{ item.ots }}</td>
+			  			 				<td>{{ item.inv }}</td>
+			  			 				<td>{{ item.cost }}</td>
+			  			 			</tr>
+			  			 			{% endfor %}
+			  			 		</tbody>
+			  			   	</table>
+			  			  	<!-- end list-table -->
+					  	</div>
+					  </div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

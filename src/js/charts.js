@@ -225,3 +225,43 @@ const initLinearChart = () => {
 };
 setTimeout(initLinearChart,100);
 
+const initPieChart = () => {
+  const containers = $('.js-pie-chart');
+  containers.each( (i, el) => {
+    let data;
+    let chartLinear;
+    const ctx = $(el);
+    const dataPath = $(el).data('json');
+    LOAD_DATA({
+      path: dataPath,
+      callback: object => {
+        data = object;
+        var options = {
+          type: 'pie',
+          data: data,
+          options: {
+            responsive: true,
+            legend: {
+              display: false
+            },
+            plugins: {
+              datalabels: {
+                font: {
+                  family: '"AvenirNext", Helvetica, sans-serif',
+                  size: 13,
+                  weight: 600
+                },
+                color: '#fff',
+                display: 'auto',
+                formatter: value => { return value+'%'; }
+              }
+            }
+          }
+        };
+        chartLinear = new Chart(ctx, options);
+      }
+    });
+  } );
+};
+setTimeout(initPieChart, 100);
+

@@ -12,3 +12,4 @@ import './_tabs';
 import './_mob-map-select';
 import './_screenshotsControls';
 import './_tabs-mob-btn';
+import './_checkInput';

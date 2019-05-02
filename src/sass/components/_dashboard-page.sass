@@ -37,10 +37,51 @@
     overflow: visible !important
     +md
       overflow: hidden !important
+  &__groups
+    align-items: flex-end
+    flex-wrap: wrap
+    display: flex
+    .input-group
+      +sm
+        margin-bottom: 10px
+      &:not(:last-child)
+        margin-right: 40px
+        +md
+          margin-right: 20px
+  &__left-wrap
+    flex-wrap: wrap
+    display: flex
+    .dashboard-head__title
+      &:not(:last-child)
+        margin-right: 30px
+        +md
+          margin-right: 15px
   .mob-accordion-btn
     display: none
     +sm
       display: block
+  .head-link
+    margin-bottom: 4px
+  .text-label
+    margin-bottom: 1px
+    &:not(:last-child)
+      margin-right: 19px
+
+.head-link
+  color: $blue
+  font-weight: 600
+  transition: color .3s
+  vertical-align: top
+  display: inline-block
+  +hover
+    color: lighten($blue, 12%)
+
+.text-label
+  padding: 3px 0
+  padding-right: 18px
+  font-size: 13px
+  font-weight: 500
+  border-right: 1px solid rgba(#979797, .5)
 
 .inversion-section
   margin-bottom: 51px
@@ -161,3 +202,50 @@
       position: relative
       overflow: hidden
       padding-bottom: 10px
+
+.table-section
+  &:not(:last-child)
+    margin-bottom: 60px
+  &__head
+    margin-bottom: 2px
+  &__footer
+    margin-top: 18px
+    justify-content: flex-end
+    display: flex
+  .ps__rail-y
+    display: none !important
+
+.supports-section
+  padding-bottom: 93px
+  +sm
+    padding-bottom: 30px
+  &__head
+    margin-bottom: 18px
+  &__title
+    margin-bottom: 15px
+  &__chart
+    padding-top: 25px
+    +md
+      padding-top: 0
+  &__content
+    width: 100%
+    display: flex
+    +md
+      flex-direction: column
+  &__left
+    flex-shrink: 0
+    +md
+      margin-top: 30px
+      order: 2
+      width: 100%
+      flex-shrink: 1
+  &__right
+    position: relative
+    flex-grow: 1
+    +md
+      flex-grow: 0
+      width: 100%
+    &:not(:first-child)
+      padding-left: 60px
+      +md
+        padding-left: 0

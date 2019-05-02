@@ -4,19 +4,17 @@
 
 {% macro breadcrumbs(props) %}
 <!-- begin breadcrumbs -->
-<ul class="breadcrumbs{% if props.class %}{{ props.class }}{% endif %}">
-	{% for item in props.list %}
-		{% if loop.last %}
-		<li class="breadcrumbs__item">
-			<span>{{ item }}</span>
+<div class="breadcrumbs{% if props.class %}{{ props.class }}{% endif %}">
+	<a href="#" class="breadcrumbs__prev">{{ icon('arrow') }}</a>
+	<ul class="breadcrumbs__list">
+	{% for i in range(1,props.length or 4) %}
+		<li class="breadcrumbs__item{% if loop.first %} is-active{% endif %}">
+			<a href="#">{{ i }}</a>
 		</li>
-		{% else %}
-		<li class="breadcrumbs__item">
-			<a href="#">{{ item }}</a>
-		</li>
-		{% endif %}
 	{% endfor %}
-</ul>
+	</ul>
+	<a href="#" class="breadcrumbs__next">{{ icon('arrow') }}</a>
+</div>
 <!-- end breadcrumbs -->
 {% endmacro %}
 

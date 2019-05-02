@@ -1,0 +1,51 @@
+.breadcrumbs
+	font-size: 13px
+	font-weight: 500
+	align-items: center
+	display: flex
+	a
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			top: -5px
+			left: -5px
+			right: 0
+			bottom: 0
+	&__prev
+		margin-right: 35px
+		.icon
+			margin-top: -2px
+			+rotate(90)
+	&__next
+		margin-left: 35px
+		.icon
+			margin-top: -4px
+			+rotate(-90)
+	&__prev,
+	&__next
+		font-size: 0
+		+hover
+			.icon
+				color: $blue
+		.icon
+			font-size: 7px
+			color: #4A484A
+			transition: color .3s
+			vertical-align: top
+			display: inline-block
+	&__list
+		align-items: center
+		display: flex
+	&__item,
+	li
+		color: rgba(#4A484A, .5)
+		&:not(:first-child)
+			margin-left: 35px
+		&.is-active
+			color: $blue
+		a
+			color: currentColor
+			transition: color .3s
+			+hover
+				color: $blue

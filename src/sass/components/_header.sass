@@ -95,6 +95,7 @@
 			height: 30px
 			font-size: 14px 
 			color: $gray 
+			transition: border-color .3s
 			border-bottom: 1px solid $inputBorder
 			display: block
 			.search_small &
@@ -106,8 +107,14 @@
 				font-style: italic
 				color: rgba($gray, .79) 
 			&:focus
+				border-color: $blue
 				&::placeholder
 					font-size: 0
+			+hover
+				border-color: $blue
+		&.is-filled
+			input
+				border-color: $blue
 	&__button
 		position: absolute
 		top: 50%
